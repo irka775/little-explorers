@@ -1,5 +1,5 @@
 """
-ASGI config for litle_explorers_p project.
+ASGI config for litlte_explorers_p project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'litle_explorers_p.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'little_explorers_p.settings')
 
 application = get_asgi_application()

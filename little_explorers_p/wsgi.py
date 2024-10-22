@@ -1,5 +1,5 @@
 """
-WSGI config for litle_explorers_p project.
+WSGI config for little_explorers_p project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'litle_explorers_p.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'little_explorers_p.settings')
 
 application = get_wsgi_application()
