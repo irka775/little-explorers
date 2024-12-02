@@ -1,0 +1,52 @@
+[
+  {
+    "pk": 1,
+    "model": "products.category",
+    "fields": { "name": "jeans", "friendly_name": "Jeans" }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": { "name": "pants", "friendly_name": "Pants" }
+  },
+  {
+    "pk": 3,
+    "model": "products.category",
+    "fields": { "name": "dresses", "friendly_name": "Dresses" }
+  },
+  {
+    "pk": 4,
+    "model": "products.category",
+    "fields": { "name": "shirts", "friendly_name": "Shirts" }
+  },
+  {
+    "pk": 5,
+    "model": "products.category",
+    "fields": { "name": "outerwear", "friendly_name": "Outerwear" }
+  },
+  {
+    "pk": 6,
+    "model": "products.category",
+    "fields": { "name": "shoes", "friendly_name": "Shoes" }
+  },
+  {
+    "pk": 7,
+    "model": "products.category",
+    "fields": { "name": "sleepwear", "friendly_name": "Sleepwear" }
+  },
+  {
+    "pk": 8,
+    "model": "products.category",
+    "fields": { "name": "accessories", "friendly_name": "Accessories" }
+  },
+  {
+    "pk": 9,
+    "model": "products.category",
+    "fields": { "name": "formal_shoes", "friendly_name": "Formal Shoes" }
+  },
+  {
+    "pk": 10,
+    "model": "products.category",
+    "fields": { "name": "sportswear", "friendly_name": "Sportswear" }
+  }
+]

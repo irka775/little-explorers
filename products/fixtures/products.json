@@ -1,0 +1,170 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1001340155",
+      "name": "Classic Fit Kids' Jeans",
+      "description": "Durable and soft denim jeans, perfect for school or play. Classic fit with 5-pocket styling and a comfortable cut for active kids.",
+      "price": 29.99,
+      "category": 1,
+      "rating": 4.8,
+      "image_url": "https://example.com/images/kids_classic_jeans.jpg",
+      "image": "kids_classic_jeans.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1001600425",
+      "name": "Audra Kids' Straight Leg Pants",
+      "description": "Stylish and comfortable straight-leg pants for kids, featuring an elastic waist for easy wear and durable fabric for everyday use.",
+      "price": 24.99,
+      "category": 1,
+      "rating": 4.7,
+      "image_url": "https://example.com/images/kids_straight_pants.jpg",
+      "image": "kids_straight_pants.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1002000001",
+      "name": "Cotton T-Shirt - Fun Prints",
+      "description": "Soft cotton t-shirt with fun, kid-friendly prints. Perfect for casual wear and layering.",
+      "price": 12.99,
+      "category": 2,
+      "rating": 4.9,
+      "image_url": "https://example.com/images/kids_tshirt.jpg",
+      "image": "kids_tshirt.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1002000002",
+      "name": "Kids' Hoodie - Rainbow Design",
+      "description": "Cozy hoodie with a colorful rainbow design. Keeps kids warm and stylish during colder days.",
+      "price": 19.99,
+      "category": 2,
+      "rating": 4.8,
+      "image_url": "https://example.com/images/kids_hoodie.jpg",
+      "image": "ghf"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1003000001",
+      "name": "Girls' Floral Dress",
+      "description": "Charming floral dress with a soft lining, ideal for special occasions or everyday wear.",
+      "price": 35.99,
+      "category": 3,
+      "rating": 4.9,
+      "image_url": "https://example.com/images/kids_floral_dress.jpg",
+      "image": "kids_floral_dress.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1003000002",
+      "name": "Boys' Checked Shirt",
+      "description": "Smart checked shirt with button-up front, great for casual or formal occasions.",
+      "price": 18.99,
+      "category": 4,
+      "rating": 4.7,
+      "image_url": "https://example.com/images/kids_checked_shirt.jpg",
+      "image": "kids_checked_shirt.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1004000001",
+      "name": "Kids' Raincoat - Waterproof",
+      "description": "Bright waterproof raincoat with a hood, perfect for rainy adventures.",
+      "price": 22.99,
+      "category": 5,
+      "rating": 4.8,
+      "image_url": "https://example.com/images/kids_raincoat.jpg",
+      "image": "kids_raincoat.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1005000001",
+      "name": "Kids' Sneakers - Lightweight",
+      "description": "Lightweight and comfortable sneakers designed for active kids.",
+      "price": 29.99,
+      "category": 6,
+      "rating": 4.8,
+      "image_url": "https://example.com/images/kids_sneakers.jpg",
+      "image": "kids_sneakers.jpg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1006000001",
+      "name": "Kids' Pajama Set - Soft Cotton",
+      "description": "Cute and cozy pajama set made from breathable cotton, featuring fun patterns.",
+      "price": 19.99,
+      "category": 7,
+      "rating": 4.9,
+      "image_url": "https://example.com/images/kids_pajamas.jpg",
+      "image": "kids_pajamas.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1007000001",
+      "name": "Kids' Winter Hat & Scarf Set",
+      "description": "Warm and soft hat and scarf set for kids, perfect for chilly days.",
+      "price": 14.99,
+      "category": 8,
+      "rating": 4.7,
+      "image_url": "https://example.com/images/kids_winter_set.jpg",
+      "image": "kids_winter_set.jpg"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1008000001",
+      "name": "Girls' Glitter Ballet Flats",
+      "description": "Adorable glittery ballet flats, perfect for dressy occasions.",
+      "price": 24.99,
+      "category": 9,
+      "rating": 4.8,
+      "image_url": "https://example.com/images/kids_ballet_flats.jpg",
+      "image": "kids_ballet_flats.jpg"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1009000001",
+      "name": "Boys' Sports Jacket",
+      "description": "Lightweight sports jacket with zippered pockets, ideal for outdoor activities.",
+      "price": 27.99,
+      "category": 10,
+      "rating": 4.8,
+      "image_url": "https://example.com/images/kids_sports_jacket.jpg",
+      "image": "kids_sports_jacket.jpg"
+    }
+  }
+]
