@@ -129,7 +129,7 @@ WSGI_APPLICATION = "little_explorers_p.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if "DATABASE_URL" in os.environ and "USE_AWS" in os.environ:
+if DEBUG==False and "DATABASE_URL" in os.environ and "USE_AWS" in os.environ:
     DATABASES = {"default": dj_database_url.parse(
         os.environ.get("DATABASE_URL"))}
 else:
@@ -224,7 +224,7 @@ STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "")
 STRIPE_WH_SECRET = os.getenv("STRIPE_WH_SECRET", "")
 
 
-if os.environ.get("DEBUG", "False") == "True":
+if DEBUG == "True":
     STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
     EMAIL_BACKEND = (
         "django.core.mail.backends.console.EmailBackend"  # Default to console
