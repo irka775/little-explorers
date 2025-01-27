@@ -70,6 +70,11 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+def test(request):
+    """ A view to show individual product details """
+
+    return render(request, 'products/test.html')
+
 
 @login_required
 def add_product(request):

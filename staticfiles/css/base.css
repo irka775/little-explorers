@@ -8,6 +8,8 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
+    margin: 0;
+    padding: 0;
 }
 
 /* from Bulma */
@@ -415,3 +417,63 @@ input[name='q']::placeholder {
 .menu-item{
     color: #007bff;
 }
+
+
+
+
+
+
+
+
+
+  /* Style pentru imagini */
+  .image-container img {
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .image-container img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Modal styling */
+  .modal {
+    display: none; /* Ascuns inițial */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .modal-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Butonul de închidere */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .close-btn:hover {
+    background-color: darkred;
+  }

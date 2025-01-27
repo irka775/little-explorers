@@ -55,16 +55,16 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if product.image %}
-                                <a href="{{ product.image.url }}" target="_blank">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                <a href="{{ product.image.url }}" >
+                                    <img class="image-container" id="image1"  src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                             {% elif product.image_url %}
-                                <a href="{{ product.image_url }}" target="_blank">
-                                    <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
+                                <a href="{{ product.image_url }}" >
+                                    <img class="image-container" id="image1"  src="{{ product.image_url }}" alt="{{ product.name }}">
                                 </a>
                             {% else %}
                                 <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    <img class="image-container" id="image1"  src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                             {% endif %}
                                 <div class="card-body pb-0">
@@ -158,5 +158,28 @@
                 window.location.replace(currentUrl);
             }
         })
+
+        
+        
+
+    const image = document.getElementById('image1');
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeBtn = document.getElementById('closeBtn');
+
+    image.addEventListener('click', () => {
+      modalImage.src = image.src; 
+      modal.style.display = 'flex'; 
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
     </script>
 {% endblock %}

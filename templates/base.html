@@ -8,6 +8,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{% static 'favicons/favicon-96x96.png' %}">
     {% endblock %}
 
     {% block extra_meta %}
@@ -17,6 +21,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        
     {% endblock %}
 
     {% block extra_css %}
@@ -45,8 +50,8 @@
         <div class="col bg-black text-white">
 
                 <img src="https://img.icons8.com/color/48/000000/truck--v1.png" alt="Delivery Truck">
-        FREE Delivery on orders over <span>$50</span>! 🚚✨
-        <img src="https://img.icons8.com/color/48/000000/confetti.png" alt="Confetti">
+        FREE Delivery on orders over <span>$50</span>! 
+       
     </div>            
 
     </div>
@@ -123,6 +128,13 @@
             </nav>
         </div>
 
+              <!-- Modal -->
+  <div class="modal" id="imageModal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeBtn">Close</button>
+      <img src="" alt="Large View" id="modalImage">
+    </div>
+  </div>
     </header>
 
     {% if messages %}
@@ -147,11 +159,16 @@
     {% endblock %}
 
     {% block content %}
+
     {% endblock %}
+
+
+
 
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
+
     </script>
     {% endblock %}
 
