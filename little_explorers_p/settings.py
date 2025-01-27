@@ -179,43 +179,42 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-if "USE_AWS" in os.environ:
-    # Cache control
-    AWS_S3_OBJECT_PARAMETERS = {
-        "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
-        "CacheControl": "max-age=94608000",
-    }
+# Cache control
+AWS_S3_OBJECT_PARAMETERS = {
+    "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
+    "CacheControl": "max-age=94608000",
+}
 
-    # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = os.environ.get(
-        "AWS_STORAGE_BUCKET_NAME"
-    )
-    AWS_S3_REGION_NAME = os.environ.get(
-        "AWS_S3_REGION_NAME"
-    )
-    AWS_ACCESS_KEY_ID = os.environ.get(
-        "AWS_ACCESS_KEY_ID"
-    )
-    AWS_SECRET_ACCESS_KEY = os.environ.get(
-        "AWS_SECRET_ACCESS_KEY"
-    )
-    AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+# Bucket Config
+AWS_STORAGE_BUCKET_NAME = os.environ.get(
+    "AWS_STORAGE_BUCKET_NAME"
+)
+AWS_S3_REGION_NAME = os.environ.get(
+    "AWS_S3_REGION_NAME"
+)
+AWS_ACCESS_KEY_ID = os.environ.get(
+    "AWS_ACCESS_KEY_ID"
+)
+AWS_SECRET_ACCESS_KEY = os.environ.get(
+    "AWS_SECRET_ACCESS_KEY"
+)
+AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+AWS_QUERYSTRING_AUTH = False
 
-    # Static and media files
-    STATICFILES_STORAGE = "custom_storages.StaticStorage"
-    STATICFILES_LOCATION = "static"
-    DEFAULT_FILE_STORAGE = "custom_storages.MediaStorage"
-    MEDIAFILES_LOCATION = "media"
+# Static and media files
+STATICFILES_STORAGE = "custom_storages.StaticStorage"
+STATICFILES_LOCATION = "staticfiles"
+DEFAULT_FILE_STORAGE = "custom_storages.MediaStorage"
+MEDIAFILES_LOCATION = "media"
 
-    # Override static and media URLs in production
-    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/"
-    MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/"
+# Override static and media URLs in production
+STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/"
+MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/"
 
 
 STRIPE_CURRENCY = "eur"
@@ -223,32 +222,13 @@ STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY", "")
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "")
 STRIPE_WH_SECRET = os.getenv("STRIPE_WH_SECRET", "")
 
-
-if DEBUG == "True":
-    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-    EMAIL_BACKEND = (
-        "django.core.mail.backends.console.EmailBackend"  # Default to console
-    )
-    if os.environ.get("USE_REAL_EMAILS", "False") == "True":
-        EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-        EMAIL_USE_TLS = True
-        EMAIL_PORT = 587
-        EMAIL_HOST = "smtp.mail.yahoo.com"
-        EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-        EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
-        DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-    else:
-        DEFAULT_FROM_EMAIL = "little_explorers_p@example.com"
-else:
-    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-    EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
-    EMAIL_HOST = "smtp.mail.yahoo.com"
-    EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-    EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
-    DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST = "smtp.mail.yahoo.com"
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
