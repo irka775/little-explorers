@@ -1,3 +1,4 @@
+import boto3
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -11,29 +12,51 @@ from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 
 
-def test_s3_write():
+
+
+def upload_file_to_s3():
+    file_name = "uploads/test.txt"  # Numele fișierului în bucket-ul S3
+    content = ContentFile(b"Hello from Django Storagesfghfghfdhgh!")  # Conținutul fișierului
+
     try:
-        file_name = "staticfiles/test.txt"
-        content = ContentFile(b"Hello from Django!")
         file_path = default_storage.save(file_name, content)
-        return f"File saved to {file_path}"
+        return f"File successfully saved to: {file_path}"
     except Exception as e:
-        return f"Error: {e}"
+        return f"Error during file upload: {e}"
 
+# import boto3
 
-def test_s3_read():
+# s3 = boto3.client("s3")
+
+def read_file_from_s3():
+    file_name = "uploads/test.txt"
+
     try:
-        file_name = "staticfiles/test.txt"
         with default_storage.open(file_name, "r") as file:
             content = file.read()
             print(content)
-        return f"File content: {content}"
+            return f"File content: {content}"
     except Exception as e:
-        return f"Error: {e}"
+        return f"Error reading file: {e}"
 
 
 
+# def test_s3_connection():
+#     bucket_name = "organic-food-bucket"
+#     file_name = "staticfiles/test.txt"
+#     content = b"Test content from Django"
 
+#     try:
+#         # Upload file
+#         s3.put_object(Bucket=bucket_name, Key=file_name, Body=content)
+#         print(f"File '{file_name}' uploaded successfully.")
+
+#         # Read file
+#         response = s3.get_object(Bucket=bucket_name, Key=file_name)
+#         file_content = response["Body"].read().decode("utf-8")
+#         print(f"File content: {file_content}")
+#     except Exception as e:
+#         print(f"Error: {e}")
 
 
 
@@ -86,8 +109,8 @@ def all_products(request):
         'current_categories': categories,
         'current_sorting': current_sorting,
     }
-    test_s3_write()
-    test_s3_read()
+    upload_file_to_s3()
+    read_file_from_s3()
     return render(request, 'products/products.html', context)
 
 

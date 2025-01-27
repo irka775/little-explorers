@@ -205,11 +205,11 @@ AWS_SECRET_ACCESS_KEY = os.environ.get(
 )
 AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 AWS_QUERYSTRING_AUTH = False
-
+AWS_DEFAULT_ACL = None
 # Static and media files
-STATICFILES_STORAGE = "custom_storages.StaticStorage"
-STATICFILES_LOCATION = "staticfiles"
-DEFAULT_FILE_STORAGE = "custom_storages.MediaStorage"
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3StaticStorage"
+STATICFILES_LOCATION = "static"
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3MediaStorage"
 MEDIAFILES_LOCATION = "media"
 
 # Override static and media URLs in production
