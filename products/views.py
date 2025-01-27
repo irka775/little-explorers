@@ -11,17 +11,6 @@ from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 
 
-
-
-
-
-
-
-
-
-
-
-
 def test_s3_write():
     try:
         file_name = "staticfiles/test.txt"
@@ -41,7 +30,6 @@ def test_s3_read():
         return f"File content: {content}"
     except Exception as e:
         return f"Error: {e}"
-
 
 
 
@@ -98,7 +86,8 @@ def all_products(request):
         'current_categories': categories,
         'current_sorting': current_sorting,
     }
-
+    test_s3_write()
+    test_s3_read()
     return render(request, 'products/products.html', context)
 
 
