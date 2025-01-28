@@ -427,13 +427,13 @@ input[name='q']::placeholder {
 
 
   /* Style pentru imagini */
-  .image-container img {
+  .image-container-modal img {
     width: 100px;
     cursor: pointer;
     transition: transform 0.3s ease;
   }
 
-  .image-container img:hover {
+  .image-container-modal img:hover {
     transform: scale(1.1);
   }
 
