@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     "corsheaders",
     "crispy_forms",
     "crispy_bootstrap4",
-    "storages",
     "widget_tweaks",
     "django_extensions",
     "home",
@@ -57,6 +56,7 @@ INSTALLED_APPS = [
     "bag",
     "checkout",
     "profiles",
+    "storages",
 ]
 
 
@@ -177,9 +177,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
@@ -207,14 +205,34 @@ AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 AWS_QUERYSTRING_AUTH = False
 AWS_DEFAULT_ACL = None
 # Static and media files
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3StaticStorage"
 STATICFILES_LOCATION = "static"
-DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3MediaStorage"
 MEDIAFILES_LOCATION = "media"
 
-# Override static and media URLs in production
 STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/"
 MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/"
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3StaticStorage"
+
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+        "OPTIONS": {
+            "bucket_name": "organic-food-bucket",
+            "custom_domain": "organic-food-bucket.s3.amazonaws.com",
+            "querystring_auth": False,  
+        },
+    },
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+        "OPTIONS": {
+            "bucket_name": "organic-food-bucket",
+            "location": "static",
+        },
+    },
+}
+
 
 
 STRIPE_CURRENCY = "eur"
@@ -232,3 +250,4 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
