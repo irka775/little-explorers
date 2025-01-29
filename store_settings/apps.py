@@ -6,3 +6,4 @@ class StoreSettingsConfig(AppConfig):
     name = "store_settings"
     def ready(self):
         import store_settings.signals 
+        import store_settings.tasks  # 🔄 Pornim automat task-ul la start Django
