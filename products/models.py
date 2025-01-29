@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -40,3 +41,11 @@ class Promotion(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Wishlist(models.Model):
+    customer = models.OneToOneField(User, related_name='wishlist', on_delete=models.CASCADE)
+    products = models.ManyToManyField(Product, related_name='wishlisted_by')
+
+    def __str__(self):
+        return f"Wishlist for {self.customer.get_full_name()}"

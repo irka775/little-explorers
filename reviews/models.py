@@ -14,10 +14,3 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Review for {self.product.name} by {self.customer.first_name}"
-
-class Wishlist(models.Model):
-    customer = models.OneToOneField(User, related_name='wishlist', on_delete=models.CASCADE)
-    products = models.ManyToManyField(Product, related_name='wishlisted_by')
-
-    def __str__(self):
-        return f"Wishlist for {self.customer.get_full_name()}"

@@ -93,6 +93,14 @@
                                                 </small>
                                             {% endif %}
                                         </div>
+                                        <div class="col text-right">
+                                            <form method="post" action="{% url 'add_to_wishlist' product.id %}">
+                                                {% csrf_token %}
+                                                <button type="submit" class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-heart"></i> Add to Wishlist
+                                                </button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -5,12 +5,11 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Category, Wishlist
 from .forms import ProductForm
 
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
-
 
 
 def all_products(request):
@@ -22,14 +21,12 @@ def all_products(request):
     sort = None
     direction = None
 
-
     from django.core.files.storage import default_storage
     from django.core.files.base import ContentFile
 
     file_name = "test_file.txt"
     content = ContentFile(b"Test content for S3 upload")
     default_storage.save(file_name, content)
-
 
     if request.GET:
         if 'sort' in request.GET:
@@ -159,3 +156,51 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def add_to_wishlist(request, product_id):
+    if request.method == 'POST':
+        product = get_object_or_404(Product, id=product_id)
+
+        # Ensure user has a wishlist
+        wishlist, created = Wishlist.objects.get_or_create(customer=request.user)
+
+        # Add product to wishlist if not already added
+        if product not in wishlist.products.all():
+            wishlist.products.add(product)
+            messages.success(
+                request, f'{product.name} has been added to your wishlist.')
+        else:
+            messages.info(
+                request, f'{product.name} is already in your wishlist.')
+
+    return redirect('products')  # Redirect back to products page
+
+@login_required
+def remove_from_wishlist(request, product_id):
+    """Remove a product from the wishlist."""
+    product = get_object_or_404(Product, id=product_id)
+    try:
+        # Retrieve the user's wishlist
+        wishlist = Wishlist.objects.get(customer=request.user)
+        if product in wishlist.products.all():
+            wishlist.products.remove(product)  # Remove the product
+            messages.success(request, f'{product.name} has been removed from your wishlist.')
+        else:
+            messages.info(request, f'{product.name} is not in your wishlist.')
+    except Wishlist.DoesNotExist:
+        messages.error(request, "You don't have a wishlist yet.")
+
+    return redirect('wishlist')  # Redirect back to the wishlist page
+
+
+@login_required
+def wishlist(request):
+    try:
+        wishlist = Wishlist.objects.get(customer=request.user)
+        wishlist_items = wishlist.products.all()  # Retrieve the products in the wishlist
+    except Wishlist.DoesNotExist:
+        wishlist_items = None  # Handle the case where no wishlist exists for the user
+
+    return render(request, 'products/wishlist.html', {'wishlist_items': wishlist_items})
