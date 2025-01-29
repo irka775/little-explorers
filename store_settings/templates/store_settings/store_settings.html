@@ -14,6 +14,40 @@
 {% endblock %}
 
 {% block content %}
+{% if user.is_superuser %}
+<!-- Admin Exclusive Content -->
+<div 
+  class="alert alert-primary text-center mt-5 p-5 rounded-3 shadow-sm" 
+  role="alert"
+  style="font-family: 'Arial', sans-serif; font-size: 1.1rem; line-height: 1.5"
+>
+  <!-- Store Logo -->
+  {% if store_settings and store_settings.store_logo %}
+    <img src="{{ store_settings.store_logo.url }}" alt="{{ store_settings.store_name }}" height="50" class="mb-2">
+  {% endif %}
+
+  <!-- Welcome Heading -->
+  <h4 class="alert-heading">
+    Welcome, Administrator of <strong>{{ store_settings.store_name }}</strong>!
+  </h4>
+
+  <!-- Admin Message -->
+  <p>
+    You have exclusive access to the management panel, designed to help you oversee and optimize
+    the operations of <strong>{{ store_settings.store_name }}</strong>. From here, you can manage products, 
+    configure store settings, and ensure a seamless shopping experience for customers.
+  </p>
+  
+  <hr>
+
+  <!-- Important Note -->
+  <p class="mb-0">
+    Please use this dashboard responsibly, as any changes made here directly affect the store’s 
+    functionality, user experience, and overall performance.
+  </p>
+</div>
+
+
 
 <div class="container mt-4 pt-3">
     <div class="row justify-content-center">
@@ -47,4 +81,36 @@
         }
     }
 </script>
+
+{% else %}
+
+<div 
+  class="alert  text-center mt-5 p-5 rounded-3 shadow-sm" 
+  role="alert"
+  style="font-family: 'Arial', sans-serif; font-size: 1.1rem; line-height: 1.5"
+>
+<div
+  class=" alert-warning text-center alert  text-center mt-5 p-5 rounded-3 shadow-sm"
+  role="alert"
+  style="font-family: 'Arial', sans-serif; font-size: 1.1rem"
+>
+{% if store_settings and store_settings.store_logo %}
+<img src="{{ store_settings.store_logo.url }}" alt="{{ store_settings.store_name }}" height="50" class="mb-3">
+{% endif %}
+  <h4 class="alert-heading">⚠️ Access Restricted - {{ store_settings.store_name }}</h4></h4>
+  <p>
+    This page is reserved exclusively for administrators with elevated
+    privileges. Only users with administrative rights are authorized to view or
+    interact with the content available here.
+  </p>
+  <hr >
+  <p class="mb-0">
+    If you believe you should have access, please contact the
+    <a href="mailto:{{ store_settings.contact_email }}" class="alert-link"
+      >system administrator</a
+    >
+    for further assistance.
+  </p>
+</div>
+{% endif %}
 {% endblock %}

@@ -68,7 +68,7 @@
     
             {{ store_settings.store_name }}
             {% if store_settings and store_settings.store_logo %}
-                <img src="{{ store_settings.store_logo.url }}" alt="{{ store_settings.store_name }}" height="40">
+                <img src="{{ store_settings.store_logo.url }}" alt="Logo" height="40">
             {% else %}
                 <h6>No Logo</h6>
             {% endif %}
@@ -81,7 +81,7 @@
                 <a class="navbar-brand" href="{% url 'home' %}">{{ store_settings.store_name }}
 
                     {% if store_settings and store_settings.store_logo %}
-                    <img src="{{ store_settings.store_logo.url }}" alt="{{ store_settings.store_name }}" height="50">
+                    <img src="{{ store_settings.store_logo.url }}" alt="Logo" height="50">
                 {% else %}
                     <h6>No Logo</h6>
                 {% endif %}
