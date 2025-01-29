@@ -40,9 +40,15 @@
     {% endblock %}
 
 
-    <title>LittleExplorers.ie {% block extra_title %}{% endblock %}</title>
+    <title>{{ store_settings.store_name }} {% block extra_title %}{% endblock %}
+
+
+    </title>
+
+
   </head>
   <body>
+
     <header class="container-fluid fixed-top">
 
             <!-- Delivery Banner -->
@@ -59,7 +65,14 @@
 
         <div id="topnav" class="row  pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a class="navbar-brand" href="{% url 'home' %}">LittleExplorers.ie</a>
+                <a class="navbar-brand" href="{% url 'home' %}">{{ store_settings.store_name }}
+
+                    {% if store_settings and store_settings.store_logo %}
+                    <img src="{{ store_settings.store_logo.url }}" alt="{{ store_settings.store_name }}" height="50">
+                {% else %}
+                    <h6>No Logo</h6>
+                {% endif %}
+                </a>
             </div>
 
 
@@ -94,6 +107,7 @@
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'store_settings' %}" class="dropdown-item">Store Settings</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -163,6 +177,9 @@
     {% endblock %}
 
 
+    <footer>
+        <p>Contact: {{ store_settings.contact_email }} | Phone: {{ store_settings.contact_phone }}</p>
+    </footer>
 
 
     {% block postloadjs %}
