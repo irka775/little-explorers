@@ -1,12 +1,8 @@
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::organic-food-bucket/static/*"
-        }
-    ]
-}
+from store_settings.models import StoreSettings
+
+for obj in MyModel.objects.all():
+    try:
+        obj.new_int_field = int(obj.text_field)  # Convertim text în număr
+        obj.save()
+    except ValueError:
+        print(f"⚠️ Valoare invalidă: {obj.text_field}")  # Gestionăm erorile

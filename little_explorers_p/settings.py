@@ -8,12 +8,19 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
+# =============================================================================
 
 import os
 import dj_database_url
 from pathlib import Path
 
+os.environ["DJANGO_COLORS"] = "cyan"
+
+# =============================================================================
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# =============================================================================
 
 # Check if the .env file exists in the root directory of the project
 if os.path.exists("env.py"):
@@ -21,6 +28,7 @@ if os.path.exists("env.py"):
     # Import only if .env exists# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
     import env
 
+# =============================================================================
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY", "")
@@ -30,6 +38,8 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 print("Debug mode is "+str(DEBUG))
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
+
+# =============================================================================
 
 # Application definition
 
@@ -62,6 +72,8 @@ INSTALLED_APPS = [
 ]
 
 
+# =============================================================================
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "allauth.account.middleware.AccountMiddleware",
@@ -74,10 +86,14 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# =============================================================================
+
 ROOT_URLCONF = "little_explorers_p.urls"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 CORS_ORIGIN_ALLOW_ALL = True
+
+# =============================================================================
 
 TEMPLATES = [
     {
@@ -95,7 +111,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "django.template.context_processors.media",
                 "bag.contexts.bag_contents",
-                "little_explorers_p.context_processors.global_settings",  
+                "little_explorers_p.context_processors.global_settings",
 
             ],
             "builtins": [
@@ -106,6 +122,8 @@ TEMPLATES = [
     },
 ]
 
+# =============================================================================
+
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 AUTHENTICATION_BACKENDS = (
@@ -115,10 +133,14 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-FREE_DELIVERY_THRESHOLD=50
-STANDARD_DELIVERY_PERCENTAGE=5
-SITE_ID = 1
+# =============================================================================
 
+FREE_DELIVERY_THRESHOLD = 50
+STANDARD_DELIVERY_PERCENTAGE = 5
+
+# =============================================================================
+
+SITE_ID = 1
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
@@ -126,17 +148,12 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
-
 WSGI_APPLICATION = "little_explorers_p.wsgi.application"
 
+# =============================================================================
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# if DEBUG==False and "DATABASE_URL" in os.environ and "USE_AWS" in os.environ:
-# DATABASES = {"default": dj_database_url.parse(
-#     os.environ.get("DATABASE_URL"))}
-# else:
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -144,6 +161,7 @@ DATABASES = {
     }
 }
 
+# =============================================================================
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -163,6 +181,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# =============================================================================
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -178,6 +198,8 @@ USE_L10N = True
 USE_TZ = True
 
 
+# =============================================================================
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
@@ -185,12 +207,16 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
+# =============================================================================
+
 
 # Cache control
 AWS_S3_OBJECT_PARAMETERS = {
     "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
     "CacheControl": "max-age=94608000",
 }
+
+# =============================================================================
 
 # Bucket Config
 AWS_STORAGE_BUCKET_NAME = os.environ.get(
@@ -208,6 +234,9 @@ AWS_SECRET_ACCESS_KEY = os.environ.get(
 AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 AWS_QUERYSTRING_AUTH = False
 AWS_DEFAULT_ACL = None
+
+# =============================================================================
+
 # Static and media files
 STATICFILES_LOCATION = "static"
 MEDIAFILES_LOCATION = "media"
@@ -219,13 +248,15 @@ STATICFILES_STORAGE = "storages.backends.s3boto3.S3StaticStorage"
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 
+# =============================================================================
+
 STORAGES = {
     "default": {
         "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
         "OPTIONS": {
             "bucket_name": "organic-food-bucket",
             "custom_domain": "organic-food-bucket.s3.amazonaws.com",
-            "querystring_auth": False,  
+            "querystring_auth": False,
         },
     },
     "staticfiles": {
@@ -238,11 +269,14 @@ STORAGES = {
 }
 
 
+# =============================================================================
 
 STRIPE_CURRENCY = "eur"
 STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY", "")
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "")
 STRIPE_WH_SECRET = os.getenv("STRIPE_WH_SECRET", "")
+
+# =============================================================================
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_USE_TLS = True
@@ -251,7 +285,9 @@ EMAIL_HOST = "smtp.mail.yahoo.com"
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# =============================================================================
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# =============================================================================

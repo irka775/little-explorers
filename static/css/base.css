@@ -477,3 +477,111 @@ input[name='q']::placeholder {
   .close-btn:hover {
     background-color: darkred;
   }
+
+
+
+
+
+
+
+
+  /* Toggle switch styles for any on/off controls */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: auto;  /* Align to the right */
+}
+
+/* Hide the default input for the switch */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input:checked+.slider {
+    background-color: #2aa989;
+    /* Green color when "on" */
+}
+
+/* Move the slider button when checked */
+input:checked+.slider:before {
+    transform: translateX(26px);
+    /* Slide the button */
+    content: "on";
+    /* Display "on" text when checked */
+}
+
+/* Display "off" text when not checked */
+input:not(:checked)+.slider:before {
+    content: "off";
+    /* Display "off" */
+}
+
+
+/* Slider styles for the toggle switch */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #dcdcdc;
+    /* Default background color */
+    transition: .4s;
+    /* Smooth transition when toggling */
+    border-radius: 34px;
+    /* Round edges */
+}
+
+/* Slider "before" pseudo-element */
+.slider:before {
+    position: absolute;
+    content: "OFF";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+/* Change the background color when the switch is checked */
+input:checked + .slider {
+    background-color: #2aa989;
+}
+
+/* Move the slider button when checked */
+input:checked + .slider:before {
+    transform: translateX(26px);
+    content: "ON";
+    color: #fff;
+    background-color: #00cc44;
+}
+
+/* Display "off" text when not checked */
+input:not(:checked)+.slider:before {
+    content: "OFF";
+    /* Display "off" */
+}
+
+/* Rounded slider */
+.slider.round {
+    border-radius: 34px;
+    /* Round slider */
+}
+
+/* Rounded button inside the slider */
+.slider.round:before {
+    border-radius: 50%;
+    /* Make button fully round */
+}
