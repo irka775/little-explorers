@@ -14,7 +14,7 @@ import os
 import dj_database_url
 from pathlib import Path
 
-os.environ["DJANGO_COLORS"] = "cyan"
+os.environ["DJANGO_COLORS"] = "green"
 
 # =============================================================================
 
@@ -68,6 +68,9 @@ INSTALLED_APPS = [
     "profiles",
     "reviews",
     "store_settings",
+    "django_otp.plugins.otp_totp",
+    'rest_framework',
+    'rest_framework.authtoken',
     "storages",
 ]
 

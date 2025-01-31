@@ -563,14 +563,14 @@ input:checked + .slider {
 /* Move the slider button when checked */
 input:checked + .slider:before {
     transform: translateX(26px);
-    content: "ON";
+    content: "on";
     color: #fff;
     background-color: #00cc44;
 }
 
 /* Display "off" text when not checked */
 input:not(:checked)+.slider:before {
-    content: "OFF";
+    content: "off";
     /* Display "off" */
 }
 
@@ -585,3 +585,9 @@ input:not(:checked)+.slider:before {
     border-radius: 50%;
     /* Make button fully round */
 }
+
+
+.col-form-label {
+    text-align: left !important;
+}
+
