@@ -13,6 +13,8 @@ class StoreSettings(models.Model):
     store_name = models.CharField(max_length=255, default="Little Explorers")
     store_logo = models.ImageField(
         upload_to="store_logos/", null=True, blank=True)
+    main_page_image = models.ImageField(
+        upload_to="main_page_image/", null=True, blank=True)
     contact_email = models.EmailField(default="IrishRoyals@example.com")
     contact_phone = models.CharField(max_length=20, default="+353000000000")
     currency = models.CharField(max_length=10, default="EUR")

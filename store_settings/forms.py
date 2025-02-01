@@ -38,7 +38,7 @@ class StoreSettingsForm(forms.ModelForm):
     class Meta:
         model = StoreSettings
         fields = [
-            "store_name", "store_logo", "contact_email", "contact_phone", "currency",
+            "store_name", "store_logo","main_page_image", "contact_email", "contact_phone", "currency",
             "enable_reviews", "enable_maintenance_mode", "enable_paypal",
             "enable_stripe", "enable_cash_on_delivery"
         ]

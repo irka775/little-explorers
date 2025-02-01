@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% url 'dynamic_css' %}">
+
         
     {% endblock %}
 
@@ -62,7 +64,7 @@
 
     </div>
 
-    <div class="row d-lg-none bg-white text-center py-2">
+    <div class="row d-lg-none  text-center py-2">
         <div class="col">
             <a class="navbar-brand d-block d-lg-none" href="{% url 'home' %}">
     
@@ -76,17 +78,17 @@
     </div>
 </div>
 
-        <div id="topnav" class="row  pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a class="navbar-brand" href="{% url 'home' %}">{{ store_settings.store_name }}
+<div id="topnav" class="row  pt-lg-2 d-none d-lg-flex">
+    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <a class="navbar-brand" href="{% url 'home' %}">{{ store_settings.store_name }}
 
-                    {% if store_settings and store_settings.store_logo %}
-                    <img src="{{ store_settings.store_logo.url }}" alt="Logo" height="50">
-                {% else %}
-                    <h6>No Logo</h6>
-                {% endif %}
-                </a>
-            </div>
+            {% if store_settings and store_settings.store_logo %}
+            <img src="{{ store_settings.store_logo.url }}" alt="Logo" height="50">
+        {% else %}
+            <h6>No Logo</h6>
+        {% endif %}
+        </a>
+    </div>
 
 
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -185,14 +187,16 @@
     {% block page_header %}
     {% endblock %}
 
-    {% block content %}
 
-    {% endblock %}
+    
+    
+    <main class="flex-grow">
+        {% block content %}
+        {% endblock %}
+    </main>
 
 
-    <footer>
-        <p>Contact: {{ store_settings.contact_email }} | Phone: {{ store_settings.contact_phone }}</p>
-    </footer>
+
 
 
     {% block postloadjs %}
@@ -201,7 +205,10 @@
 
     </script>
     {% endblock %}
-
+    <footer class="site-footer">
+        <p>Contact: {{ store_settings.contact_email }} | Phone: {{ store_settings.contact_phone }}</p>
+    </footer>
     
   </body>
+  
 </html>

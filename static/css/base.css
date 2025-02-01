@@ -1,17 +1,29 @@
 html {
     height: 100%;
-}
-
-body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
     margin: 0;
     padding: 0;
 }
 
+body {
+    background: url("{{ store_settings.store_logo.url }}") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    color: #555;
+    font-family: 'Lato';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupă întreaga înălțime a ecranului */
+    
+}
+
+main {
+    flex: 1;
+}
+.flex-grow {
+    flex: 1;
+}
 /* from Bulma */
 .icon {
     align-items: center;
@@ -552,7 +564,7 @@ input:not(:checked)+.slider:before {
     line-height: 26px;
     font-size: 12px;
     font-weight: bold;
-    color: #ff0000;
+    color: #2b2424;
 }
 
 /* Change the background color when the switch is checked */
@@ -589,5 +601,30 @@ input:not(:checked)+.slider:before {
 
 .col-form-label {
     text-align: left !important;
+}
+
+
+
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgb(207, 181, 186); 
+    color: rgb(15, 7, 7);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        font-size: 14px;
+        padding: 10px 0;
+    }
 }
 
