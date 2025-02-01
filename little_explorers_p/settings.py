@@ -200,68 +200,64 @@ USE_L10N = True
 USE_TZ = True
 
 
-# =============================================================================
-
-
-# Cache control
-AWS_S3_OBJECT_PARAMETERS = {
-    "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
-    "CacheControl": "max-age=94608000",
-}
 
 # =============================================================================
 
-# Bucket Config
-AWS_STORAGE_BUCKET_NAME = os.environ.get(
-    "AWS_STORAGE_BUCKET_NAME"
-)
-AWS_S3_REGION_NAME = os.environ.get(
-    "AWS_S3_REGION_NAME"
-)
-AWS_ACCESS_KEY_ID = os.environ.get(
-    "AWS_ACCESS_KEY_ID"
-)
-AWS_SECRET_ACCESS_KEY = os.environ.get(
-    "AWS_SECRET_ACCESS_KEY"
-)
-AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 AWS_QUERYSTRING_AUTH = False
 AWS_DEFAULT_ACL = None
 
 # =============================================================================
 
 # Static and media files
-STATICFILES_LOCATION = "static"
-MEDIAFILES_LOCATION = "media"
+# Static and media files locations
+STATICFILES_LOCATION = "static/"
+MEDIAFILES_LOCATION = "media/"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
 if DEBUG:
-    # Static files local
-    STATIC_URL = "/static/"
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+    # Local settings for development
+    STATIC_URL = f"/{STATICFILES_LOCATION}"
     STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
-    # Media files local
-    MEDIA_URL = "/media/"
+    MEDIA_URL = f"/{MEDIAFILES_LOCATION}"
     MEDIA_ROOT = os.path.join(BASE_DIR, "media")
     DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
 
 else:
-    # AWS S3 settings for static and media
+
+        # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
+        "CacheControl": "max-age=94608000",
+    }
+        # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = os.environ.get(
+        "AWS_STORAGE_BUCKET_NAME"
+    )
+    AWS_S3_REGION_NAME = os.environ.get(
+        "AWS_S3_REGION_NAME"
+    )
+    AWS_ACCESS_KEY_ID = os.environ.get(
+        "AWS_ACCESS_KEY_ID"
+    )
+    AWS_SECRET_ACCESS_KEY = os.environ.get(
+        "AWS_SECRET_ACCESS_KEY"
+    )
+    # Production settings for AWS S3
     AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 
-    # Static files on AWS
-    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/static/"
+    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}"
     STATICFILES_STORAGE = "storages.backends.s3boto3.S3StaticStorage"
 
-    # Media files on AWS
-    MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/media/"
+    MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}"
     DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+# STATIC_ROOT is only used for collectstatic
+
+
     STORAGES = {
         "default": {
             "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",

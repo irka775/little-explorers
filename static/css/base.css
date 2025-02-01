@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: url("{{ store_settings.store_logo.url }}") no-repeat center center fixed;
+    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     color: #555;
@@ -348,7 +348,7 @@ input[name='q']::placeholder {
 
   /* Delivery Banner Styles */
   .delivery-banner {
-    background: linear-gradient(90deg, #ffcccb, #ffd700);
+    background: linear-gradient(to right, #87CEFA, #32CD32);
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -606,10 +606,10 @@ input:not(:checked)+.slider:before {
 
 
 .site-footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
-    background: rgb(207, 181, 186); 
+    background: linear-gradient(to right, #87CEFA, #32CD32);
     color: rgb(15, 7, 7);
     text-align: center;
     padding: 15px 0;
