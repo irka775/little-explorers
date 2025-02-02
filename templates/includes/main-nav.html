@@ -15,7 +15,7 @@
                 <img src="https://img.icons8.com/color/48/000000/clothes.png" alt="Clothes">
                 All Clothes
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0" aria-labelledby="allClothesDropdown">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
@@ -37,7 +37,7 @@
                 <img src="https://img.icons8.com/color/48/000000/category.png" alt="Categories">
                 Categories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+            <div class="dropdown-menu border-0" aria-labelledby="categoriesDropdown">
                 <a href="{% url 'products' %}?category=activewear,essentials" class="dropdown-item">Activewear &amp; Essentials</a>
                 <a href="{% url 'products' %}?category=jeans" class="dropdown-item">Jeans</a>
                 <a href="{% url 'products' %}?category=shirts" class="dropdown-item">Shirts</a>
