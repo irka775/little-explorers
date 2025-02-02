@@ -24,10 +24,6 @@ def all_products(request):
     from django.core.files.storage import default_storage
     from django.core.files.base import ContentFile
 
-    file_name = "test_file.txt"
-    content = ContentFile(b"Test content for S3 upload")
-    default_storage.save(file_name, content)
-
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']

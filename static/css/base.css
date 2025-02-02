@@ -472,9 +472,12 @@ input[name='q']::placeholder {
   }
 
   .modal-content img {
-    width: 100%;
-    height: auto;
-  }
+    width: auto;
+    max-width: 90%;
+    max-height: 80vh; 
+    object-fit: contain;
+}
+
 
   /* Butonul de închidere */
   .close-btn {
