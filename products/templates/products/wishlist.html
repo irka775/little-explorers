@@ -24,9 +24,9 @@
                             <div class="card h-100 border-0 shadow-sm">
                                 <a href="{% url 'product_detail' product.id %}">
                                     {% if product.image %}
-                                        <img class="image-container" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        <img class="image-container" src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy"  width="400" height="300">
                                     {% else %}
-                                        <img class="image-container" src="{% static 'images/noimage.png' %}" alt="No Image">
+                                        <img class="image-container" src="{% static 'images/noimage.png' %}" alt="No Image" loading="lazy"  width="400" height="300">
                                     {% endif %}
                                 </a>
                                 <div class="card-body pb-0">

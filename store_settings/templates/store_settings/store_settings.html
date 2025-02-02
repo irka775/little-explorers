@@ -17,7 +17,7 @@
     style="font-family: 'Arial', sans-serif; font-size: 1.1rem; line-height: 1.5">
     <!-- Store Logo -->
     {% if store_settings and store_settings.store_logo %}
-    <img src="{{ store_settings.store_logo.url }}" alt="{{ store_settings.store_name }}" height="50" class="mb-2">
+    <img src="{{ store_settings.store_logo.url }}" alt="{{ store_settings.store_name }}"  width="400" height="300" class="mb-2" loading="lazy">
     {% endif %}
 
     <!-- Welcome Heading -->
@@ -261,7 +261,7 @@
     <!-- Store Logo -->
     {% if store_settings and store_settings.store_logo %}
     <img src="{{ store_settings.store_logo.url }}" alt="{{ store_settings.store_name }}" height="60"
-        class="mb-4 shadow-sm rounded-circle">
+        class="mb-4 shadow-sm rounded-circle" loading="lazy">
     {% endif %}
 
     <!-- Restriction Heading -->

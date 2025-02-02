@@ -41,13 +41,17 @@ CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
 
 # =============================================================================
 CSP_DEFAULT_SRC = ("'self'",)
-CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'", "https://js.stripe.com")
-CSP_STYLE_SRC = ("'self'", "https://fonts.googleapis.com")
+CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'")
+CSP_STYLE_SRC = ("'self'", "'unsafe-inline'")
+CSP_IMG_SRC = ("'self'", "data:")
+
 
 # Application definition
 
 INSTALLED_APPS = [
     "django.contrib.admin",
+    "crispy_forms",
+    "django_bootstrap5",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -60,8 +64,6 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "corsheaders",
-    "crispy_forms",
-    "crispy_bootstrap4",
     "widget_tweaks",
     "django_extensions",
     "home",
@@ -77,6 +79,8 @@ INSTALLED_APPS = [
     "storages",
     
 ]
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
 # =============================================================================
@@ -96,8 +100,6 @@ MIDDLEWARE = [
 # =============================================================================
 
 ROOT_URLCONF = "little_explorers_p.urls"
-
-CRISPY_TEMPLATE_PACK = "bootstrap4"
 CORS_ORIGIN_ALLOW_ALL = True
 
 # =============================================================================
