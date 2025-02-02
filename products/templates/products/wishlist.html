@@ -12,19 +12,15 @@
 {% endblock %}
 
 {% block content %}
+
 <div class="container-fluid">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">Wishlist</h2>
-            <hr class="w-50 mb-4">
-        </div>
-    </div>
+
     <div class="row">
         <div class="wishlist-container col-10 offset-1">
             {% if wishlist_items %}
                 <div class="row">
                     {% for product in wishlist_items %}
-                        <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="mt-5 col-sm-6 col-md-4 col-lg-3">
                             <div class="card h-100 border-0 shadow-sm">
                                 <a href="{% url 'product_detail' product.id %}">
                                     {% if product.image %}
@@ -47,8 +43,8 @@
                     {% endfor %}
                 </div>
             {% else %}
-                <div class="alert alert-info text-center" role="alert">
-                    Your wishlist is empty! Start adding your favorite products.
+                <div class="mt-5 alert alert-info text-center" role="alert">
+                    Your wishlist is empty! Start adding your favorite <a href="{% url 'products' %}"><b><i><u> products.</u></i></b></a> 
                 </div>
             {% endif %}
         </div>
