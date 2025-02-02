@@ -50,8 +50,6 @@ CSP_IMG_SRC = ("'self'", "data:")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
-    "crispy_forms",
-    "django_bootstrap5",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -61,6 +59,8 @@ INSTALLED_APPS = [
     "django.contrib.sitemaps",
     # App third-party
     "allauth",
+    "crispy_forms",
+    'crispy_bootstrap5',    # Bootstrap 5 Support
     "allauth.account",
     "allauth.socialaccount",
     "corsheaders",
