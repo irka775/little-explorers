@@ -440,10 +440,13 @@ input[name='q']::placeholder {
 
   /* Style pentru imagini */
   .image-container img {
-    width: 100px;
+    width: 200px;  /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: contain; /* Ensures the whole image is visible */
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
+}
+
 
   .image-container img:hover {
     transform: scale(1.1);
