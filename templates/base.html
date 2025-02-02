@@ -161,7 +161,7 @@
   <div class="modal" id="imageModal">
     <div class="modal-content">
       <button class="close-btn" id="closeBtn">Close</button>
-      <img src="" alt="Large View" id="modalImage">
+      <img src="{{ MEDIA_URL }}noimage.png" alt="Large View" id="modalImage">
     </div>
   </div>
     </header>
@@ -200,7 +200,7 @@
 
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
 
     </script>

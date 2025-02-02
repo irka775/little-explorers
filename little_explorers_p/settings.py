@@ -72,6 +72,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     "storages",
+    
 ]
 
 
@@ -210,7 +211,7 @@ AWS_DEFAULT_ACL = None
 
 # Static and media files
 # Static and media files locations
-STATICFILES_LOCATION = "static/"
+STATICFILES_LOCATION = "static"
 MEDIAFILES_LOCATION = "media/"
 
 # Static files (CSS, JavaScript, Images)
@@ -218,13 +219,14 @@ MEDIAFILES_LOCATION = "media/"
 
 if DEBUG:
     # Local settings for development
-    STATIC_URL = f"/{STATICFILES_LOCATION}"
-    STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-
-    MEDIA_URL = f"/{MEDIAFILES_LOCATION}"
-    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+    STATIC_URL = "/static/"
+    STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
     DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
+    STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 else:
 
@@ -249,11 +251,14 @@ else:
     # Production settings for AWS S3
     AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 
-    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}"
+    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/static/"
     STATICFILES_STORAGE = "storages.backends.s3boto3.S3StaticStorage"
 
     MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}"
     DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+    STATIC_ROOT = None 
+
+
 
 # STATIC_ROOT is only used for collectstatic
 
