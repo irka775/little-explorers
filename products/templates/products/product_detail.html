@@ -2,11 +2,14 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
+<div class="container header-container mt-12">
+    <div class="row">
+        <div class="col-md-6 col-lg-4 text-center">
+            Header Content
         </div>
     </div>
+</div>
+
 {% endblock %}
 
 {% block content %}
@@ -17,15 +20,15 @@
                 <div class="image-container my-5">
                     {% if product.image %}
                     <a href="{{ product.image.url }}" target="_blank">
-                        <img class="image-container-modal image-container" id="image" src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy"  width="400" height="300">
+                        <img class="image-container-modal image-container" id="image" src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy"  width="200" height="200">
                     </a>
                 {% elif product.image_url %}
                     <a href="{{ product.image_url }}" target="_blank">
-                        <img class="image-container-modal image-container" id="image" src="{{ product.image_url }}" alt="{{ product.name }}" loading="lazy"  width="400" height="300">
+                        <img class="image-container-modal image-container" id="image" src="{{ product.image_url }}" alt="{{ product.name }}" loading="lazy"  width="200" height="200">
                     </a>
                 {% else %}
                     <a href="">
-                        <img class="image-container-modal image-container" id="image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" loading="lazy"  width="400" height="300">
+                        <img class="image-container-modal image-container" id="image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" loading="lazy"  width="200" height="00">
                     </a>
                 {% endif %}
                 </div>

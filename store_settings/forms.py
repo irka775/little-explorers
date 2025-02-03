@@ -38,10 +38,19 @@ class StoreSettingsForm(forms.ModelForm):
     class Meta:
         model = StoreSettings
         fields = [
-            "store_name", "store_logo","main_page_image", "contact_email", "contact_phone", "currency",
-            "enable_reviews", "enable_maintenance_mode", "enable_paypal",
-            "enable_stripe", "enable_cash_on_delivery"
-        ]
+            "store_name",
+            "store_logo",
+            "welcome_msg",
+            "home_page_button",
+            "main_page_image",
+            "contact_email",
+            "contact_phone",
+            "currency",
+            "enable_reviews",
+            "enable_maintenance_mode",
+            "enable_paypal",
+            "enable_stripe",
+            "enable_cash_on_delivery"]
 
     def __init__(self, *args, **kwargs):
         super(StoreSettingsForm, self).__init__(*args, **kwargs)
@@ -74,7 +83,8 @@ class UserPasswordChangeForm(PasswordChangeForm):
     def clean(self):
         cleaned_data = super().clean()
         if not any(cleaned_data.values()):
-            # If all password fields are empty, return an empty dictionary (bypasses validation)
+            # If all password fields are empty, return an empty dictionary
+            # (bypasses validation)
             return {}
         return cleaned_data
 

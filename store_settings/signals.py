@@ -26,7 +26,7 @@ def update_stripe_currency(sender, instance, **kwargs):
 @receiver(post_migrate)
 def load_settings_on_startup(sender, **kwargs):
     """
-    La fiecare pornire Django sau după o migrare, 
+    La fiecare pornire Django sau după o migrare,
     reîncarcă setările din baza de date.
     """
     settings_obj = StoreSettings.objects.first()

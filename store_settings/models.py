@@ -13,8 +13,19 @@ class StoreSettings(models.Model):
     store_name = models.CharField(max_length=255, default="Little Explorers")
     store_logo = models.ImageField(
         upload_to="store_logos/", null=True, blank=True)
+    
     main_page_image = models.ImageField(
         upload_to="main_page_image/", null=True, blank=True)
+    
+
+    welcome_msg = models.CharField(
+        max_length=255, null=False, blank=False, default="Welcome to our store"
+    )
+
+    home_page_button = models.CharField(max_length=20, default="Discover More")
+
+
+
     contact_email = models.EmailField(default="IrishRoyals@example.com")
     contact_phone = models.CharField(max_length=20, default="+353000000000")
     currency = models.CharField(max_length=10, default="EUR")
@@ -63,7 +74,7 @@ class ShippingSettings(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(
-        User, on_delete=models.CASCADE, related_name="profile"  # 🔹 Adaugă related_name
+        User, on_delete=models.CASCADE, related_name="profile"
     )
 
     enable_2fa = models.BooleanField(default=False)

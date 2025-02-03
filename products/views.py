@@ -99,7 +99,8 @@ def add_product(request):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Failed to add product. Please ensure the form is valid.')
+                request,
+                'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -127,7 +128,8 @@ def edit_product(request, product_id):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Failed to update product. Please ensure the form is valid.')
+                request,
+                'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -160,7 +162,8 @@ def add_to_wishlist(request, product_id):
         product = get_object_or_404(Product, id=product_id)
 
         # Ensure user has a wishlist
-        wishlist, created = Wishlist.objects.get_or_create(customer=request.user)
+        wishlist, created = Wishlist.objects.get_or_create(
+            customer=request.user)
 
         # Add product to wishlist if not already added
         if product not in wishlist.products.all():
@@ -173,6 +176,7 @@ def add_to_wishlist(request, product_id):
 
     return redirect('products')  # Redirect back to products page
 
+
 @login_required
 def remove_from_wishlist(request, product_id):
     """Remove a product from the wishlist."""
@@ -182,7 +186,8 @@ def remove_from_wishlist(request, product_id):
         wishlist = Wishlist.objects.get(customer=request.user)
         if product in wishlist.products.all():
             wishlist.products.remove(product)  # Remove the product
-            messages.success(request, f'{product.name} has been removed from your wishlist.')
+            messages.success(
+                request, f'{product.name} has been removed from your wishlist.')
         else:
             messages.info(request, f'{product.name} is not in your wishlist.')
     except Wishlist.DoesNotExist:
@@ -195,8 +200,10 @@ def remove_from_wishlist(request, product_id):
 def wishlist(request):
     try:
         wishlist = Wishlist.objects.get(customer=request.user)
-        wishlist_items = wishlist.products.all()  # Retrieve the products in the wishlist
+        # Retrieve the products in the wishlist
+        wishlist_items = wishlist.products.all()
     except Wishlist.DoesNotExist:
         wishlist_items = None  # Handle the case where no wishlist exists for the user
 
-    return render(request, 'products/wishlist.html', {'wishlist_items': wishlist_items})
+    return render(request, 'products/wishlist.html',
+                  {'wishlist_items': wishlist_items})

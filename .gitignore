@@ -12,3 +12,5 @@ cloudinary_python.txt
 *.pyc
 venv/
 venv
+format_code.py
+to_heroku_witout_commit.txt

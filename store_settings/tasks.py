@@ -4,6 +4,7 @@ import os
 from django.conf import settings
 from django.utils.termcolors import colorize
 
+
 def log_env_variables():
     """
     Rulează în fundal și afișează variabilele de mediu importante la fiecare 10 secunde.
@@ -59,7 +60,9 @@ def log_env_variables():
             color = "yellow" if "SECRET" in key else "green"
             print(colorize(f"🔹 {key}: {value}", fg=color, opts=("bold",)))
 
-        time.sleep(60)  
+        time.sleep(60)
+
+
 if settings.DEBUG:
     if os.environ.get("RUN_MAIN") == "true":
         thread = threading.Thread(target=log_env_variables, daemon=True)

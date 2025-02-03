@@ -1,0 +1,16 @@
+# Aliasuri pentru Django cu calea completă către Python
+Set-Alias server "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "runserver"
+Set-Alias migrate "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "migrate"
+Set-Alias makemigrations "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "makemigrations"
+Set-Alias shell "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "shell"
+Set-Alias createsuperuser "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "createsuperuser"
+Set-Alias collectstatic "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "collectstatic", "--noinput"
+Set-Alias dbshell "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "dbshell"
+Set-Alias check "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "check"
+Set-Alias test "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "test"
+Set-Alias flush "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "flush", "--noinput"
+Set-Alias showmigrations "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "showmigrations"
+Set-Alias loaddata "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "loaddata"
+Set-Alias dumpdata "D:\python3_10_3\python.exe" -ArgumentList "C:\Users\Irka\Desktop\pp5\little-explorers\manage.py", "dumpdata", "--indent", "4"
+
+Write-Host "✅ Aliasurile pentru Django au fost configurate!"

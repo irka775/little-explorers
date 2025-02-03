@@ -34,9 +34,6 @@ def logout_other_sessions(user):
     return True
 
 
-
-
-
 @login_required
 def store_settings_view(request):
     """View pentru setările magazinului"""
@@ -70,7 +67,7 @@ def change_password_view(request):
     if request.method == "POST":
         form = PasswordChangeForm(user=request.user, data=request.POST)
         if form.is_valid():
-            user=form.save()
+            user = form.save()
             # Prevent user from being logged out
             update_session_auth_hash(request, user)
             messages.success(request, "✅ Password updated successfully!")
@@ -80,4 +77,6 @@ def change_password_view(request):
     else:
         form = PasswordChangeForm(user=request.user)
 
-    return render(request, "store_settings/change_password.html", {"form": form})
+    return render(request,
+                  "store_settings/change_password.html",
+                  {"form": form})

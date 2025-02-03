@@ -25,7 +25,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Check if the .env file exists in the root directory of the project
 if os.path.exists("env.py"):
     print(".env file found")
-    # Import only if .env exists# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+    # Import only if .env exists# Build paths inside the project like this:
+    # os.path.join(BASE_DIR, ...)
     import env
 
 # =============================================================================
@@ -35,7 +36,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False") == "True"
-print("Debug mode is "+str(DEBUG))
+print("Debug mode is " + str(DEBUG))
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
 
@@ -77,7 +78,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     "storages",
-    
+
 ]
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
@@ -206,7 +207,6 @@ USE_L10N = True
 USE_TZ = True
 
 
-
 # =============================================================================
 
 AWS_QUERYSTRING_AUTH = False
@@ -235,12 +235,12 @@ if DEBUG:
 
 else:
 
-        # Cache control
+    # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
         "CacheControl": "max-age=94608000",
     }
-        # Bucket Config
+    # Bucket Config
     AWS_STORAGE_BUCKET_NAME = os.environ.get(
         "AWS_STORAGE_BUCKET_NAME"
     )
@@ -261,12 +261,10 @@ else:
 
     MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}"
     DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-    STATIC_ROOT = None 
-
+    STATIC_ROOT = None
 
 
 # STATIC_ROOT is only used for collectstatic
-
 
     STORAGES = {
         "default": {
