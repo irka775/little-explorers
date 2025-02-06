@@ -39,7 +39,7 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 print("Debug mode is " + str(DEBUG))
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
-
+ 
 # =============================================================================
 CSP_DEFAULT_SRC = ("'self'",)
 CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'")
@@ -305,8 +305,8 @@ EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # =============================================================================
-
-
+ 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # =============================================================================
+ 

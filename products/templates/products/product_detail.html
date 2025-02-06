@@ -2,20 +2,14 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container mt-12">
-    <div class="row">
-        <div class="col-md-6 col-lg-4 text-center">
-            Header Content
-        </div>
-    </div>
-</div>
+<div class="container-fluid" style="min-height: 15vh;"></div>
 
 {% endblock %}
 
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row m-5">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
                     {% if product.image %}

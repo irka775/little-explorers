@@ -1,25 +1,16 @@
+from django import forms
+from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import PasswordChangeForm, SetPasswordForm
-from django import forms
-from .models import StoreSettings, ShippingSettings
 
-
-from django import forms
-from .models import UserProfile
+from .models import ShippingSettings, StoreSettings, UserProfile
 
 
 class UserSettingsForm(forms.ModelForm):
-    logout_other_sessions = forms.BooleanField(
-        required=False,
-        label="Logout from other sessions",
-        help_text="Enable this option to log out from all other devices",
-    )
-
     class Meta:
         model = UserProfile
         fields = [
             "enable_2fa",
-            "logout_other_sessions",  # Adăugăm câmpul aici!
+            "logout_other_sessions",  
             "notify_change",
             "enable_dark_mode",
             "enable_notifications",
