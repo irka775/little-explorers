@@ -1,18 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
-
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+<div class="container-fluid" style="min-height: 20vh;"></div>
+
 {% endblock %}
 
 {% block content %}
+<div class="card-body m-3"></div>
     <div class="overlay"></div>
-    <div class="container mb-2">
+    <div class="container m-5">
         <div class="row">
             <div class="col">
                 <hr>
@@ -115,6 +112,7 @@
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}

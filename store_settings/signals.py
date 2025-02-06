@@ -1,9 +1,11 @@
-from django.conf import settings
-from django.db.models.signals import post_save, post_migrate
-from django.db.models.signals import post_save, post_delete, pre_save
-from django.dispatch import receiver
-from .models import StoreSettings
 import logging
+
+from django.conf import settings
+from django.db.models.signals import (post_delete, post_migrate, post_save,
+                                      pre_save)
+from django.dispatch import receiver
+
+from .models import StoreSettings
 
 # Initialize logger
 logger = logging.getLogger(__name__)

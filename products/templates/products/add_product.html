@@ -2,24 +2,22 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+<div class="container-fluid" style="min-height: 13vh;"></div>
+
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
+<div class="card-body m-5 ">
+    <div class="overlay "></div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
+            <div class="col-12 col-md-6 ">
+                <hr class="m-1">
                 <h2 class="logo-font mb-4">Product Management</h2>
                 <h5 class="text-muted">Add a Product</h5>
-                <hr>
+                <hr class="mb-4">
             </div>
-        </div>
+        </hr>
 
         <div class="row">
             <div class="col-12 col-md-6">
@@ -40,6 +38,7 @@
             </div>            
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}

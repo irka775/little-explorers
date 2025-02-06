@@ -1,6 +1,7 @@
+import os
 import threading
 import time
-import os
+
 from django.conf import settings
 from django.utils.termcolors import colorize
 

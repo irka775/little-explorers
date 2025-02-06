@@ -10,21 +10,20 @@ DELIVERY_CHOICES = [
 
 class StoreSettings(models.Model):
     """General Store Settings"""
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="store_settings", default=1,null=True, blank=True)
+
     store_name = models.CharField(max_length=255, default="Little Explorers")
     store_logo = models.ImageField(
         upload_to="store_logos/", null=True, blank=True)
-    
+
     main_page_image = models.ImageField(
         upload_to="main_page_image/", null=True, blank=True)
-    
 
     welcome_msg = models.CharField(
         max_length=255, null=False, blank=False, default="Welcome to our store"
     )
 
     home_page_button = models.CharField(max_length=20, default="Discover More")
-
-
 
     contact_email = models.EmailField(default="IrishRoyals@example.com")
     contact_phone = models.CharField(max_length=20, default="+353000000000")
@@ -45,9 +44,8 @@ class StoreSettings(models.Model):
 
 
 def get_default_store():
-    """Return the first store settings if exists, otherwise None"""
     store = StoreSettings.objects.first()
-    return store.id if store else None
+    return store.id if store else 1
 
 
 class ShippingSettings(models.Model):

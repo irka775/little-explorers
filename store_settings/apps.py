@@ -6,6 +6,4 @@ class StoreSettingsConfig(AppConfig):
     name = "store_settings"
 
     def ready(self):
-        import store_settings.signals
-        import store_settings.tasks
-        from little_explorers_p.utils import colored_print
+        pass

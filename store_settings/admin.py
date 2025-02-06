@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import StoreSettings, ShippingSettings
+
+from .models import ShippingSettings, StoreSettings
 
 
 @admin.register(StoreSettings)
@@ -11,7 +12,7 @@ class StoreSettingsAdmin(admin.ModelAdmin):
         "enable_maintenance_mode")
     list_editable = ("enable_maintenance_mode",)
     fieldsets = (
-        ("General Settings", {"fields": ("store_name", "store_logo","main_page_image","welcome_msg",)}),
+        ("General Settings", {"fields": ("store_name", "store_logo", "main_page_image", "welcome_msg",)}),
         ("Contact Info", {"fields": ("contact_email", "contact_phone")}),
         ("E-Commerce Settings", {"fields": ("currency", "shipping_options")}),
         ("Payment Methods", {"fields": ("enable_paypal",
