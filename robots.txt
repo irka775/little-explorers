@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /account/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /store_settings/
+Disallow: /search/
+Disallow: /profile/
+Disallow: /api/
+
+# Allow everything else
+Allow: /
+
+# Specify the location of the sitemap (if you have one)
+Sitemap: https://www.yourdomain.com/sitemap.xml
