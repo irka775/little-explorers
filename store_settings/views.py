@@ -57,7 +57,7 @@ def store_settings_view(request):
             user_profile = user_profile_form.save(commit=False)
             user_profile.user = request.user
             user_profile.save()
-            updated_fields.append(f"{request.user.username} - Profile")
+            updated_fields.append(f"{request.user.username} - Security & Privacy Settings")
 
         if updated_fields:
             messages.success(request, f"✅ The following settings were updated: {', '.join(updated_fields)}")
@@ -66,56 +66,7 @@ def store_settings_view(request):
 
         return redirect("store_settings")
 
-    # ==========================
-    # 📌 Print Setările în Consolă
-    # ==========================
-    print("\n" + "=" * 50)
-    print(f"📢 STORE SETTINGS - {request.user.username}")
-    print("=" * 50)
-    
-    store_data = {
-        "Store Name": store_settings.store_name,
-        "Store Logo": store_settings.store_logo.url if store_settings.store_logo else "No logo",
-        "Welcome Message": store_settings.welcome_msg,
-        "Main Page Button": store_settings.home_page_button,
-        "Main Page Image": store_settings.main_page_image.url if store_settings.main_page_image else "No image",
-        "Contact Email": store_settings.contact_email,
-        "Contact Phone": store_settings.contact_phone,
-        "Currency": store_settings.currency,
-        "Enable PayPal": store_settings.enable_paypal,
-        "Enable Stripe": store_settings.enable_stripe,
-        "Enable Reviews": store_settings.enable_reviews,
-        "Enable Maintenance Mode": store_settings.enable_maintenance_mode,
-        "Enable Cash on Delivery": store_settings.enable_cash_on_delivery,
-    }
-    print(json.dumps(store_data, indent=4))
-
-    print("\n" + "=" * 50)
-    print("📢 SHIPPING SETTINGS")
-    print("=" * 50)
-
-    shipping_data = {
-        "Shipping Option": shipping_sett.shipping_options if shipping_sett else "N/A",
-        "Standard Shipping Cost": str(shipping_sett.standard_shipping_cost) if shipping_sett else "N/A",
-        "Free Shipping Threshold": str(shipping_sett.free_shipping_threshold) if shipping_sett else "N/A",
-    }
-    print(json.dumps(shipping_data, indent=4))
-
-    print("\n" + "=" * 50)
-    print("📢 USER PROFILE SETTINGS")
-    print("=" * 50)
-
-    user_profile_data = {
-        "Enable 2FA": user_profile.enable_2fa if user_profile else "N/A",
-        "Logout Other Sessions": user_profile.logout_other_sessions if user_profile else "N/A",
-        "Notify Change": user_profile.notify_change if user_profile else "N/A",
-        "Enable Dark Mode": user_profile.enable_dark_mode if user_profile else "N/A",
-        "Enable Notifications": user_profile.enable_notifications if user_profile else "N/A",
-        "Allow Password Autofill": user_profile.password_autofill if user_profile else "N/A",
-    }
-    print(json.dumps(user_profile_data, indent=4))
-    print("=" * 50 + "\n")
-
+  
     context = {
         "store_sett_form": StoreSettingsForm(instance=store_settings),
         "shipping_sett_form": ShippingSettingsForm(instance=shipping_sett),

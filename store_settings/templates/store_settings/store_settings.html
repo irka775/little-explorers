@@ -126,8 +126,13 @@
                                 {{ store_sett_form.currency }}
                             </div>
                         </div>
+                        <hr class="mt-5">
 
+                        <!-- Shipping Settings -->
 
+                        {{ shipping_sett_form|crispy }}
+
+                        <hr class="m-5">
 
 
                         <!-- Enable PayPal -->
@@ -252,12 +257,7 @@
 
 
 
-                        <hr>
-
-                        <!-- Shipping Settings -->
-                        <h4 class="mb-3">🚚 Shipping Settings</h4>
-
-                        {{ shipping_sett_form|crispy }}
+                     
 
                         <hr>
 

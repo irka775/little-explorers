@@ -28,6 +28,8 @@ urlpatterns = [
     path('reviews/', include('reviews.urls')),
     path('store_settings/', include('store_settings.urls')),
     path('profile/', include('profiles.urls')),
+    path("robots.txt", include("robots.urls")),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
