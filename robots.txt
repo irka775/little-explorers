@@ -1,15 +1,11 @@
 User-agent: *
 Disallow: /admin/
-Disallow: /account/
-Disallow: /checkout/
-Disallow: /cart/
+Disallow: /user_account/
+Disallow: /bag/
 Disallow: /store_settings/
-Disallow: /search/
-Disallow: /profile/
-Disallow: /api/
-
-# Allow everything else
-Allow: /
-
-# Specify the location of the sitemap (if you have one)
-Sitemap: https://www.yourdomain.com/sitemap.xml
+Disallow: /checkout/order_confirmation/
+Disallow: /media/
+Disallow: /products/add/
+Disallow: /products/
+Disallow: /private/ 
+Sitemap: https://arduino-lab-project-ab20ce1e1a15.herokuapp.com/sitemap.xml
