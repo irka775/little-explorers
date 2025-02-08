@@ -79,6 +79,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     "storages",
     "robots",
+    "import_export",
+
 
 ]
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -165,13 +167,19 @@ WSGI_APPLICATION = "little_explorers_p.wsgi.application"
 
 # =============================================================================
 
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+if "DATABASE_URL" in os.environ :
+    DATABASES={
+        "default":dj_database_url.parse(
+            os.environ.get("DATABASE_URL")
+        )
     }
-}
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+#     }
+# }
 
 # =============================================================================
 
@@ -264,10 +272,7 @@ else:
 
     MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}"
     DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-    STATIC_ROOT = None
-
-
-# STATIC_ROOT is only used for collectstatic
+    # STATIC_ROOT is only used for collectstatic
 
     STORAGES = {
         "default": {
@@ -286,6 +291,8 @@ else:
             },
         },
     }
+
+
 
 
 # =============================================================================

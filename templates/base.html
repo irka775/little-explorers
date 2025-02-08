@@ -67,8 +67,13 @@
 
 </head>
 
-<body style="background: url('{{ store_settings.main_page_image.url }}') no-repeat center center fixed;
-                    background-size: cover; ">
+{% if store_settings.main_page_image %}
+    <body style="background: url('{{ store_settings.main_page_image.url }}') no-repeat center center fixed;
+                background-size: cover; ">
+{% else %}
+    <body>
+{% endif %}
+
 
   <header class="fixed-top  shadow ">
     <div class="container-fluid  ">
