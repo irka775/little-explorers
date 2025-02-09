@@ -1,3 +1,7 @@
+from django.conf import settings
+from django.core.mail import send_mail
+from django.contrib import messages
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -10,7 +14,8 @@ DELIVERY_CHOICES = [
 
 class StoreSettings(models.Model):
     """General Store Settings"""
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="store_settings", default=1,null=True, blank=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE,
+                                related_name="store_settings", default=1, null=True, blank=True)
 
     store_name = models.CharField(max_length=255, default="Little Explorers")
     store_logo = models.ImageField(
@@ -84,3 +89,13 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - Profile"
+
+
+class Subscriber(models.Model):
+    user = models.OneToOneField(
+        User, on_delete=models.CASCADE, null=True, blank=True)
+    email = models.EmailField(unique=True)
+    subscribed = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.email

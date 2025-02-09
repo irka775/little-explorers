@@ -13,9 +13,9 @@
     <meta name="description"
         content="Shop for high-quality kids' clothing at affordable prices. Free shipping over $50!">
     <meta name="keywords"
-        content="kids clothing, children's fashion, baby clothes, Little Royals, kids boutique, stylish kids, elegant kidswear, premium kids fashion, trendy children's wear, quality clothing, kids apparel, online kids shop">
+        content="kids clothing, children's fashion, baby clothes, Little  Explorers, kids boutique, stylish kids, elegant kidswear, premium kids fashion, trendy children's wear, quality clothing, kids apparel, online kids shop">
     <!-- Meta Author -->
-    <meta name="author" content="Little Royals Team">
+    <meta name="author" content="Little  Explorers Team">
     <meta name="robots" content="index, follow">
 
     <meta name="theme-color" content="#2471a1">
@@ -77,9 +77,9 @@
 
   <header class="fixed-top  shadow ">
     <div class="container-fluid  ">
-
+      
         <!-- Delivery Banner -->
-        <div class="row bg-black text-white text-center ">
+        <div class="row  text-white text-center delivery-banner">
             <div class="col">
                 <img src="https://img.icons8.com/color/48/000000/truck--v1.png" alt="Delivery Truck" loading="lazy">
                 FREE Delivery on orders over <span>{{ shipping_settings.free_shipping_threshold  }} {{ store_settings.currency  }}
@@ -91,16 +91,22 @@
         <div class="row  align-items-center py-3 navbar">
             
             <!-- Logo -->
-            <div class="col-12 col-lg-4 text-center text-center">
+            <div class="col-6 col-lg-4 text-center text-center">
                 <a class="navbar-brand text-white" href="{% url 'home' %}">
                     {{ store_settings.store_name }}
                     {% if store_settings and store_settings.store_logo %}
+
                     <img src="{{ store_settings.store_logo.url }}" alt="Logo" height="50" loading="lazy">
                     {% else %}
                     <h6>No Logo</h6>
                     {% endif %}
                 </a>
             </div>
+
+            <div class="col-4 col-lg-4 text-center text-center">
+
+            <h3>Logged in as: {{ subscribe_settings.user }} </h3>
+        </div>
 
             <!-- Search Bar -->
             <div class="col-12 col-lg-3 text-center">
@@ -177,12 +183,10 @@
     <div class="modal" id="imageModal">
         <div class="modal-content">
             <button class="close-btn" id="closeBtn">Close</button>
-
-            <div src="{{ MEDIA_URL }}noimage.png" alt="Large View" id="modalImage" loading="lazy">
-
-            </div>
+            <img src="{{ MEDIA_URL }}noimage.png" alt="Large View" id="modalImage" loading="lazy">
         </div>
     </div>
+    
 
     {% if messages %}
     <div class="message-container">
@@ -202,8 +206,12 @@
     </div>
     {% endif %}
 
+
     {% block page_header %}
-{% endblock %}
+    
+    <div class="page_header" ></div>
+
+    {% endblock %}
 
 
 
@@ -217,6 +225,38 @@
 
 
 
+
+
+
+    <footer class="site-footer">
+        <form id="newsletter-form">
+            {% csrf_token %}
+            {% if request.user.is_authenticated %}
+                <input type="email" id="email-input" name="email" value="{{ request.user.email }}" hidden required>
+                <button id="subscribe-button" type="submit"
+                    class="btn {% if subscribe_settings and subscribe_settings.subscribed %}btn-danger{% else %}btn-success{% endif %}">
+                    
+                    {% if subscribe_settings.subscribed %}
+                        Unsubscribe
+                    {% else %}
+                        Subscribe
+                    {% endif %}
+                </button>
+            {% else %}
+                <input type="email" id="email-input" name="email" placeholder="Enter your email" required>
+                <button id="subscribe-button" type="submit" class="btn btn-success">Subscribe</button>
+            {% endif %}
+        </form>
+        <p id="subscription-message" class="mt-2"></p>
+        
+        
+        <a href="https://www.facebook.com/littleexplorers" target="_blank">
+            Follow us on Facebook
+        </a>
+        
+        
+        <p>Contact: {{ store_settings.contact_email }} | Phone: {{ store_settings.contact_phone }}</p>
+    </footer>
     {% block postloadjs %}
 
     <script>
@@ -238,13 +278,68 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Stripe -->
 
     <script src="https://js.stripe.com/v3/"></script>
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("newsletter-form");
+    const button = document.getElementById("subscribe-button");
+    const emailInput = document.getElementById("email-input");
+    const messageContainer = document.getElementById("subscription-message");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const email = emailInput.value.trim();
+        const csrfToken = document.querySelector("[name=csrfmiddlewaretoken]").value;
+
+        if (!email) {
+            messageContainer.textContent = "Please enter a valid email.";
+            return;
+        }
+
+        const isSubscribing = button.textContent.trim() === "Subscribe";
+        const url = isSubscribing ? "{% url 'subscribe' %}" : "{% url 'unsubscribe' %}";
+
+        button.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Processing...';
+        button.disabled = true;
+
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "X-CSRFToken": csrfToken,
+            },
+            body: `email=${encodeURIComponent(email)}`
+        })
+        .then(response => response.json())  // Verifică dacă JSON-ul e valid
+        .then(data => {
+            if (data.status === "subscribed") {
+                button.textContent = "Unsubscribe";
+                button.classList.remove("btn-success");
+                button.classList.add("btn-danger");
+                messageContainer.textContent = data.message;
+            } else if (data.status === "unsubscribed") {
+                button.textContent = "Subscribe";
+                button.classList.remove("btn-danger");
+                button.classList.add("btn-success");
+                messageContainer.textContent = data.message;
+            } else {
+                messageContainer.textContent = data.message;
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            messageContainer.textContent = "An error occurred. Please try again.";
+        })
+        .finally(() => {
+            button.disabled = false;
+        });
+    });
+});
+
+    </script>
+    
     {% endblock postloadjs %}
-
-
-    <footer class="site-footer">
-        <p>Contact: {{ store_settings.contact_email }} | Phone: {{ store_settings.contact_phone }}</p>
-    </footer>
-
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-import boto3
+from django.shortcuts import render
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -7,9 +7,6 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category, Wishlist
 from .forms import ProductForm
-
-from django.core.files.storage import default_storage
-from django.core.files.base import ContentFile
 
 
 def all_products(request):
@@ -20,9 +17,6 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-
-    from django.core.files.storage import default_storage
-    from django.core.files.base import ContentFile
 
     if request.GET:
         if 'sort' in request.GET:
@@ -66,15 +60,19 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+from django.http import Http404
+
 def product_detail(request, product_id):
     """ A view to show individual product details """
-
-    product = get_object_or_404(Product, pk=product_id)
+    try:
+        product = Product.objects.get(id=product_id)
+    except Product.DoesNotExist:
+        print("404 - Product not found")
+        raise Http404("Product does not exist")  # ✅ Asigură-te că returnează un 404 corect
 
     context = {
         'product': product,
     }
-
     return render(request, 'products/product_detail.html', context)
 
 
@@ -207,3 +205,25 @@ def wishlist(request):
 
     return render(request, 'products/wishlist.html',
                   {'wishlist_items': wishlist_items})
+
+
+def custom_404(request, exception):
+    print("404")
+    return render(request, "404.html", status=404)
+
+
+def custom_500(request):
+    print("500")
+
+    return render(request, "500.html", status=500)
+
+
+def custom_403(request, exception):
+    print("403")
+
+    return render(request, "403.html", status=403)
+
+
+def custom_400(request, exception):
+    print("400")
+    return render(request, "400.html", status=400)

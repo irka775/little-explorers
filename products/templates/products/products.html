@@ -1,10 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-<div class="container-fluid" style="min-height: 10vh;"></div>
 
-{% endblock %}
 
 
 
@@ -57,6 +54,9 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 <a href="{% url 'product_detail' product.id %}">
+
+
+
                                 {% if product.image %}
                                     <img class="image-container" id="image"  src="{{ product.image.url }}" alt="{{ product.name }}" with="200" height="200" loading="lazy">
                                 
@@ -66,6 +66,9 @@
                             {% else %}
                                 <img class="image-container" id="image"  src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" with="200" height="200" loading="lazy">
                             {% endif %}
+
+
+                            
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ product.name }}</p>
                                 </div>
@@ -74,24 +77,25 @@
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                                         </a>
-                                            {% if product.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %}
-                                            {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                                </small>
-                                            {% endif %}
+
+                                        {% if product.category %}
+                                        <p class="small mt-1 mb-0">
+                                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                            </a>
+                                        </p>
+                                        {% endif %}
+                                        {% if product.rating %}
+                                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                        {% else %}
+                                            <small class="text-muted">No Rating</small>
+                                        {% endif %}
+                                        {% if request.user.is_superuser %}
+                                            <small class="ml-3">
+                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            </small>
+                                        {% endif %}
                                         </div>
                                         <div class="col text-right">
                                             <form method="post" action="{% url 'add_to_wishlist' product.id %}">
@@ -172,4 +176,4 @@
 
 
     </script>
-{% endblock %}
+                                        {% endblock %}

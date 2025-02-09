@@ -17,12 +17,22 @@
                         <img class="image-container-modal image-container" id="image" src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy"  width="200" height="200">
                     </a>
                 {% elif product.image_url %}
-                    <a href="{{ product.image_url }}" target="_blank">
-                        <img class="image-container-modal image-container" id="image" src="{{ product.image_url }}" alt="{{ product.name }}" loading="lazy"  width="200" height="200">
-                    </a>
+
+                        {% if  image_exists %}
+
+
+                            <a href="{{ product.image_url }}" target="_blank">
+                                <img class="image-container-modal image-container" id="image" src="{{ product.image_url }}" alt="{{ product.name }}" loading="lazy"  width="200" height="200">
+                            </a>
+                        {% else %}
+                        <H3>Incorect Image url</H3>
+                        {% endif %}
+
+
+
                 {% else %}
                     <a href="">
-                        <img class="image-container-modal image-container" id="image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" loading="lazy"  width="200" height="00">
+                        <img class="image-container-modal image-container" id="image" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}" loading="lazy"  width="200" height="200">
                     </a>
                 {% endif %}
                 </div>
@@ -135,8 +145,10 @@ const closeBtn = document.getElementById('closeBtn');
 
 images.forEach(image => {
     image.addEventListener('click', (e) => {
-        e.preventDefault(); // Previi comportamentul implicit al linkului
+        e.preventDefault();
         modalImage.src = image.src; 
+        console.log("Image clicked:", image.src); // ✅ Vezi dacă imaginea este corectă
+
         modal.style.display = 'flex'; 
     });
 });

@@ -351,13 +351,16 @@ input[name='q']::placeholder {
     }
 }
 
+.page_header{
+    min-height: 17vh;
+}
 /* responsive font sizes */
 
 /* ============================================================================ */
 
   /* Delivery Banner Styles */
   .delivery-banner {
-    background: linear-gradient(to right,rgb(31, 62, 82), #32CD32);
+    background: black;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -373,7 +376,7 @@ input[name='q']::placeholder {
 }
 
 .delivery-banner span {
-    color: #ff4500;
+    color:rgb(0, 255, 153);
     font-weight: 700;
 }
 

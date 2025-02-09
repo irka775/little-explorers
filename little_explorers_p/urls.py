@@ -13,6 +13,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from products.views import custom_404, custom_500, custom_403, custom_400
+from django.conf.urls import handler404, handler500, handler403, handler400
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -35,3 +37,9 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,
                           document_root=settings.STATIC_ROOT)
+
+handler404 = "products.views.custom_404"
+
+handler500 = "products.views.custom_500"
+handler403 = "products.views.custom_403"
+handler400 = "products.views.custom_400"
