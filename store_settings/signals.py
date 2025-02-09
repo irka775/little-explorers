@@ -1,3 +1,6 @@
+from django.contrib.auth.models import User
+from store_settings.models import Subscriber
+from django.db.models.signals import post_save
 import logging
 
 from django.conf import settings
@@ -89,3 +92,10 @@ def log_settings_pre_update(sender, instance, **kwargs):
                 f" Store name changed from '{existing.store_name}' to '{instance.store_name}'")
 
 # =============================================================================
+
+
+@receiver(post_save, sender=User)
+def create_subscriber(sender, instance, created, **kwargs):
+    """Crează automat un Subscriber pentru fiecare utilizator nou"""
+    if created:
+        Subscriber.objects.get_or_create(user=instance, email=instance.email)

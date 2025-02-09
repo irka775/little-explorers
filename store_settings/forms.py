@@ -1,3 +1,4 @@
+from .models import Subscriber
 from django import forms
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.models import User
@@ -10,7 +11,7 @@ class UserSettingsForm(forms.ModelForm):
         model = UserProfile
         fields = [
             "enable_2fa",
-            "logout_other_sessions",  
+            "logout_other_sessions",
             "notify_change",
             "enable_dark_mode",
             "enable_notifications",
@@ -22,6 +23,12 @@ class UserSettingsForm(forms.ModelForm):
         for field in self.fields:
             self.fields[field].widget.attrs.update(
                 {'class': 'form-check-input'})
+
+
+class NewsletterSignupForm(forms.ModelForm):
+    class Meta:
+        model = Subscriber
+        fields = ['email']
 
 
 class StoreSettingsForm(forms.ModelForm):

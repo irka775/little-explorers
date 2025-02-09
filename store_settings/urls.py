@@ -1,9 +1,11 @@
 from django.urls import path
 
-from .views import change_password_view, store_settings_view
+from . import views
 
 urlpatterns = [
-    path("", store_settings_view, name="store_settings"),
-    path("change_password/", change_password_view,
+    path("", views.store_settings_view, name="store_settings"),
+    path("change_password/", views.change_password_view,
          name="change_password"),
-]
+    path('subscribe/', views.subscribe, name='subscribe'),
+    path('unsubscribe/', views.unsubscribe, name='unsubscribe'),
+    ]

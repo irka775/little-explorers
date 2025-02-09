@@ -2,15 +2,6 @@
 {% load static %}
 
 
-
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
 
 <div class="container-fluid">
@@ -24,9 +15,9 @@
                             <div class="card h-100 border-0 shadow-sm">
                                 <a href="{% url 'product_detail' product.id %}">
                                     {% if product.image %}
-                                        <img class="image-container" src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy"  width="400" height="300">
+                                        <img class="image-container" src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy"  width="200" height="200">
                                     {% else %}
-                                        <img class="image-container" src="{% static 'images/noimage.png' %}" alt="No Image" loading="lazy"  width="400" height="300">
+                                        <img class="image-container" src="{% static 'images/noimage.png' %}" alt="No Image" loading="lazy"  width="200" height="200">
                                     {% endif %}
                                 </a>
                                 <div class="card-body pb-0">
