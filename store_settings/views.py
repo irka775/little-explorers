@@ -1,18 +1,16 @@
-from django.shortcuts import redirect
-from .forms import NewsletterSignupForm
 from .models import Subscriber
-from django.conf import settings
-from django.core.mail import send_mail
-from django.shortcuts import render, redirect
-from .forms import ShippingSettingsForm, StoreSettingsForm, UserSettingsForm
-from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
 from django.shortcuts import redirect, render
 from rest_framework.authtoken.models import Token
+from django.views.decorators.csrf import csrf_exempt
 
-from .forms import ShippingSettingsForm, StoreSettingsForm, UserSettingsForm, NewsletterSignupForm
+from django.contrib import messages
+
+from django.http import JsonResponse
+
+from .forms import ShippingSettingsForm, StoreSettingsForm, UserSettingsForm
 from .models import StoreSettings, ShippingSettings, UserProfile
 
 
@@ -27,34 +25,6 @@ def logout_other_sessions(request, user):
     return True
 
 
-from django.http import JsonResponse
-from django.core.mail import send_mail
-from django.conf import settings
-from django.contrib import messages
-from django.views.decorators.csrf import csrf_exempt
-from .forms import NewsletterSignupForm
-
-
-from django.http import JsonResponse
-from django.core.mail import send_mail
-from django.conf import settings
-from django.contrib import messages
-from django.views.decorators.csrf import csrf_exempt
-from .models import Subscriber
-
-from django.http import JsonResponse
-from django.core.mail import send_mail
-from django.conf import settings
-from django.contrib import messages
-from django.views.decorators.csrf import csrf_exempt
-from .models import Subscriber
-from django.core.exceptions import ObjectDoesNotExist
-
-from django.http import JsonResponse
-from django.core.mail import send_mail
-from django.conf import settings
-from django.views.decorators.csrf import csrf_exempt
-from .models import Subscriber
 
 @csrf_exempt
 def subscribe(request):
@@ -111,8 +81,7 @@ def unsubscribe(request):
 @login_required
 def store_settings_view(request):
     """View for store settings"""
-    store_settings, created = StoreSettings.objects.get_or_create(
-        user=request.user)
+    store_settings = StoreSettings.get_instance()
     shipping_sett = ShippingSettings.objects.filter().first()
     user_profile = UserProfile.objects.filter(user=request.user).first()
 
@@ -129,6 +98,7 @@ def store_settings_view(request):
         if store_sett_form.is_valid():
             if store_sett_form.has_changed():
                 store_sett_form.save()
+                print(store_settings.enable_maintenance_mode)
                 updated_fields.append("Store Settings")
 
         if shipping_sett_form.is_valid():
