@@ -15,7 +15,7 @@ DELIVERY_CHOICES = [
 class StoreSettings(models.Model):
     """General Store Settings"""
     user = models.OneToOneField(User, on_delete=models.CASCADE,
-                                related_name="store_settings", default=1, null=True, blank=True)
+                                related_name="store_settings", null=True, blank=True)
 
     store_name = models.CharField(max_length=255, default="Little Explorers")
     store_logo = models.ImageField(
@@ -39,6 +39,16 @@ class StoreSettings(models.Model):
     enable_paypal = models.BooleanField(default=True)
     enable_stripe = models.BooleanField(default=True)
     enable_cash_on_delivery = models.BooleanField(default=True)
+    def save(self, *args, **kwargs):
+        self.pk = 1  # Asigură că există un singur rând
+        super().save(*args, **kwargs)
+    @classmethod
+    def get_instance(cls):
+        instance = cls.objects.filter(pk=1).first()
+        if not instance:
+            instance = cls(pk=1)
+            instance.save()
+        return instance
 
     def __str__(self):
         return self.store_name
@@ -46,6 +56,7 @@ class StoreSettings(models.Model):
     class Meta:
         verbose_name = "Store Settings"
         verbose_name_plural = "Store Settings"
+    
 
 
 def get_default_store():

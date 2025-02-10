@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description"
-        content="Shop for high-quality kids' clothing at affordable prices. Free shipping over $50!">
+    content="Shop for high-quality kids' clothing at affordable prices. Free shipping over $50!">
     <meta name="keywords"
         content="kids clothing, children's fashion, baby clothes, Little  Explorers, kids boutique, stylish kids, elegant kidswear, premium kids fashion, trendy children's wear, quality clothing, kids apparel, online kids shop">
     <!-- Meta Author -->
@@ -19,9 +19,9 @@
     <meta name="robots" content="index, follow">
 
     <meta name="theme-color" content="#2471a1">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.webp' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.webp' %}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'favicons/favicon-96x96.webp' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'favicons/favicon-96x96.png' %}">
     <link rel="canonical" href="{{ request.build_absolute_uri }}">
 
     {% endblock %}
@@ -59,7 +59,7 @@
 
     {% endblock %}
 
-    <title>{{ store_settings.store_name }} {% block extra_title %}{% endblock %}
+    <title>{{ store_settings.store_name }} - Premium Kids Clothing {% block extra_title %}{% endblock %}</title>
 
 
     </title>
@@ -103,9 +103,14 @@
                 </a>
             </div>
 
-            <div class="col-4 col-lg-4 text-center text-center">
+            <div class="col-3 col-lg-4 text-center text-center">
+                {% if request.user.is_authenticated %}
 
-            <h4>Logged in as: {{ subscribe_settings.user }} </h4>
+            <h6>Logged in as: <b>{{ subscribe_settings.user }} </b></h6>
+            {% else %}
+            <a href="{% url 'account_login' %}">Login</a> | <a href="{% url 'account_signup' %}">Register</a>
+            {% endif %}
+
         </div>
 
             <!-- Search Bar -->
@@ -183,7 +188,7 @@
     <div class="modal" id="imageModal">
         <div class="modal-content">
             <button class="close-btn" id="closeBtn">Close</button>
-            <img src="{{ MEDIA_URL }}noimage.png" alt="Large View" id="modalImage" loading="lazy">
+            <img src="{{ MEDIA_URL }}noimage.webp" alt="Large View" id="modalImage" loading="lazy">
         </div>
     </div>
     

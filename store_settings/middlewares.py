@@ -8,8 +8,7 @@ class MaintenanceModeMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        store_settings = StoreSettings.objects.filter(user__is_superuser=True).first()
-        
+        store_settings = StoreSettings.get_instance()
         if (
             store_settings
             and store_settings.enable_maintenance_mode
