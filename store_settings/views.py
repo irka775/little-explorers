@@ -94,11 +94,14 @@ def store_settings_view(request):
             request.POST, instance=user_profile)
 
         updated_fields = []
+        if store_sett_form.is_valid():
+            print("✅ StoreSettingsForm is valid")
+        else:
+            print("❌ StoreSettingsForm is NOT valid:", store_sett_form.errors)
 
         if store_sett_form.is_valid():
             if store_sett_form.has_changed():
                 store_sett_form.save()
-                print(store_settings.enable_maintenance_mode)
                 updated_fields.append("Store Settings")
 
         if shipping_sett_form.is_valid():

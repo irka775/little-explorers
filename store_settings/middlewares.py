@@ -1,6 +1,6 @@
 from django.shortcuts import HttpResponse
 from store_settings.models import StoreSettings
-
+store_settings=None
 class MaintenanceModeMiddleware:
     """Middleware for maintenance mode."""
 

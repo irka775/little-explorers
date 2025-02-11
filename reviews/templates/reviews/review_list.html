@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">User Reviews & Feedback</h2>
+    <a href="{% url 'review_create' %}" class="btn btn-primary mb-3">Leave a Review</a>
+
+    {% for review in reviews %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">
+                {% if review.review_type == 'product' %}
+                    Product Review: {{ review.product.name }}
+                {% else %}
+                    Site Feedback
+                {% endif %}
+            </h5>
+            <p class="card-text">{{ review.comment }}</p>
+            <small class="text-muted">By {{ review.customer.username }} on {{ review.created_at }}</small>
+            {% if review.customer == request.user %}
+                <a href="{% url 'review_edit' review.id %}" class="btn btn-warning btn-sm">Edit</a>
+                <a href="{% url 'review_delete' review.id %}" class="btn btn-danger btn-sm">Delete</a>
+            {% endif %}
+        </div>
+    </div>
+    {% empty %}
+    <p>No reviews yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -168,19 +168,38 @@ WSGI_APPLICATION = "little_explorers_p.wsgi.application"
 
 # =============================================================================
 
-if "DATABASE_URL" in os.environ :
+if "DATABASE_URL" in os.environ and not DEBUG :
     DATABASES={
         "default":dj_database_url.parse(
             os.environ.get("DATABASE_URL")
         )
     }
 
-# DATABASES = {
+import sys
+
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        }
+    }
+
+    # DATABASES = {
 #     "default": {
 #         "ENGINE": "django.db.backends.sqlite3",
 #         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
 #     }
 # }
+    PASSWORD_HASHERS = ['django.contrib.auth.hashers.MD5PasswordHasher',]
+    DEBUG_TOOLBAR_CONFIG = {"SHOW_TOOLBAR_CALLBACK": lambda request: False,}
+    LOGGING = {'version': 1,'disable_existing_loggers': True,}
+
+
+
+
+
+TEST_RUNNER = "django.test.runner.DiscoverRunner"
 
 # =============================================================================
 
