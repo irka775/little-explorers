@@ -29,11 +29,15 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "store_name",
-                    models.CharField(default="Little Explorers", max_length=255),
+                    models.CharField(
+                        default="Little Explorers", max_length=255
+                    ),
                 ),
                 (
                     "store_logo",
-                    models.ImageField(blank=True, null=True, upload_to="store_logos/"),
+                    models.ImageField(
+                        blank=True, null=True, upload_to="store_logos/"
+                    ),
                 ),
                 (
                     "main_page_image",
@@ -43,7 +47,9 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "welcome_msg",
-                    models.CharField(default="Welcome to our store", max_length=255),
+                    models.CharField(
+                        default="Welcome to our store", max_length=255
+                    ),
                 ),
                 (
                     "home_page_button",
@@ -61,10 +67,16 @@ class Migration(migrations.Migration):
                 ),
                 ("currency", models.CharField(default="EUR", max_length=10)),
                 ("enable_reviews", models.BooleanField(default=True)),
-                ("enable_maintenance_mode", models.BooleanField(default=False)),
+                (
+                    "enable_maintenance_mode",
+                    models.BooleanField(default=False),
+                ),
                 ("enable_paypal", models.BooleanField(default=True)),
                 ("enable_stripe", models.BooleanField(default=True)),
-                ("enable_cash_on_delivery", models.BooleanField(default=True)),
+                (
+                    "enable_cash_on_delivery",
+                    models.BooleanField(default=True),
+                ),
                 (
                     "user",
                     models.OneToOneField(
@@ -107,11 +119,15 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "standard_shipping_cost",
-                    models.DecimalField(decimal_places=2, default=5.0, max_digits=6),
+                    models.DecimalField(
+                        decimal_places=2, default=5.0, max_digits=6
+                    ),
                 ),
                 (
                     "free_shipping_threshold",
-                    models.DecimalField(decimal_places=2, default=50.0, max_digits=6),
+                    models.DecimalField(
+                        decimal_places=2, default=50.0, max_digits=6
+                    ),
                 ),
                 (
                     "store",
@@ -141,7 +157,10 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("enable_2fa", models.BooleanField(default=False)),
-                ("logout_other_sessions", models.BooleanField(default=False)),
+                (
+                    "logout_other_sessions",
+                    models.BooleanField(default=False),
+                ),
                 ("notify_change", models.BooleanField(default=True)),
                 ("enable_dark_mode", models.BooleanField(default=False)),
                 ("enable_notifications", models.BooleanField(default=True)),

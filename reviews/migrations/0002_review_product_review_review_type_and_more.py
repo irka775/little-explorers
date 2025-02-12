@@ -27,7 +27,10 @@ class Migration(migrations.Migration):
             model_name="review",
             name="review_type",
             field=models.CharField(
-                choices=[("product", "Product Review"), ("site", "Site Feedback")],
+                choices=[
+                    ("product", "Product Review"),
+                    ("site", "Site Feedback"),
+                ],
                 default="product",
                 max_length=10,
             ),

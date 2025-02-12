@@ -29,7 +29,13 @@ class Migration(migrations.Migration):
                 (
                     "rating",
                     models.PositiveIntegerField(
-                        choices=[(1, "1"), (2, "2"), (3, "3"), (4, "4"), (5, "5")]
+                        choices=[
+                            (1, "1"),
+                            (2, "2"),
+                            (3, "3"),
+                            (4, "4"),
+                            (5, "5"),
+                        ]
                     ),
                 ),
                 ("comment", models.TextField()),
