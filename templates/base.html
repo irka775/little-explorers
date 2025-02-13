@@ -1,353 +1,328 @@
+<!-- This file is the mail HTML-file, in which all files have their base.
+    Base structure is inspired by the Code Institute Boutique Ado project, but customized -->
 {% load static %}
 
 <!doctype html>
 <html lang="en">
 
 <head>
-
     {% block meta %}
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description"
-    content="Shop for high-quality kids' clothing at affordable prices. Free shipping over $50!">
-    <meta name="keywords"
-        content="kids clothing, children's fashion, baby clothes, Little  Explorers, kids boutique, stylish kids, elegant kidswear, premium kids fashion, trendy children's wear, quality clothing, kids apparel, online kids shop">
-    <!-- Meta Author -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Shop for high-quality kids' clothing at affordable prices. Free shipping over $50!">
+    <meta name="keywords" content="kids clothing, children's fashion, baby clothes, Little  Explorers, kids boutique, stylish kids, elegant kidswear, premium kids fashion, trendy children's wear, quality clothing, kids apparel, online kids shop">
     <meta name="author" content="Little  Explorers Team">
     <meta name="robots" content="index, follow">
-
     <meta name="theme-color" content="#2471a1">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'favicons/favicon-96x96.png' %}">
-    <link rel="canonical" href="{{ request.build_absolute_uri }}">
-
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
-
+    
     {% block corecss %}
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'favicons/favicon-96x96.png' %}">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@300;400;500&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}" media="print" onload="this.onload=null;this.media='all';">
-
-
 
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
+
     {% block corejs %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     {% endblock %}
 
     {% block extra_js %}
 
-
     {% endblock %}
 
     <title>{{ store_settings.store_name }} - Premium Kids Clothing {% block extra_title %}{% endblock %}</title>
-
-
-
 </head>
 
 {% if store_settings.main_page_image %}
+
     <body style="background: url('{{ store_settings.main_page_image.url }}') no-repeat center center fixed;
                 background-size: cover; ">
 {% else %}
+
     <body>
+        
 {% endif %}
 
 
-  <header class="fixed-top  shadow ">
-    <div class="container-fluid  ">
-      
-        <!-- Delivery Banner -->
-        <div class="row  text-white text-center delivery-banner">
-            <div class="col">
-                <img src="https://img.icons8.com/color/48/000000/truck--v1.png" alt="Delivery Truck" loading="lazy" width="50" height="60">
-                FREE Delivery on orders over <span>{{ shipping_settings.free_shipping_threshold  }} {{ store_settings.currency  }}
-</span>!
-            </div>
-        </div>
+        <header class="fixed-top  shadow ">
+            <div class="container-fluid  ">
 
-        <!-- Row Principal -->
-        <div class="row  align-items-center py-3 navbar">
-            
-            <!-- Logo -->
-            <div class="col-6 col-lg-4 text-center text-center">
-                <a class="navbar-brand text-white" href="{% url 'home' %}">
-                    {{ store_settings.store_name }}
-                    {% if store_settings and store_settings.store_logo %}
-
-                    <picture>
-                        <source srcset="{{ store_settings.store_logo.url }}" type="image/webp">
-                        <img src="{{ store_settings.store_logo.url }}" alt="Logo" width="70" height="50" loading="lazy">
-                    </picture>
-                                        {% else %}
-                    <h6>No Logo</h6>
-                    {% endif %}
-                </a>
-            </div>
-
-            <div class="col-3 col-lg-4 text-center text-center">
-                {% if request.user.is_authenticated %}
-
-            <h6>Logged in as: <b>{{ subscribe_settings.user }} </b></h6>
-            {% else %}
-            <a href="{% url 'account_login' %}">Login</a> | <a href="{% url 'account_signup' %}">Register</a>
-            {% endif %}
-
-        </div>
-
-            <!-- Search Bar -->
-            <div class="col-12 col-lg-3 text-center">
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
-                            placeholder="Search our site">
-                        <button class="btn btn-black border border-black rounded-0" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
+                <!-- Delivery Banner -->
+                <div class="row  text-white text-center delivery-banner">
+                    <div class="col">
+                        <img src="https://img.icons8.com/color/48/000000/truck--v1.png" alt="Delivery Truck"
+                            loading="lazy">
+                        FREE Delivery on orders over <span>{{ shipping_settings.free_shipping_threshold }}
+                            {{store_settings.currency }}
+                        </span>!
                     </div>
-                </form>
-            </div>
+                </div>
 
-            <!-- User Menu -->
-            <div class="col-12 col-lg-4 text-center">
-                <ul class="list-inline m-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-white nav-link dropdown-toggle" href="#" id="user-options" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user fa-lg"></i> My Account
+                <div class="row  align-items-center py-3 navbar">
+
+                    <!-- Logo -->
+                    <div class="col-6 col-lg-4 text-center text-center">
+                        <a class="navbar-brand text-white" href="{% url 'home' %}">
+                            {{ store_settings.store_name }}
+                            {% if store_settings and store_settings.store_logo %}
+
+                            <img src="{{ store_settings.store_logo.url }}" alt="Logo" height="50" loading="lazy">
+                            {% else %}
+                            <h6>No Logo</h6>
+                            {% endif %}
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
+                    </div>
+
+                    <div class="col-3 col-lg-4 text-center text-center">
+                        {% if request.user.is_authenticated %}
+
+                        <h6>Logged in as: <b>{{ subscribe_settings.user }} </b></h6>
+                        {% else %}
+                        <a href="{% url 'account_login' %}">Login</a> | <a
+                            href="{% url 'account_signup' %}">Register</a>
+                        {% endif %}
+
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="col-12 col-lg-3 text-center">
+                        <form method="GET" action="{% url 'products' %}">
+                            <div class="input-group">
+                                <input class="form-control border border-black rounded-0" type="text" name="q"
+                                    placeholder="Search our site">
+                                <button class="btn btn-black border border-black rounded-0" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- User Menu -->
+                    <div class="col-12 col-lg-4 text-center">
+                        <ul class="list-inline m-0">
+                            <li class="list-inline-item dropdown">
+                                <a class="text-white nav-link dropdown-toggle" href="#" id="user-options"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-user fa-lg"></i> My Account
+                                </a>
+                                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                    {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'store_settings' %}" class="dropdown-item">Store Settings</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
+                                    {% endif %}
+                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                    <a href="{% url 'store_settings' %}" class="dropdown-item">Store Settings</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                    {% else %}
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                    {% endif %}
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="nav-link text-white" href="{% url 'view_bag' %}">
+                                    <i class="fas fa-shopping-bag fa-lg"></i>
+                                    {% if grand_total %}
+                                    ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    $0.00
+                                    {% endif %}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Navbar secundar -->
+                <!-- Navbar secundar CENTRAT pe linie -->
+                <div class="row d-flex align-items-center justify-content-center navbar">
+                    <div class="col-7 navbar">
+                        <div class="col-4 text-center">
+                            <nav class=" navbar-expand-lg navbar-light mx-auto">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                {% include 'includes/mobile-top-header.html' %}
+                                {% include 'includes/main-nav.html' %}
+                            </nav>
                         </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="nav-link text-white" href="{% url 'view_bag' %}">
-                            <i class="fas fa-shopping-bag fa-lg"></i>
-                            {% if grand_total %}
-                                ${{ grand_total|floatformat:2 }}
-                            {% else %}
-                                $0.00
-                            {% endif %}
-                        </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- Modal -->
+        <div class="modal" id="imageModal">
+            <div class="modal-content">
+                <button class="close-btn" id="closeBtn">Close</button>
+                <img src="{{ MEDIA_URL }}noimage.webp" alt="Large View" id="modalImage" loading="lazy">
             </div>
         </div>
 
-        <!-- Navbar secundar -->
-<!-- Navbar secundar CENTRAT pe linie -->
-<div class="row d-flex align-items-center justify-content-center navbar">
-    <div class="col-7 navbar">
-        
-    </div>
-    <div class="col-4 text-center">
-        <nav class=" navbar-expand-lg navbar-light mx-auto">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
-                aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            {% include 'includes/mobile-top-header.html' %}
-            {% include 'includes/main-nav.html' %}
-        </nav>
-    </div>
-
-</div>
-
-</header>
-
-
-    <!-- Modal -->
-    <div class="modal" id="imageModal">
-        <div class="modal-content">
-            <button class="close-btn" id="closeBtn">Close</button>
-            <img src="{{ MEDIA_URL }}noimage.webp" alt="Large View" id="modalImage" loading="lazy" width="900" height="900">
+        {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+            {% with message.level as level %}
+            {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+            {% endwith %}
+            {% endfor %}
         </div>
-    </div>
-    
-
-    {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-        {% with message.level as level %}
-        {% if level == 40 %}
-        {% include 'includes/toasts/toast_error.html' %}
-        {% elif level == 30 %}
-        {% include 'includes/toasts/toast_warning.html' %}
-        {% elif level == 25 %}
-        {% include 'includes/toasts/toast_success.html' %}
-        {% else %}
-        {% include 'includes/toasts/toast_info.html' %}
         {% endif %}
-        {% endwith %}
-        {% endfor %}
-    </div>
-    {% endif %}
 
+        {% block page_header %}
 
-    {% block page_header %}
-    
-    <div class="page_header" ></div>
+        <div class="page_header"></div>
 
-    {% endblock %}
-
-
-
-
-
-    <main class="flex-grow " style="margin-top: 200px;">
-        {% block content %}
         {% endblock %}
-    </main>
 
 
+        <main class="flex-grow " style="margin-top: 200px;">
+            {% block content %}
+            {% endblock %}
+        </main>
 
 
-
-
-
-    <footer class="site-footer">
-        <form id="newsletter-form">
-            {% csrf_token %}
-            {% if request.user.is_authenticated %}
+        <footer class="site-footer">
+            <form id="newsletter-form">
+                {% csrf_token %}
+                {% if request.user.is_authenticated %}
                 <input type="email" id="email-input" name="email" value="{{ request.user.email }}" hidden required>
                 <button id="subscribe-button" type="submit"
                     class="btn {% if subscribe_settings and subscribe_settings.subscribed %}btn-danger{% else %}btn-success{% endif %}">
-                    
+
                     {% if subscribe_settings.subscribed %}
-                        Unsubscribe
+                    Unsubscribe
                     {% else %}
-                        Subscribe
+                    Subscribe
                     {% endif %}
                 </button>
-            {% else %}
+                {% else %}
                 <input type="email" id="email-input" name="email" placeholder="Enter your email" required>
                 <button id="subscribe-button" type="submit" class="btn btn-success">Subscribe</button>
-            {% endif %}
-        </form>
-        <p id="subscription-message" class="mt-2"></p>
-        
-        
-        <a href="{{ MEDIA_URL }}facebook_bussines_page.PNG" target="_blank">
-            Follow us on Facebook
-
-        </a>
-        
-        
-        
-        <p>Contact: {{ store_settings.contact_email }} | Phone: {{ store_settings.contact_phone }}</p>
-    </footer>
-    {% block postloadjs %}
-
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-    let toastElList = [].slice.call(document.querySelectorAll('.toast'));
-    
-    let toastList = toastElList.map(function (toastEl) {
-        return new bootstrap.Toast(toastEl).show();
-    });
-});
+                {% endif %}
+            </form>
+            <p id="subscription-message" class="mt-2"></p>
 
 
-    </script>
+            <a href="{{ MEDIA_URL }}facebook_bussines_page.PNG" target="_blank">
+                Follow us on Facebook
+
+            </a>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <!-- Stripe -->
 
-    <script src="https://js.stripe.com/v3/"></script>
-    <script>
+            <p>Contact: {{ store_settings.contact_email }} | Phone: {{ store_settings.contact_phone }}</p>
+        </footer>
+        {% block postloadjs %}
 
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("newsletter-form");
-    const button = document.getElementById("subscribe-button");
-    const emailInput = document.getElementById("email-input");
-    const messageContainer = document.getElementById("subscription-message");
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let toastElList = [].slice.call(document.querySelectorAll('.toast'));
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
+                let toastList = toastElList.map(function (toastEl) {
+                    return new bootstrap.Toast(toastEl).show();
+                });
+            });
 
-        const email = emailInput.value.trim();
-        const csrfToken = document.querySelector("[name=csrfmiddlewaretoken]").value;
 
-        if (!email) {
-            messageContainer.textContent = "Please enter a valid email.";
-            return;
-        }
+        </script>
 
-        const isSubscribing = button.textContent.trim() === "Subscribe";
-        const url = isSubscribing ? "{% url 'subscribe' %}" : "{% url 'unsubscribe' %}";
+        <script>
 
-        button.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Processing...';
-        button.disabled = true;
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("newsletter-form");
+                const button = document.getElementById("subscribe-button");
+                const emailInput = document.getElementById("email-input");
+                const messageContainer = document.getElementById("subscription-message");
 
-        fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-                "X-CSRFToken": csrfToken,
-            },
-            body: `email=${encodeURIComponent(email)}`
-        })
-        .then(response => response.json())  // Verifică dacă JSON-ul e valid
-        .then(data => {
-            if (data.status === "subscribed") {
-                button.textContent = "Unsubscribe";
-                button.classList.remove("btn-success");
-                button.classList.add("btn-danger");
-                messageContainer.textContent = data.message;
-            } else if (data.status === "unsubscribed") {
-                button.textContent = "Subscribe";
-                button.classList.remove("btn-danger");
-                button.classList.add("btn-success");
-                messageContainer.textContent = data.message;
-            } else {
-                messageContainer.textContent = data.message;
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            messageContainer.textContent = "An error occurred. Please try again.";
-        })
-        .finally(() => {
-            button.disabled = false;
-        });
-    });
-});
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
 
-    </script>
-    
-    {% endblock postloadjs %}
-</body>
+                    const email = emailInput.value.trim();
+                    const csrfToken = document.querySelector("[name=csrfmiddlewaretoken]").value;
+
+                    if (!email) {
+                        messageContainer.textContent = "Please enter a valid email.";
+                        return;
+                    }
+
+                    const isSubscribing = button.textContent.trim() === "Subscribe";
+                    const url = isSubscribing ? "{% url 'subscribe' %}" : "{% url 'unsubscribe' %}";
+
+                    button.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Processing...';
+                    button.disabled = true;
+
+                    fetch(url, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                            "X-CSRFToken": csrfToken,
+                        },
+                        body: `email=${encodeURIComponent(email)}`
+                    })
+                        .then(response => response.json())  // Verifică dacă JSON-ul e valid
+                        .then(data => {
+                            if (data.status === "subscribed") {
+                                button.textContent = "Unsubscribe";
+                                button.classList.remove("btn-success");
+                                button.classList.add("btn-danger");
+                                messageContainer.textContent = data.message;
+                            } else if (data.status === "unsubscribed") {
+                                button.textContent = "Subscribe";
+                                button.classList.remove("btn-danger");
+                                button.classList.add("btn-success");
+                                messageContainer.textContent = data.message;
+                            } else {
+                                messageContainer.textContent = data.message;
+                            }
+                        })
+                        .catch(error => {
+                            console.error("Error:", error);
+                            messageContainer.textContent = "An error occurred. Please try again.";
+                        })
+                        .finally(() => {
+                            button.disabled = false;
+                        });
+                });
+            });
+
+        </script>
+
+        {% endblock postloadjs %}
+    </body>
 
 </html>
