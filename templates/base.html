@@ -81,7 +81,7 @@
         <!-- Delivery Banner -->
         <div class="row  text-white text-center delivery-banner">
             <div class="col">
-                <img src="https://img.icons8.com/color/48/000000/truck--v1.png" alt="Delivery Truck" loading="lazy">
+                <img src="https://img.icons8.com/color/48/000000/truck--v1.png" alt="Delivery Truck" loading="lazy" width="50" height="60">
                 FREE Delivery on orders over <span>{{ shipping_settings.free_shipping_threshold  }} {{ store_settings.currency  }}
 </span>!
             </div>
@@ -96,7 +96,7 @@
                     {{ store_settings.store_name }}
                     {% if store_settings and store_settings.store_logo %}
 
-                    <img src="{{ store_settings.store_logo.url }}" alt="Logo" height="50" loading="lazy">
+                    <img src="{{ store_settings.store_logo.url }}" alt="Logo" width="70" height="50" loading="lazy">
                     {% else %}
                     <h6>No Logo</h6>
                     {% endif %}
@@ -188,7 +188,7 @@
     <div class="modal" id="imageModal">
         <div class="modal-content">
             <button class="close-btn" id="closeBtn">Close</button>
-            <img src="{{ MEDIA_URL }}noimage.webp" alt="Large View" id="modalImage" loading="lazy">
+            <img src="{{ MEDIA_URL }}noimage.webp" alt="Large View" id="modalImage" loading="lazy" width="900" height="900">
         </div>
     </div>
     
