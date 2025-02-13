@@ -156,3 +156,21 @@ class SubscriberAdmin(admin.ModelAdmin):
 
     mark_subscribed.short_description = "Mark as Subscribed"
     mark_unsubscribed.short_description = "Mark as Unsubscribed"
+
+
+
+
+
+from django.contrib import admin
+from django.contrib.auth.models import User
+from django.contrib.auth.admin import UserAdmin
+
+# Custom UserAdmin to display user ID
+class CustomUserAdmin(UserAdmin):
+    list_display = ('id', 'username', 'email', 'first_name', 'last_name', 'is_staff')
+
+# Unregister the default UserAdmin
+admin.site.unregister(User)
+
+# Register User with the custom admin class
+admin.site.register(User, CustomUserAdmin)

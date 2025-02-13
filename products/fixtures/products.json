@@ -9,7 +9,7 @@
       "price": 29.99,
       "category": 1,
       "rating": 4.8,
-      "image_url": "https://example.com/images/kids_classic_jeans.jpg",
+      "image_url": "https://organic-food-bucket.s3.eu-north-1.amazonaws.com/noimage.webp",
       "image": "kids_classic_jeans.jpg"
     }
   },
@@ -21,9 +21,9 @@
       "name": "Audra Kids' Straight Leg Pants",
       "description": "Stylish and comfortable straight-leg pants for kids, featuring an elastic waist for easy wear and durable fabric for everyday use.",
       "price": 24.99,
-      "category": 1,
+      "category": 2,
       "rating": 4.7,
-      "image_url": "https://example.com/images/kids_straight_pants.jpg",
+      "image_url": "https://organic-food-bucket.s3.eu-north-1.amazonaws.com/noimage.webp",
       "image": "kids_straight_pants.jpg"
     }
   },
@@ -35,10 +35,66 @@
       "name": "Cotton T-Shirt - Fun Prints",
       "description": "Soft cotton t-shirt with fun, kid-friendly prints. Perfect for casual wear and layering.",
       "price": 12.99,
-      "category": 2,
+      "category": 4,
       "rating": 4.9,
-      "image_url": "https://example.com/images/kids_tshirt.jpg",
+      "image_url": "https://organic-food-bucket.s3.eu-north-1.amazonaws.com/noimage.webp",
       "image": "kids_tshirt.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1002400887",
+      "name": "Winter Jacket - Boys",
+      "description": "Warm and cozy winter jacket, designed for maximum comfort during the cold season. Water-resistant and insulated for outdoor adventures.",
+      "price": 59.99,
+      "category": 5,
+      "rating": 4.6,
+      "image_url": "https://organic-food-bucket.s3.eu-north-1.amazonaws.com/noimage.webp",
+      "image": "kids_winter_jacket.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1003800563",
+      "name": "Sneakers - Kids' Sport Shoes",
+      "description": "Comfortable and durable sneakers, perfect for running and playing. Lightweight and breathable design.",
+      "price": 39.99,
+      "category": 6,
+      "rating": 4.8,
+      "image_url": "https://organic-food-bucket.s3.eu-north-1.amazonaws.com/noimage.webp",
+      "image": "kids_sport_sneakers.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1004100923",
+      "name": "Girls' Floral Dress",
+      "description": "Elegant floral dress for girls, perfect for special occasions and everyday comfort.",
+      "price": 34.99,
+      "category": 3,
+      "rating": 4.7,
+      "image_url": "https://organic-food-bucket.s3.eu-north-1.amazonaws.com/noimage.webp",
+      "image": "kids_floral_dress.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "kp1005400764",
+      "name": "Sports Tracksuit Set",
+      "description": "Comfortable and stylish tracksuit set for active kids, perfect for sports and outdoor activities.",
+      "price": 44.99,
+      "category": 10,
+      "rating": 4.9,
+      "image_url": "https://organic-food-bucket.s3.eu-north-1.amazonaws.com/noimage.webp",
+      "image": "kids_tracksuit.jpg"
     }
   }
 ]
