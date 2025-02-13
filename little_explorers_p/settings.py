@@ -135,6 +135,14 @@ TEMPLATES = [
 
 # =============================================================================
 
+CSP_DEFAULT_SRC = ("'self'",)
+CSP_SCRIPT_SRC = ("'self'", "https://cdnjs.cloudflare.com", "https://ajax.googleapis.com")
+CSP_STYLE_SRC = ("'self'", "https://fonts.googleapis.com", "'unsafe-inline'")
+CSP_IMG_SRC = ("'self'", "data:", "https://img.icons8.com")
+CSP_FONT_SRC = ("'self'", "https://fonts.gstatic.com")
+
+# =============================================================================
+
 # Authentication settings
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 

@@ -39,7 +39,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@300;400;500&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}" media="print" onload="this.onload=null;this.media='all';">
 
 
@@ -50,19 +49,18 @@
     {% endblock %}
 
     {% block corejs %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     {% endblock %}
 
     {% block extra_js %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 
     {% endblock %}
 
     <title>{{ store_settings.store_name }} - Premium Kids Clothing {% block extra_title %}{% endblock %}</title>
 
-
-    </title>
 
 
 </head>
@@ -96,8 +94,11 @@
                     {{ store_settings.store_name }}
                     {% if store_settings and store_settings.store_logo %}
 
-                    <img src="{{ store_settings.store_logo.url }}" alt="Logo" width="70" height="50" loading="lazy">
-                    {% else %}
+                    <picture>
+                        <source srcset="{{ store_settings.store_logo.url }}" type="image/webp">
+                        <img src="{{ store_settings.store_logo.url }}" alt="Logo" width="70" height="50" loading="lazy">
+                    </picture>
+                                        {% else %}
                     <h6>No Logo</h6>
                     {% endif %}
                 </a>
