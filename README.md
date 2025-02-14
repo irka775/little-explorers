@@ -122,6 +122,8 @@ Tasks are managed visually, moving through stages: *To Do*, *In Progress*, and *
 
 The Kanban board can be viewed [here](https://github.com/users/irka775/projects/9/views/1?pane=issue&itemId=95547391&issue=irka775%7Clittle-explorers%7C25).
 
+---
+
 
 ## User Experience
 
@@ -167,7 +169,7 @@ These goals help ensure that the project is **efficiently built, secure, and rea
 
 ---
 
-### Business Model
+#### Business Model
 
 I have chosen a **traditional B2C (Business-to-Customer) e-commerce model**, where the store directly sells children's clothing to customers without intermediaries. The website is designed to provide a **straightforward and user-friendly shopping experience**, ensuring users(parents and guardians) can easily find and purchase high-quality clothing for their children.
 
@@ -195,7 +197,7 @@ The website is designed to be:
 
 ---
 
-###  Marketing
+####  Marketing
 
 ##### **Marketing Strategy**
 For the **Little Explorers** e-commerce project, I have developed a **basic Facebook marketing strategy** to simulate how a real business would promote an online store. However, since this project is created for learning purposes and is not a real e-commerce site, I have set up a **fictional Facebook page** and captured a screenshot of it instead of managing an actual social media presence.
@@ -213,31 +215,19 @@ While this page is only a placeholder for learning purposes, in the future, a fu
 ##### **Newsletter Subscription (Email Marketing)**
 **Little Explorers** integrates **Mailchimp** to allow users to subscribe to newsletters during registration. This simulates how an online store can engage with customers through **exclusive offers, product updates, and seasonal promotions**.
 
-- Upon subscribing, users are redirected to a confirmation page.  
+- Upon subscribing, users are get a confirmation message.  
 - The site owner can track subscribers in the **Mailchimp Audience Dashboard**.  
 - Subscribers receive promotional emails when new collections, discounts, or special events are launched.
 
 
-### **Confirmation After Subscribing**
-![Subscription Confirmation](#)
+#### **Subscription Form**
+![Subscription Form](media\screenshots\subscribe_email.PNG)
 
-### **The New Subscriber Appears in the Mailchimp Audience Dashboard**
-![Mailchimp Audience](#)
+#### **Subscription Confirmation Page**
+![Subscription Confirmation Page](media\screenshots\subscribe.PNG)
 
-### **Subscribers Receive Promotional Emails from Little Explorers**
-![Mailchimp Campaigns](#)
-
-
-
-
-
-
-
-
-
-
------------------------------------------------------------------
---------------------------------------------------------
+#### **Subscription Success Message**
+![Subscription Success Message](media\screenshots\unsubscribe.PNG)
 
 ### **Future Marketing Plans (If the Project Expands)**
 If **Little Explorers** grows into a real business, the marketing strategy could include:
@@ -249,290 +239,404 @@ If **Little Explorers** grows into a real business, the marketing strategy could
 
 ---
 
-
-
-This site has a Facebook Business page with a link on the page footer. It can be viewed [here](https://www.facebook.com/stepupshoeseurope/)
-
-Upon registering for an account, customers can check a box to receive news and offers through email via [Mailchimp](https://mailchimp.com/).
-
-Upon registering, the user ir redirected to a new page confirming their subscription. The site owner can now see the new subscriber on their audience dashboard, and new campaigns will be sent to them too.
-
-
-**The mailchimp signup form**
-
-## ![Meta-tags seo](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/misc/mailchimp_field.png)
-
-**Confirmation after subscribing**
-
-## ![Meta-tags seo](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/misc/mailchimp_subscr_conf.png)
-
-**The new subscriber is added to the site owners audience in the Mailchimp Dashboard**
-
-## ![Meta-tags seo](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/misc/mailchimp_audience.png)
-
-**They will receive emails when the site owner creates a new campaign**
-
-## ![Meta-tags seo](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/misc/mailchimp_campaigns.png)
-
-</details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-------------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-
 #### Search Engine Optimisation
 
-I have generated a sitemap.xml and robots.txt file, and only included relevant canonical links (pages that are not duplicates) which helps Google map the pages of the site.
+I have generated a sitemap.xml and robots.txt file which helps Google map the pages of the site.
 
-I have also done some research on highest searched words in shoe retailing, and came up with this title and description:
+I have also done some research on highest searched words in kids clothing retailing, and came up with this title and description:
 
-![Meta-tags seo](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/misc/seo.png)
+#### **Meta-tags seo**
+![Meta-tags seo](media\screenshots\meta_tags.PNG)
+
+---
 
 ### Structure
 
-This website has 11 custom built pages and 16 (not all are used) account operations Django Allauth pages. The navbar at the top of the screen gives users access to the most important pages at all times.
+Little Explorers is an e-commerce website specializing in kids' clothing and is designed with a user-friendly interface, allowing customers to seamlessly browse, shop, and manage their accounts with ease.The website is built using the Django framework, offering a secure and scalable e-commerce experience. It features a customized product management system, interactive user accounts, and a responsive design to ensure accessibility across all devices.
+With intuitive navigation, dynamic filtering options, and secure checkout, Little Explorers provides a smooth and enjoyable shopping experience. Customers can also leave product reviews, manage their wishlists, and track their orders—all in one place.
+For store administrators, the platform includes powerful management tools, allowing easy product, brand, order, and customer control. Additional store settings ensure that the shopping experience remains up to date and optimized.
 
 #### Pages
 
-**Accessible to all users**
+##### **Accessible to All Users**
+These pages are available to both **guests and logged-in users**.
 
-- Home - The landing page of the site, with a full screen carousel hero image giving first time visitors a nice welcome
+- **Home** - The landing page , a welcome message, and a call-to-action button ("Discover More").
+- **Products** - A **searchable and sortable** product listing page, where users can browse by category, name, or description.
+- **Product Detail** - A dedicated page for each product, displaying images, size options, price, and product description.
+- **Cart** - Displays all items added by the user, allowing quantity adjustments and product removal.
+- **Checkout** - Users enter their shipping details and payment information to complete their order.
+- **Order Confirmation** - Displays the order summary and payment success message.
+- **Sign In & Sign Up** - Authentication pages for account registration and login.
+- **Contact** - A contact form allowing users to send inquiries. Contact email and phone number are also displayed in the footer.
+- **Reviews** - Users can view all product reviews submitted by other customers.
+- **Subscribe & Unsubscribe** - Visitors can subscribe to and unsubscribe from email notifications.
 
-- Products - This is a list of the products when clicking on a category in the navbar, or performing a search
 
-- Product Detail - The dedicated page for a specific product, where users can read a description and perform all given tasks for the product
+##### **Accessible to Signed-In Users**
+These features require users to be **logged in**.
 
-- Cart - A user purchases an item by adding it to the cart; clicking on it will show all cart items
+- **My Account (Dashboard)** - Users can:
+  - View order history.
+  - Manage billing and shipping information.
+  - Edit their profile details.
+  - Access and manage their wishlist.
+- **Wishlist** - Users can:
+  - Add or remove products from their wishlist.
+  - View saved items for future purchases.
+- **Order Management** - Users can:
+  - View past orders and their details.
+  - Access receipts and tracking information.
+- **Edit Account** - Users can:
+  - Change their password.
+  - Log out from all other active devices.
+- **Reviews Management** - Users can:
+  - Submit reviews for purchased products.
+  - Edit or delete their own reviews.
+- **Sign Out** - Logs the user out securely.
+- **Delete Account** - Permanently removes the user's account and all associated data.
 
-- Checkout - Here users enter their delivery details and card info to proceed with their order
 
-- Order Confirmation - The page show when a payment has successfully been made, showing the order information
+##### **Accessible to Admin Users**
+These features are only available to **superusers (store owners/admins)**.
 
-- The Sign In and Sign Up pages
+- **Product Management**
+  - **Add Product** - Admins can add new clothing items.
+  - **Edit Product** - Modify existing product details (name, description, price, images, categories).
+  - **Delete Product** - Remove products from the store.
+- **Brand Management**
+  - **Add Brand** - Admins can introduce new brands.
+  - **Manage Brands** - View, edit, or delete brand listings.
+- **Order Management**
+  - View and manage customer orders.
+  - Update order status (e.g., **Processing, Shipped, Completed**).
+- **User Management**
+  - View user profiles.
+  - Manage wishlist items and account settings if needed.
+- **Store Settings**
+  - Modify general store settings (branding, logo, etc.).
+  - Configure shipping settings.
+  - Update store policies and terms.
+- **Site Error Pages**
+  - **Custom 404 Page** - Displayed when a page is not found.
+  - **Custom 500 Page** - Shown when an internal server error occurs.
+  - **Custom 403 Page** - Access denied page for unauthorized actions.
+  - **Custom 400 Page** - Bad request handling.
 
-- Contact - A simple contact form that is sent to the site owner
 
-**Accessible to signed in users**
+#### **Pages Provided by Django Allauth**
+These pages are integrated from **Django Allauth**. Read more about **Allauth** [here](https://django-allauth.readthedocs.io/en/latest/).
 
-- My StepUp - The users order history, billing and shipping info is here, as well as the users wish list, editable here in the My StepUp page.
+- **Sign Up** - Register a new account.
+- **Sign In** - Log in to an existing account.
+- **Sign Out** - Logs the user out securely.
+- **Password Reset** - Allows users to reset their password via email verification.
+- **Email Verification Pages** - Ensures users confirm their email before accessing all features.
 
-- Sign Out
-
-- Other accounts operations pages such as Change Password or Password reset
-
-- Delete Account - Allows the user to completely remove their account from StepUp
-
-**Accessible to Admin users**
-
-- Add Brand or Product - This is where admin users can add new products to the website
-
-- Edit Product - The page for admins to edit or delete products
-
-- Manage Brands - An overview of all brands on the site with edit and remove functionality
-
-#### Pages provided by Django
-
-These pages are provided by the Allauth package of the Django framework, but are customised by me to fit in with the rest of the site. Read more about Allauth [here](https://django-allauth.readthedocs.io/en/latest/)
-
-- Sign Up - where users can register for an account on the site
-
-- Sign in - Registered users can log accessing their personal info etc by signing in
-
-- Sign Out - The same goes for signing out
-
-- Various pages for email verification and password reset, etc
 
 #### Technical Design
 
 ##### Code Structure
 
-I have devided the code into apps as per Django best practice, for the different areas of functionality.
+The **Little Explorers** project follows Django's **best practices**, organizing the code into multiple **apps**, each handling a specific part of the functionality.
 
-- Home - basic functionality for the home page
+- **Home** - Handles the main homepage and welcome content.
+- **Products** - Manages **product listings, filtering, sorting, and product details**.
+- **Bag (Cart)** - Implements the **shopping cart functionality**, allowing users to add and manage their selected items.
+- **Checkout** - Manages the **order processing and payment integration**.
+- **Profiles** - Handles **user accounts, order history, and wishlist**.
+- **Reviews** - Implements the **user review system**, allowing customers to leave, edit, or delete reviews.
+- **Store Settings** - Allows **administrators to configure store settings, shipping options, and site preferences**.
 
-- Products - all functionality related to the products on the site
 
-- Cart - functionality for the users shopping cart
+**Other Directories and Files**
 
-- Checkout - functionality for the user to go through with the order and payment
-
-- Profiles - functionality regarding the users profile and order data (My StepUp)
-
-- User Account - The app in which users can delete their account
-
-**Other Directories and files**
-
-- static - css and javascript files
-
-- media - images for the development website (other images are used in the production version)
-
-- stepup - project folder containing settings, urls and other configuration files for the whole project
-
-- templates - contains the base template and templates (HTML-files with Django logic) for the Django allauth authentication
-
-- manage.py - the main python project file to get the web application running
-
-- README.md - the document you are reading right now, documentation of the whole project
-
-- custom_storages.py - configuration for storage of media and static files on AWS S3
-
-- Procfile - needed for deployment to Heroku to specify commands to be executed by the app on startup
-
-- requirements.txt - a list of dependancies (installed packages) that the project requires for the application to function
-
-- robots.txt and sitemap.xml - files configured for Search Engine Optimisation
-
-Enviromental Variables such as API-keys, passwords etc are stored securely in the back end (in the development environment and in the Heroku App settings) so that regular users do not have access to them.
+- **static/** - Contains **CSS, JavaScript, and frontend assets** used for styling and interactivity.
+- **media/** - Stores **uploaded product images** for local development (in production, these are stored externally).
+- **store_settings/** - Manages store-level **configuration settings, shipping settings, and admin control options**.
+- **templates/** - Holds the **HTML templates** used for rendering pages. This includes:
+  - **auth templates** (Django Allauth).
+  - **error pages** (400, 403, 404, 500).
+  - **base templates and layout files**.
+- **manage.py** - The main Python script for running the Django project.
+- **custom_storages.py** - Configures **AWS S3 for static and media file storage**.
+- **db.sqlite3** - The **local development database** (PostgreSQL is used in production).
+- **env.py** - Stores **environment variables** securely.
+- **.gitignore** - Prevents unnecessary files from being tracked in Git.
+- **requirements.txt** - Lists all **dependencies** required for the project.
+- **Procfile** - Required for **Heroku deployment**, specifying startup commands.
+- **robots.txt & sitemap.xml** - Configured for **Search Engine Optimization (SEO)**.
 
 ##### Database
 
-The [SQLite](https://www.sqlite.org/index.html) database was used for the development environment, and the [Postgres](https://www.postgresql.org/) database for production as an add-on via Heroku. Both are relational databases and work well with the Django framework used for this project.
+- **Development Database**: [SQLite](https://www.sqlite.org/index.html) is used for local testing.
+- **Production Database**: [PostgreSQL](https://www.postgresql.org/) is used for better scalability and is hosted via **Heroku**.
+  Both are relational databases and work well with the Django framework used for this project.
+
+ **Security & Environmental Variables**
+
+Sensitive data such as **API keys, database credentials, and payment gateway secrets** are **never stored in the codebase** and instead of that I have been created:
+- `env.py` for local development.
+- **Heroku Config Vars** in Heroku platform for Heroku development.
+
 
 ##### Data Models
 
-The following models have been used to populate the database and for the site to function as it should:
+The **Little Explorers** e-commerce platform utilizes a relational database structure, following Django ORM (Object-Relational Mapping).The following models have been used to populate the database and for the site to function as it should:
 
-- **User** - the built in Django User model, facilitates the users basic information
+ **1. User & Profiles**
+The UserProfile model extends Django’s built-in **User model**, storing **default shipping details** and **account preferences**. 
+**User** - the built in Django User model, facilitates the users basic information.
+**UserProfile** - the model storing the users product and order information. 
 
-- **Category** - the category in which the product is placed
+ **2. Products & Categories**
+The Product model represents items available for sale, with categories and reviews linked to it.
+**Category** - the category in which the product is place.
+**Product** - the model for the product itself and its details.
+**WishListItem** - the customer has the option to save an item, which will then appear in their wish list on the My StepUp page.
 
-- **Brand** - the brand of the product
+ **3. Reviews**
+Customers can leave **product reviews** or **general site feedback**.
+ **Review** - a model for users to give the product a rating and a review.
 
-- **Product** - the model for the product itself and its details
+ **4. Shopping & Orders**
+Orders contain **multiple line items**, and each product purchased is stored separately in **OrderLineItem**.
+ **Order** - a users successful purchase leads to an instance of the Order model being created, storing delivery and user data.
+ **OrderLineItem** - a model holding the product information for a single product, binding the product model together with the order.
 
-- **Review** - a model for users to give the product a rating and a review
-
-- **Order** - a users successful purchase leads to an instance of the Order model being created, storing delivery and user data
-
-- **OrderLineItem** - a model holding the product information for a single product, binding the product model together with the order
-
-- **UserProfile** - the model storing the users product and order information
-
-- **WishListItem** - the customer has the option to save an item, which will then appear in their wish list on the My StepUp page
+ **5. Store Settings & Shipping**
+Admin users manage store configurations, shipping options, and payment settings.
 
 ##### Schema of models
 
-Below is a schema of the models used in this application, created with [Lucidchart](https://lucid.co/product/lucidchart)
+I used in **Little Explorers** e-commerce platform a **relational database structure** and below is a schema diagram representing the relationships between models.
 
-![Schema of models](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/schemas/db_model_schema.png)
+ **Schema Diagram**
+![Schema of models](--------)
+
+ **Key Relationships & Explanation**
+
+ **1. User & UserProfile**
+- The UserProfile model extends Django’s built-in User model.
+- It stores default shipping details, helping users complete orders faster.
+- **Relationship:** UserProfile has a OneToOneField with User.
+
+**2. Products & Categories**
+- A Product belongs to a Category, allowing easy organization.
+- Each Product can have multiple Reviews from customers.
+- **Relationship:** Product has a ForeignKey to Category.
+
+ **3. Reviews**
+- Users can leave product reviews or site feedback.
+- Reviews include a **rating, comment, and creation date.
+- **Relationship:** 
+  - A Review is linked to both a User and a Product (if applicable).
+
+ **4. Orders & OrderLineItems**
+- When a customer places an Order, it contains multiple OrderLineItems.
+- Each OrderLineItem stores product, quantity, and subtotal.
+- **Relationships:**
+  - Order has multiple OrderLineItems (OneToMany).
+  - Each OrderLineItem is linked to a Product (ForeignKey).
+
+ **5. Wishlist**
+- Customers can save favorite products to their wishlist.
+- **Relationships:**
+  - Wishlist has a OneToOneField with User.
+  - A Wishlist can contain multiple Products (ManyToMany).
+
+ **6. Store Settings & Shipping**
+- The StoreSettings model manages global store settings, branding, and payment options.
+- ShippingSettings controls delivery costs and free shipping thresholds**.
+- **Relationship:** ShippingSettings has a ForeignKey to StoreSettings.
+
+ **7. Subscribers**
+- Customers and guests can subscribe to the newsletter.
+- **Relationships:**
+  - A Subscriber can be linked to a User (OneToOne) or just an email.
+
+This schema ensures that Little Explorers remains scalable, secure, and optimized for handling user interactions, product management, and orders.
+
+---
+
 
 ### Scope - Epics and User Stories
 
-#### Epic 1: Base functionality and ease of use
+The **Little Explorers** e-commerce platform is designed with a **user-centric approach**, ensuring an intuitive shopping experience. Below is a key **epics and user stories**, defining the functionality required for different types of users (customers, admins, and visitors).
+Each epic represents a broad feature set, broken down into smaller, actionable user stories.
 
-1. As a user, the intention of the specific page is made clear to me, so that I know the purpose of that page
+#### Epic 1: Project Setup & Configuration*
+ *As a developer, I want a well-configured development environment so that the project runs smoothly and is easy to maintain.*
 
-2. As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
+####  **User Stories**
+-  **Create a New Django Project** (#17)  
+   Set up the initial Django project structure with best practices.
+-  **Install Necessary Dependencies** (#18)  
+   Ensure all required packages (Django, PostgreSQL, Stripe, etc.) are installed.
+-  **Configure Database Settings** (#19)  
+   Set up PostgreSQL for production and SQLite for local development.
+-  **Set Up Environment Variables** (#20)  
+   Secure sensitive information using `.env` files.
+-  **Run Initial Tests** (#21)  
+   Verify that the project runs without errors and initial tests pass.
 
-3. As a user, I can see a form to register for newsletters repeatedly throughout the website, so that I can receive news on products and campaigns
+####  **Acceptance Criteria**
+- The Django project is successfully created and follows a structured architecture.
+- All required dependencies are listed in requirements.txt and installed without issues.
+- The database is configured for both development (SQLite) and production (PostgreSQL).
+- Environment variables are set for security(e.g., API keys, database credentials).
+- The application runs successfully, and initial tests pass without errors.
 
-4. As a user, I can see a link in the footer to the site’s Facebook Business Page, so that I can follow the company on Facebook
 
-5. As a user, it is visible if I am signed in or not, so that I am made aware of this
+####  Epic 2: User Authentication & Profile Management
+ *As a user, I want to securely create and manage my account so that I can access personalized features.*
 
-6. As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
+####  **User Stories**
+-  **User Registration and Authentication** (#1)  
+   Users can sign up, log in, and reset passwords.  
+- **User Registration and Shopping Experience for Little Explorers** (#15)  
+   A seamless registration and shopping experience.
 
-#### Epic 2: Products
+####  **Acceptance Criteria**
+- Users can register and log in securely.
+- Password recovery is available via email.
+- Users can update their profile details.
 
-7. As a user, I can browse a list of products for sale on the site so that I can find the product I seek
 
-8. As a user, i can perform a search, so that products matching the search appear in the products list
 
-9. As a user, I can sort the products list by category, alphabetically or by rating, so that i can quickly find the product I seek
+####  Epic 3: Product Browsing & Search
+ *As a user, I want to browse, search, and filter products so that I can easily find what I need.*
 
-10. As a user, I can view the most important details of the product in the product list, such as model, brand, category, price, rating, and image so that i know most details without having to click on the product
+####  **User Stories**
+-  **Product Catalog Browsing** (#2)  
+   Users can explore product categories.
+- **Product Search and Filter** (#3)  
+   Users can search by name, category, or price.
 
-11. As a user, i can click the product in the products list so that I can view the products details
+####  **Acceptance Criteria**
+- Products are categorized and searchable.
+- Filtering and sorting options are available.
 
-12. As a user, I can choose the size of the product, as well as the quantity, so that I can purchase the correct size/quantity
 
-#### Epic 3: The Cart
 
-13. As a user, I can add a product to my cart by clicking ’Add to Cart’ from the product detail page so that I can purchase the product
+####  Epic 4: Shopping Cart & Checkout
+ *As a user, I want to add items to my cart and proceed to checkout smoothly.*
 
-14. As a user, I can always see the total price of my cart in the navigation bar, so that I know what the total cost will be
+####  **User Stories**
+-  **Shopping Cart Functionality** (#4)  
+   Users can add, remove, and update items in their cart.
+-  **Secure Checkout and Payment** (#5)  
+   Users can enter delivery details and complete payments.
 
-15. As a user, i can adjust the quantity of the product chosen after adding it to the shopping cart
+####  **Acceptance Criteria**
+- Items persist in the cart until checkout.
+- Payment methods are secure.
 
-16. As a user, I can view the products added to my cart by clicking the cart icon or by adding an item to the cart
 
-17. As a user, I can click the remove from cart button, so that I can easily remove products from my cart
+#### Epic 5: Order Management & Payments
+ *As a user, I want to view my order history and receive confirmation after making a purchase.*
 
-#### Epic 4: Checkout
+####  **User Stories**
+-  **Order Management (Admin)** (#7)  
+   Admins can view, update, and manage orders.
 
-18. As a user, I can click on Proceed to Checkout, so that I can purchase the items in my cart
+####  **Acceptance Criteria**
+- Users receive email confirmations for orders.
+- Admins can process and update order status.
 
-19. As a logged in user, on the Checkout page, I can choose to save my delivery address to My StepUp, so that I can retain it for future orders
 
-20. As a user, i can enter my card details on the checkout page, so that I can make the desired purchase
+####  Epic 6: Wishlist & Reviews
+ *As a user, I want to save products to my wishlist and leave reviews on products.*
 
-21. As a user, I am informed of whether my purchase was successful or not via the Order Successful page, as well as via an email sent upon order confirmation
+####  **User Stories**
+-  **Wishlist** (#23)  
+   Users can save favorite items for later.
+-  **Product Reviews and Ratings** (#11)  
+   Users can submit and rate product reviews.
+-  **Display Wishlist and Reviews in the Navigation Menu** (#25)  
+   Wishlist and reviews are easily accessible.
 
-#### Epic 5: User registration and account
+####  **Acceptance Criteria**
+- Wishlist items persist in user accounts.
+- Users can submit, edit, and delete reviews.
 
-22. As a user, I can register for an account on the site, so that I can gain all the site’s customer benefits
 
-23. As a user, I am not able to access pages that require authentication if I am not signed in
+####  Epic 7: Admin & Store Management
+ *As an admin, I want to manage products, inventory, and settings efficiently.*
 
-24. As a user, I have to confirm my email address to complete my account registration
+####  **User Stories**
+-  **Product and Inventory Management (Admin)** (#6)  
+   Admins can add, edit, and remove products.
+-  **Admin Settings Panel for Customization** (#26)  
+   Store settings can be adjusted.
 
-25. As a logged in user, i can view a My StepUp page, so that I can view my previous orders, and view and update my delivery and contact details
+####  **Acceptance Criteria**
+- Admins can edit product details and stock levels.
+- Admin dashboard provides clear data insights.
 
-26. As a logged in user, I can add my delivery details to the My StepUp page, so that it is my default delivery address for my order on the checkout page
 
-27. As a logged in user, I can choose to delete my account, so that my user account no longer exists
+####  Epic 8: Mobile & User Experience Enhancements
+ *As a user, I want the website to be responsive and accessible on all devices.*
 
-#### Epic 6: The Wish List
+####  **User Stories**
+-  **Responsive Design for Mobile Devices** (#9)  
+   The site adapts to different screen sizes.
 
-28. As a logged in user, I can add a product to my Wish List, so that I can easily view it later
+#### **Acceptance Criteria**
+- The website functions smoothly on mobile.
+- UI elements resize dynamically.
 
-29. As a logged in user, I can remove a product from my Wish List, so that it no longer is there
 
-30. As a logged in user, I can add products from my Wish List to my cart, so that I can easily purchase them (user story removed for now)
+#### Epic 9: Social & Email Integrations**
+ *As a user, I want to receive notifications and share products on social media.*
 
-#### Epic 7: Reviews
+####  **User Stories**
+-  **Social Media Integration** (#14)  
+   Users can share products on social platforms.
+-  **Email Notifications** (#8)  
+  - Users receive updates about orders and promotions.
 
-31. As a user, i can read user reviews for products that have received them, so that I easier know if the product is right for me
+####  **Acceptance Criteria**
+- Email notifications are triggered for key events.
+- Social media links are available for sharing.(The Facebook link is created but currently directs to a screenshot of the store's Facebook page instead of a live profile.)
 
-32. As a logged in user, i can write a review and rate a product in the list, so that other users can benefit from this
+####  Epic 10: Documentation & Feedback
+ *As a developer or user, I want clear documentation and feedback options.*
 
-33. As a logged in user, I can remove my review of a product, so that it no longer is there
+####  **User Stories**
+-  **README Documentation for Little Explorers** (#16)  
+  A structured README file explaining project features.
+-  **Leave Feedback About the Website** (#24)  
+  -Users can submit feedback to improve UX.
 
-#### Epic 8: Contact
+####  **Acceptance Criteria**
+- README includes sections for setup, usage, and features.
+- Users can provide feedback through a contact form or direct message.
 
-34. As a user, I can get in touch with the site owner, regardless of whether I am signed in or not
 
-#### Epic 9: Site Owner functionality
+####  Epic 11: Testing & Deployment
+ *As a developer, I want to ensure the platform is stable and functional before release.*
 
-35. As a site owner, I can view an admin page, where I can perform batch editing of model instances on the site including products, categories, orders and brands
+#### **User Stories**
+-  **Project Deployment** (#10)  
+  Deploy the application to a live server.
+-  **Add Unit Tests** (#22)  
+   Implement unit tests to ensure system reliability.
 
-36. As a site owner, I can add, edit or remove any product on the site
+#### **Acceptance Criteria**
+- The project is deployed and accessible online.
+- Automated tests cover critical functionalities.
 
-37. As a site owner, I can add, edit or remove any brand on the site
+---
 
-38. As a site owner, I can remove any products review on the site
+-----------------------------------------------------------------------------------------------
 
-39. As a site owner, I can receive an email from a user that fills in the contact form, so that they can get in touch with me
 
-#### Epic 10: Terms and Policy
 
-40. As a user, I can view a terms document via a link in the sites footer
 
-41. As a user, I can view a privacy policy document via a link in the sites footer
+
+
+
 
 ### Skeleton
 

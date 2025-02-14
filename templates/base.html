@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" media="print" onload="this.onload=null;this.media='all';">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" >
 
     {% endblock %}
 
@@ -56,17 +56,7 @@
     <title>{{ store_settings.store_name }} - Premium Kids Clothing {% block extra_title %}{% endblock %}</title>
 </head>
 
-{% if store_settings.main_page_image %}
-
-    <body style="background: url('{{ store_settings.main_page_image.url }}') no-repeat center center fixed;
-                background-size: cover; ">
-{% else %}
-
-    <body>
-        
-{% endif %}
-
-
+<body style="background: url('{{ store_settings.main_page_image.url }}') no-repeat center center fixed; background-size: cover;">
         <header class="fixed-top  shadow ">
             <div class="container-fluid  ">
 
