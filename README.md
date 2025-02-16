@@ -628,16 +628,6 @@ Each epic represents a broad feature set, broken down into smaller, actionable u
 - Automated tests cover critical functionalities.
 
 ---
-
------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
 ### Skeleton
 
 #### Wireframes
@@ -652,636 +642,466 @@ All wireframes can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_V
 
 #### Colors
 
-![Colors](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/colors.png) (palette generated at https://imagecolorpicker.com)
+The **Little Explorers** website uses a vibrant and playful color palette to reflect the joy and creativity of children's fashion. The combination of green, blue, black, and white provides a fresh, clean, and inviting design.
 
-I have chosen the combination of a dark purple night sky as the background, orange and white for text and main buttons in orange and grey. As design is important to me, I couldn't help myself in experimenting and exploring in the possibilities for this project.
+![Colors](media\screenshots\colors.PNG)  
+(*Color palette generated at [imagecolorpicker.com](https://imagecolorpicker.com)*)
+
+##### **Primary Colors**
+-  **Green (#2FAA43)** – Used for the header background, representing growth, energy, and a nature-inspired theme.
+-  **Blue (#3498DB)** – Used for navigation elements, adding a cool and friendly tone to the design.
+-  **Black (#000000)** – Used for text and important contrast elements, ensuring readability.
+-  **White (#FFFFFF)** – Used for backgrounds and text, keeping the interface clean and modern.
+
+##### **Accent Colors**
+-  **Orange (#F39C12)** – Used for small highlights or action elements, adding warmth and contrast.
+-  **Red (#E74C3C)** – Used for important actions, such as the unsubscribe button.
+
+##### **Text Colors**
+- The main text color is **black (#000000)**, ensuring strong readability on light backgrounds.
+- Some elements use **white text (#FFFFFF)** when displayed on dark or colorful backgrounds for better contrast.
+- In the future, I may experiment with **softer shades** to enhance the reading experience, especially for longer texts.
+
+##### **Design Inspiration**
+The color scheme was chosen to create a fun, fresh, and engaging experience for customers browsing children's clothing. The combination of green and blue reflects playfulness and comfort, while the black and white elements ensure easy readability and a modern aesthetic.
+
+##### **Future Improvements**
+As a student, I am aware that the current color palette could be further optimized for better usability, branding, and accessibility. When I decide to extend and scale this project, I will experiment with alternative color schemes to improve contrast and readability and ensure that colors meet accessibility standards for visually impaired users.
+
+
+
 
 #### Design Choices
 
-I have added lots of semi-transparent elements to create a feeling of three-dimentionality, for example the navbar. It fades to completely transparent on scroll, so users can view the content in full.
 
-## ![Navbar](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/gif_navbar_scroll.png)
+The Little Explorers website I was designed with a playful yet clean aesthetic, incorporating soft transitions, rounded edges, and engaging colors to create a welcoming experience for users browsing children's clothing.
 
-Buttons are coloured with CSS-style attribute background: linear-gradient to create a glossy finish on the main buttons.
-Admin operation buttons on products and brands are styled differently to distinguish them from the others.
+**Navbar & Header**
+The navbar is designed to be highly functional and visually appealing, maintaining a fixed position at the top of the page for easy navigation. The background features a gradient green-blue blend, making the site feel vibrant and lively.
 
-Here you can see some of the button elements, as well as the badge, here used to indicate that the product is on sale.
+- The navbar includes icons for user accounts, cart, and categories, ensuring quick access to important sections.
+- A search bar allows users to find products efficiently.
+- The header features a full-screen hero image with an inviting message and a call-to-action button for exploring products.
 
-## ![Button Elements](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/button_badge_elements.png)
+![Navbar](media\screenshots\navbar.PNG)
+
+
+ **Buttons & UI Elements**
+Buttons across the site are designed to be eye-catching and functional, enhancing usability and user engagement.
+
+- Primary buttons use a linear-gradient CSS effect to create a glossy finish.
+- The "Discover More" button on the homepage stands out with a bold black background for contrast.
+- Admin-related buttons (e.g., for managing products) are styled differently to clearly distinguish them from user-facing elements.
+- The Unsubscribe button is colored red, indicating a critical action.
+- The Subscribe" button is styled in a green color, representing a positive action for users who want to stay updated.
+  Below are some screenshots showcasing the design choices implemented throughout the website:
+ ![Button Elements](media\screenshots\button1.PNG)
+ ![Button Elements](media\screenshots\button2.PNG)
+
+ **Typography & Readability**
+- The site primarily uses black text  for readability.
+- White text is used on dark backgrounds to maintain contrast.
+- Fonts are chosen for a modern and clean look, ensuring that product descriptions and labels are easy to read.
+
+ **For future Improvements**
+ - I recognize that design choices can always be improved. In the future, I plan to refine the color contrast for better accessibility and implement a dynamic navbar that fades or adjusts upon scrolling and thinking to enhance button styles for even better user engagement.
 
 #### Typography
 
-Google Fonts was used for all fonts on this site, and I have used three fonts:
+The typography on Little Explorers I was carefully chosen to ensure clarity, readability, and a modern,simple feel . The primary font used across the website is Lato (Google Font), with Helvetica Neue as a fallback for consistency and Comic Sans MS (Used in the Banner), applied to the announcement banner for a fun and playful touch.
 
-- Anaheim for the general content, but also the main heading
-  ![Anaheim Font](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/font_anaheim.png)
+ **Font Usage Across the Homepage**
+- **Navigation Bar & Menu** → *Lato (Google Font)*
+- **Banner** → *Comic Sans MS', 'Arial', sans-serif;* (Google Font)*
+- **Main Heading ("Welcome to our store")** → *Lato (Bold variant)*
+- **Body Text & Buttons (Discover More, Unsubscribe, etc.)** → *Lato (Regular & Semi-Bold)*
+- **Fallback Font for Safety** → *Helvetica Neue*
+
+To better visualize the typography choices, see the screenshot of the homepage:
+
+- ![Typography in Action1](media\screenshots\baner.PNG)
+- ![Typography in Action2](media\screenshots\typography1.PNG)
+- ![Typography in Action3](media\screenshots\typography2.PNG)
 
 ---
-
-- Average for the hero images
-  ![Anaheim Font](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/font_average.png)
-
----
-
-- Abel for the page headings and main products nav menu
-
-I think they blend well together with the main Anaheim Logo:
-
-## ![Anaheim Font](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/fonts_abel_anaheim.png)
 
 ## Existing Features
 
-### Feature 1: The Navbar
+The Little Explorers e-commerce platform is designed to provide a seamless shopping experience for users while offering robust management tools for administrators. Below is a breakdown of the key features:
+
+### **Feature 1: Navigation Bar**
+The navigation bar provides quick access to all essential sections of the website and remains accessible at all times.
+
+ **Implemented Features**
+- Brand Logo & Name: Displays "Little Explorers", enhancing brand identity.
+- User Account Dropdown:
+  - Allows users to log in, register, or access their profile. *(#1)*
+  - Shows the current logged-in user’s name. *(#1)*
+- Shopping Cart Icon:
+  - Displays the cart total for easy tracking. *(#4)*
+  - Redirects users to the shopping cart page. *(#4)*
+- Dropdown Menus:
+  - All Clothes – Lists all clothing categories. *(#2)*
+  - Categories – Organizes products by category. *(#2)*
+  - Wishlist Access: A quick link to the wishlist page for easy access to saved products. *(#23)*
+- Search Bar: Users can search for products by name or description. *(#3)*
+- Announcement Banner: Displays "FREE Delivery on orders over 51.00 EUR!" with an eye-catching green highlight. *(#14)*
 
-The navbar allows users to easily navigate the website, no matter which page they are on. The navbar consists of:
+ **User Stories Covered**
+  - **#1**:As a user, I want to be able to register and log into my account so that I can manage my personal details, view my orders, and save my preferences.
+  - **#2**: As a user, I want to be able to browse a catalog of products so that I can explore different clothing options for my children.
+  - **#3**: As a user, I want to filter and search for specific items so that I can easily find clothes based on size, color, or category.
+  - **#4**: As a user, I want to add items to my shopping cart so that I can prepare my purchase.
+  - **#23**: As a customer, I want to add products to a wishlist, so that I can save my favorite items for later and easily access them when I'm ready to purchase.
 
-- The products navigation menu, with sorting or filtering possibilities
-- A search bar, displaying results based on product name
-- A Sign In/Sign Up icon
-- Cart
 
----
+#### **Screenshots**
+![Navigation Bar](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/navigation_bar.png)
 
-**Products Nav Desktop**
 
-## ![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_prod_nav.png)
+### **Feature 2: Body (Homepage & Content Sections)**
+The main body presents featured products, promotions, and call-to-action elements.
 
-The navbar is also dynamic, transparent when users scroll down, for full content visibility, and turns a translucent blue shade when scrolling up, so menu items are visible.
+ **Implemented Features**
+- Hero Section:
+  - A large welcome banner with the text: "Welcome to our store"
+  - Call-to-action button: "Discover More", redirecting users to explore the store. *(#2)*
+- Dynamic Product Display:
+  - Featured products and categories update dynamically.
+  - Large, high-quality images showcasing children’s clothing. *(#2)*
+- User-Friendly Interface:
+  - Minimalist design focusing on clarity and ease of use.
+  - High contrast text for readability.
+  
+ **User Stories Covered**
+ - **#2**: As a user, I want to be able to browse a catalog of products so that I can explore different clothing options for my children.
 
-If the user us logged in, the Sign Up/Sign In menu becomes the Account menu, and if the user has admin privileges the user can access the manage brands an add product or brand pages through here.
+#### **Screenshots**
+![Homepage Body](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/homepage_body.png)
 
-There is a floating badge in the top right corner displaying the grand total and item count, always visible of the user scrolls up, which also gets an orange border if items are added.
 
-<details>
-    <summary>View More Images</summary>
 
----
+### **Feature 3: Footer**
+The footer provides quick links, social media access, and customer support contact information.
 
-**Sign In/Up Menu**
+ **Implemented Features**
+- Subscription Section:
+  - A  "Unsubscribe/Subscribe" button allowing users to manage their newsletter preferences. *(#8)*
+- Social Media Integration:
+  - A "Follow us on Facebook" link (displays a screenshot instead of a direct link). *(#14)*
+- Customer Support Information:
+  - Displays contact email: *IrishRoyals@example.com*. *(#8)*
+  - Shows customer service phone number: *+353000000000*.
+  - N.B. It is just example for contacr email and customer phone number.
+- Consistent Design:
+  - The footer maintains a green and blue gradient to align with the site's overall theme.
+  - Ensures a clear, readable font for user convenience.
 
-## ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/sign_in_up_menu.png)
+  **User Stories Covered**
+- **#8**: As a user, I want to receive order confirmation and shipping notifications via email so that I am informed about the status of my purchase.
+- **#14**: As a user, I want to share products on social media so that I can recommend them to friends and family.
 
-**Tablet nav for admin users**
+#### **Screenshots**
+![Footer](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/footer.png)
 
-## ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_nav.png)
 
-**Desktop nav after scroll up**
 
-## ![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_nav_after_scroll_up.png)
+### **Feature 4: User Registration and Authentication**
+The site allows users to create an account, log in, and manage their profiles.
 
-**Mobile nav after scroll down**
+ **Implemented Features**
+- User Registration:Users can create an account using their email and password.
+- User Login & Logout:Users can securely log in and out of their accounts.
+- Password Reset: Users can reset their password if they forget it.
+- Profile Management: Users can update their personal details.
+- Admin Access: Admin users have additional privileges, including product and order management.
 
-## ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_nav_scroll_down.png)
+ **User Stories Covered**
+- **#1** - As a user, I want to be able to register and log into my account so that I can manage my personal details, view my orders, and save my preferences.  
+- **#15** - As a shoper or site user I want to buy children's clothing from "Little Explorers,so that I can shop for kids in a convenient way.  
 
-**Cart total and count badge**
+#### **Screenshots**
+![User Authentication](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/user_auth.png)
 
-## ![Cart total and count badge](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/cart_badge_filled.png)
 
-</details>
 
-**User stories covered**
+### **Feature 5: Product Catalog Browsing**
+Users can explore a well-structured list of children’s clothing items categorized for easy navigation.
 
-2. As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
+ **Implemented Features**
+- Product pages display detailed descriptions and images.
+- Product Categories: Products are categorized for easy browsing.
+- Search Functionality: Users can search for specific products.
+- Sorting & Filtering: Users can filter products by price, category, and availability.
+- Responsive Design: The layout adapts to mobile, tablet, and desktop screens.
 
-3. As a user, it is visible if I am signed in or not, so that I am made aware of this
+ **User Stories Covered**
+ **#2** - As a user, I want to be able to browse a catalog of products so that I can explore different clothing options for my children.  
+ **#3** - As a user, I want to filter and search for specific items so that I can easily find clothes based on size, color, or category. 
+ **#9** - As a user, I want the website to be mobile-friendly so that I can browse and shop on any device. 
 
-4. As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
 
-5. As a user, i can perform a search, so that products matching the search appear in the products list
+### **Screenshots**
+![Product List](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/product_list.png)
 
-6. As a user, I can always see the total price of my cart in the navigation bar, so that I know what the total cost will be
 
-7. As a user, I can view the products added to my cart by clicking the cart icon or by adding an item to the cart
 
-8. As a user, I am not able to access pages that require authentication if I am not signed in
+### **Feature 6: Product Search and Filtering**
+Users can quickly find the products they need through search and filtering options.
 
-### Feature 2: The Home Page
+ **Implemented Features**
+- Search Bar: Users can enter keywords to find specific products.
+- Filtering Options: Products can be filtered by category, price range, and availability.
+- Sorting: Users can sort products alphabetically, by price, or by popularity.
 
-The home page is the landing page of the site, with the purpose to entice the user to proceed to the products.
+ **User Stories Covered**
+ **#3** -  As a user, I want to filter and search for specific items so that I can easily find clothes based on size, color, or category. 
 
----
+  
+#### **Screenshots**
+![Search Products](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/search_products.png)
 
-**Home On Desktop**
 
-## ![Home Desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_home.png)
+### **Feature 7: Wishlist**
+Users can *save products* they are interested in purchasing later.
 
-The user is presented with a window-sized (half window on tablet/mobile) carousel, consisting of three hero images giving the user a feel of edecation and quality on first sight. The images link to displaying the products results page, with different filtering (fitness, new and sneakers).
+ **Implemented Features**
+- Add to Wishlist: Users can save products for later.
+- View Wishlist: A dedicated wishlist page displays saved items.
+- Remove from Wishlist: Users can remove unwanted items.
 
-<details>
-    <summary>View Images on mobile and tablet</summary>
+ **User Stories Covered**
+  **#23** - As a customer, I want to add products to a wishlist, so that I can save my favorite items for later and easily access them when I'm ready to purchase. 
 
----
 
-**Home Mobile**
+#### **Screenshots**
+![Wishlist](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/wishlist.png)
 
-## ![Home Mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_home.png)
 
-**Home Tablet**
 
-## ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_home.png)
+###  **Feature 7: Shopping Cart**
+The shopping cart allows users to manage their selected items before checkout.
 
-</details>
+ **Implemented Features**
+- Add to Cart: Users can add products to their cart.
+- View Cart: A dedicated cart page shows selected items and total cost.
+- Remove Items: Users can remove unwanted products from their cart.
+- Cart Total Display: The cart icon updates dynamically to show the number of items.
 
-**User stories covered:**
+ **User Stories Covered**
+  **#4** - As a user, I want to add items to my shopping cart so that I can prepare my purchase.
 
-1. As a user, the intention of the specific page is made clear to me, so that I know the purpose of that page
+#### **Screenshots**
+![Shopping Cart](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/shopping_cart.png)
 
-2. As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
 
-3. As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
 
-### Feature 3: The Footer
+### **Feature 8: Secure Checkout and Payment**
+A seamless and secure checkout process ensures safe transactions.
 
-The footer includes a signup form for a newsletter, as well as a link to the site's Facebook business page and important links, such as contact, terms of use and the pages privacy policy. Wherever the user is on the site, except for some account operations, the footer is visible at the bottom of the page, giving the user access to these important links at virtually all times.
+**Implemented Features**
+- Delivery Information: Users must provide delivery details before placing an order.
+- Payment Options: Users can pay via Stripe, PayPal, or Cash on Delivery.
+- Order Summary: Users can review their order before payment.
+- Payment Confirmation: A success message is displayed after a successful purchase.
 
----
+ **User Stories Covered**
+ **#5** - As a user, I want to securely checkout and make payments so that I can complete my purchase with ease and confidence. 
 
-**Footer on tablet:**
+#### **Screenshots**
+![Checkout Process](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/checkout.png)
 
-## ![Footer](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_footer.png)
 
-The policy and terms appear in a modal window, which users easily can close and access again at will, due to the links placement in the footer.
 
-<details>
-    <summary>View Privacy policy on mobile</summary>
+## **Feature 8: Product Reviews and Ratings**
+Users can share feedback and rate products.
 
----
+### **Implemented Features**
+- Leave a Review: Users can submit a review after purchasing a product.
+- Rate a Product: Users can rate products from 1 to 5 stars.
+- View Reviews: All submitted reviews are visible on product pages.
 
-## ![Mobile privacy policy](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_privacy_policy.png)
+ **User Stories Covered**
+ **#11** -As a user, I want to leave reviews for products I have purchased so that I can share my feedback with other customers.  
 
-</details>
+#### **Screenshots**
+![Product Reviews](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/reviews.png)
 
-**User stories covered:**
 
-3. As a user, I can see a form to register for newsletters repeatedly throughout the website, so that I can receive news on products and campaigns
 
-4. As a user, I can see a link in the footer to the site’s Facebook Business Page, so that I can follow the company on Facebook
+### **Feature 9: Responsive Design for Mobile Devices**
+The website is fully responsive, ensuring a smooth browsing experience across all devices.
 
-5. As a user, I can view a terms document via a link in the sites footer
+**Implemented Features**
+- Optimized layout for mobile, tablet, and desktop. *(#9)*
+- Buttons and navigation adjust dynamically for touch-friendly interactions.
 
-6. As a user, I can view a privacy policy document via a link in the sites footer
+**User Stories Covered**
+ **#9** -As a user, I want the website to be mobile-friendly so that I can browse and shop on any device.
 
-### Feature 4: The Products List
 
-The products list is dynamic and will show the relevant products, depending on if the user has performed a search, clicked on a category or filtered the products in any other way.
+#### **Screenshots**
+![Mobile View](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/mobile_view.png)
 
----
 
-**The Products list**
 
-## ![Desktop products list](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_products.png)
+### **Feature 10: Email Notifications**
+Users receive email updates regarding account activity and orders.
 
-Filtering can be done:
+ **Implemented Features**
+- Order confirmation emails *(#8)*
+- Subscription confirmation for newsletters.
+- Admin notifications for new orders.
 
-- By category
-- By brand
-- By gender
-- By whether items are new or on sale
-- By users performing a search
+**User Stories Covered**
+ **#8** -As a user, I want to receive order confirmation and shipping notifications via email so that I am informed about the status of my purchase.
 
-On top of this, sorting can be done by price, rating, name or category. Users can see if the item is on sale or new, already in the products list, with a badge saying "new" or "save €".
+ #### **Screenshots**
+![Email Notifications](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/mobile_view.png)
 
-In the products list, the most important details of each item are displayed; name, brand, category, gender, price, if on sale, if new, and of course the product image. For admin users. the edit and delete buttons are also visible here.
 
-<details>
-    <summary>View More Images</summary>
+### **Feature 11: Product and Inventory Management**
+Admins can manage product listings and inventory from the admin panel.
 
----
+ **Implemented Features**
+- Add, edit, or remove products from the store. *(#6)*
+- Stock management with real-time inventory updates.
 
-**Performing a search**
+**User Stories Covered**
+ **#6** -As an admin, I want to manage products, categories so that I can keep the product listings up-to-date.
 
-## ![Mobile perform search](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_perform_search.png)
+#### **Screenshots**
+![Admin Product Management](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/admin_products.png)
 
-**Desktop products filtered**
 
-## ![Desktop products filtered](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_products_filter.png)
 
-**Tablet products for admin users**
+### **Feature 12: Order Management**
+Admins can track and manage orders efficiently.
 
-## ![Tablet products for admin users](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_products.png)
+ **Implemented Features**
+- View, process, and update orders. *(#7)*
+- Customers receive email updates on order status.
 
-</details>
+**User Stories Covered**
+ **#7** -As an admin, I want to be able to view and manage customer orders so that I can ensure that orders are processed and shipped in a timely manner.
 
-**User stories covered:**
 
-7. As a user, I can browse a list of products for sale on the site so that I can find the product I seek
+#### **Screenshots**
+![Admin Order Management](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/admin_orders.png)
 
-8. As a user, i can perform a search, so that products matching the search appear in the products list
 
-9. As a user, I can sort the products list by category, alphabetically or by rating, so that i can quickly find the product I seek
 
-10. As a user, I can view the most important details of the product in the product list, such as model, brand, category, price, rating, and image so that i know most details without having to click on the product
+### **Feature 13: Admin Settings Panel for Customization**
+The admin dashboard allows customization of store settings.
 
-### Feature 5: The Product Detail Page
+ **Implemented Features**
+- Update store name, logo, and contact details. 
+- Enable or disable customer reviews and payment methods.
 
-This page shows a dedicated page for the specific product. Here users can choose the size and the quantity of the product, as well as read a description and user reviews of it.
+**User Stories Covered**
+ **#26** -The Admin Settings Panel should be accessible only to admin users.
+Admin should be able to change the store name from the settings page.
+Admin should be able to upload a new logo for the website.
+Admin should be able to configure payment options (e.g., enable/disable Stripe, PayPal, Cash on Delivery).
+Admin should be able to set the contact email and phone number for customer support.
+Admin should be able to toggle site-wide maintenance mode (e.g., enable/disable site for updates).
+Admin should be able to configure the currency used in the store.
+Admin should be able to enable or disable user reviews and ratings.
+Changes made in the settings should be saved and immediately reflected on the site.
+A success message should be displayed after saving the settings.
 
----
+#### **Screenshots**
+![Admin Settings Panel for Customization](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/admin_orders.png)
 
-**Desktop product detail**
 
-## ![Desktop products detail](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_product_detail.png)
 
-Here users can decide the quantity as well as the size of the product to be added to their cart. If registered and logged in, users can add the item to their Wishlist.
+### **Feature 14: Social Media Integration**
+Users can connect with Little Explorers on social media platforms.
 
-Logged in users can also write and remove their own reviews here. lastly, admin users can edit and remove the product through links here, and remove any review if desired.
+ **Implemented Features**
+- Social media links for Facebook and other platforms. 
+- A screenshot of the Facebook page instead of a direct link.
 
-<details>
-    <summary>View More Images Here</summary>
+**User Stories Covered**
+ **#14** -As a user, I want to share products on social media so that I can recommend them to friends and family.
 
----
+#### **Screenshots**
+![Social Media Integration](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/social_media.png)
 
-**Product detail on mobile**
 
-## ![Reviews Box](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_product_detail_buttons.png)
 
-**Reviews Box if Product has reviews**
+### **Feature 15: Unit Tests & Project Deployment**
+The website has unit tests to ensure reliability and is fully deployed.
 
-## ![Reviews Box](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_reviews.png)
+ **Implemented Features**
+- Unit tests for core functionalitie
+- Live deployment of the project 
 
-**Delete review dialog modal**
+**User Stories Covered**
+ **#10** -As a developer, I want to deploy the application to a live server so that users can access and use the platform publicly.
+ **#22** -Add comprehensive unit tests to validate the functionality of the product-related views in the Django application. These tests aim to ensure that all key features, such as displaying products, filtering, sorting, and CRUD operations, work as expected. Testing also includes verifying permissions for superusers and preventing unauthorized actions.
 
-## ![Reviews Box](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/mobile_delete_review.png)
+ #### **Screenshots**
+![Unit Tests & Project Deployment](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/social_media.png)
 
-**Delete product admin dialog modal on desktop**
-
-## ![Reviews Box](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/delete_product_modal.png)
-
-</details>
-
-**User stories covered:**
-
-11. As a user, i can click the product in the products list so that I can view the products details
-
-12. As a user, I can choose the size of the product, as well as the quantity, so that I can purchase the correct size/quantity
-
-13. As a user, i can read user reviews for products that have received them, so that I easier know if the product is right for me
-
-14. As a logged in user, i can write a review and rate a product in the list, so that other users can benefit from this
-
-15. As a logged in user, I can remove my review of a product, so that it no longer is there
-
-### Feature 6: The Cart
-
-The Cart is the users digital shopping cart, containing all products the user has added to it and their details, including the chosen quantity and size if applicable.
-
----
-
-**The cart page on desktop**
-
-## ![The cart page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_cart_several_items.png)
-
-Its grand total and count is always partially visible in the navbar but has a dedicated page through which users can go through with the payment when they are done shopping.
-
-A toast, a small dialog window at the top right, will be visible after adding an item to the cart, letting the user know that the add was successful. The user can view, change quantity and remove items from the cart on the cart page.
-
-<details>
-    <summary>View More Images Here</summary>
-
----
-
-**Cart page on tablet**
-
-## ![Cart page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_cart_filled.png)
-
-**Added item to cart dialog toast on mobile**
-
-## ![Added item to cart dialog toast on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_added_to_cart.png)
-
-**Buttons to update quantity or remove product from cart**
-
-## ![Buttons to update quantity or remove product from cart](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/cart_hover_update_btn.png)
-
-</details>
-
-**User stories covered:**
-
-13. As a user, I can add a product to my cart by clicking ’Add to Cart’ from the product detail page so that I can purchase the product
-
-14. As a user, I can always see the total price of my cart in the navigation bar, so that I know what the total cost will be
-
-15. As a user, i can adjust the quantity of the product chosen after adding it to the shopping cart
-
-16. As a user, I can view the products added to my cart by clicking the cart icon or by adding an item to the cart
-
-17. As a user, I can click the remove from cart button, so that I can easily remove products from my cart
-
-### Feature 7: The Checkout Page
-
-The checkout page features a form for the user to fill in, with name, email, phone nr, delivery address and card details.
-
----
-
-**Checkout page on desktop**
-
-## ![Checkout page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
-
-From the checkout page, if user is authenticated, they can save their details to their My StepUp profile so they are prefilled for the next order. If they are not logged in, a link to log in is displayed in place of that option.
-
-If the payment fails or info is sufficient, the user gets a new chance to enter their info, without being charged.
-
-<details>
-    <summary>View More Images Here</summary>
-
----
-
-**Checkout page on tablet**
-
-## ![Checkout page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_checkout_details_filled.png)
-
-**Checkout page card details on mobile**
-
-## ![Checkout page bottom on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_pay_btn.png)
-
-**Payment processing on mobile**
-
-## ![Checkout page bottom on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_payment_processing.png)
-
-</details>
-
-**User stories covered:**
-
-18. As a user, I can click on Proceed to Checkout, so that I can purchase the items in my cart
-
-19. As a logged in user, on the Checkout page, I can choose to save my delivery address to My StepUp, so that I can retain it for future orders
-
-20. As a user, i can enter my card details on the checkout page, so that I can make the desired purchase
-
-### Feature 8: The Order Successful Page
-
-If the user has made a successful purchase, an order confirmation will be displayed to the user, and sent to the given email address during checkout. If the order was successful, the cart will be emptied, and, if the user is logged in and had any of the items in their wishlist, they are removed from there.
-
-In the confirmation, the user can view the items order, their sizes and quantity, an order number, grand total and delivery details.
-
----
-
-**Order confirmation page on desktop**
-
-## ![Order confirmation page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_order_confirmation.png)
-
-<details>
-    <summary>View More Images Here</summary>
-
----
-
-**Order Confirmation page on tablet**
-
-## ![Order Confirmation page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_order_confirmation.png)
-
-**Order Confirmation page on mobile**
-
-## ![Order Confirmation page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_order_confirmation.png)
-
-**Order Email Received**
-
-## ![Order Email Received](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/order_confirmation_email_received.png)
-
-</details>
-
-**User stories covered:**
-
-21. As a user, I am informed of whether my purchase was successful or not via the Order Successful page, as well as via an email sent upon order confirmation
-
-### Feature 9: The Sign Up/In/Out Pages
-
-Signing up, in and out are vital parts of this site, allowing users to save customer details to improve the users experience of the site. It also creates a possibility for the site owner to gain revisiting customers.
-
----
-
-**Sign Up page on mobile**
-
-## ![Sign Up page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/mobile_sign_up.png)
-
-Users can easily sign up through the link in the navbar.
-
-As users browse the site, they will see various links to sign in to access functionality, such as adding items to a wishlist, saving delivery details or posting reviews of products.
-
-Upon registration, the site sends an email to confirm the users email address. They then can sign in to the site and access their My StepUp profile and all other functionality for signed in users.
-
-<details>
-    <summary>View More Images Here</summary>
-
----
-
-**Sign Up page on tablet**
-
-## ![Order Confirmation page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_signup.png)
-
-**Sign In page on tablet**
-
-## ![Order Confirmation page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_signin.png)
-
-</details>
-
-**User stories covered:**
-
-22. As a user, I can register for an account on the site, so that I can gain all the site’s customer benefits
-
-23. As a user, If I am not signed in, I am redirected to sign in/up if I click on any of the links or buttons restricted to logged in users
-
-24. As a user, I have to confirm my email address to complete my account registration
-
-### Feature 10: My StepUp
-
-Each user can access their own personal profile where they can enter their delivery information, subscribe or unsubscribe to the newsletter and keep track of their orders.
-
----
-
-**The My StepUp page on desktop including the Wishlist**
-
-## ![The My StepUp page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_my_stepup.png)
-
-Here, users can also change their password, and delete their account completely if desired.
-
-<details>
-    <summary>View More Images Here</summary>
-
----
-
-**Order History box on the My StepUp page, tablet**
-
-## ![Add item to Wishlist on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_order_history.png)
-
-**Account Operations area in My Stepup, mobile**
-
-## ![Account Operations area in My Stepup, mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/mobile_account_operations.png)
-
-</details>
-
-**User stories covered:**
-
-25. As a logged in user, i can view a My StepUp page, so that I can view my previous orders, and view and update my delivery and contact details
-
-26. As a logged in user, I can add my delivery details to the My StepUp page, so that it is my default delivery address for my order on the checkout page
-
-27. As a logged in user, I can choose to delete my account, so that it no longer exists
-
-### Feature 11: The Wishlist
-
-Users can add products to their Wishlist, if they do not wish to purchase items straight away. This is located at the top of the My StepUp page. The products will remain in the users Wishlist until they have purchased the item or removed it from the list. Check image above for desktop view.
-
-<details>
-    <summary>View Images Here</summary>
-
----
-
-**The My StepUp page on mobile**
-
-## ![The My StepUp page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/mobile_my_stepup_wl_filled.png)
-
-**Add item to Wishlist on tablet**
-
-## ![Add item to Wishlist on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_add_to_wl.png)
-
-</details>
-
-**User stories covered:**
-
-28. As a logged in user, I can add a product to my Wish List, so that I can easily view it later
-
-29. As a logged in user, I can remove a product from my Wish List, so that it no longer is there
-
-30. As a logged in user, I can add products from my Wish List to my cart, so that I can easily purchase them
-
-### Feature 12: The Contact Page
-
-This is a standard contact form, through which users can contact the site owner. The form is sent by email to the site owner.
-
----
-
-**Contact Page on desktop**
-
-## ![Contact Page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_contact.png)
-
-**User stories covered:**
-
-34. As a user, I can get in touch with the site owner, regardless of whether I am signed in or not
-
-35. As a site owner, I can receive an email from a user that fills in the contact form, so that they can get in touch with me
-
-### Feature 13: The Admin Features
-
-There are extra features for admin users, so that site owners can add, edit and remove products, brands and reviews on the site. This is visible in the navbar, where two more items are visible in the account menu; Add Brand or Product and Manage Brands.
-
----
-
-**The Admin account menu**
-
-## ![The Admin account menu](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_nav.png)
-
-It is also visible in the products page, where a plus sign has appeared at the top, aswell as the Edit and Delete buttons on each product card in the list. On the product detail page, the Edit and Delete buttons are also visible, and every review displays a delete button, which deletes the review in question after confirmation.
-
-The Manage Brands page provides an overview of the brands on the site, and the possibility to edit or remove brands. Here admin users can change the brand name or the logo image for the brand. The changes are reflected in the Brands menu item in the Products nav menu, as well as in the product detail page, where, if uploaded, a brand image is visible.
-
-The Add Brand or Product page has two forms, for brand and product respectively. The product form has a lot of fields, and complex validation (for example, if an item is on sale the sale price cannot be higner that the initial one). Each form has a "add" button and the product or brand is added to the site if the form is valid. If not, an error is visible or the user is taken back to the form for them to fill it out properly.
-
-The Edit Product page consists of the same product form as on the previously mentioned page, only already filled out with the products current information. Here the admin user can update any current info for the product, as well as change the product image.
-
-<details>
-    <summary>View More Images Here</summary>
-
----
-
-**The Manage Brands page on tablet**
-
-## ![The Manage Brands page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_manage_brands.png)
-
-**Added new brand, Manage Brands page on mobile**
-
-## ![Added new brand, Manage Brands page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/mobile_add_brand_successful.png)
-
-**Add brand or product page on desktop**
-
-## ![Add brand or product page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/desktop_add_brand_product.png)
-
-**Edit Product page on mobile**
-
-## ![Edit Product page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/mobile_edit_product_new_image.png)
-
-**Products list with Edit and Delete buttons, desktop**
-
-## ![Edit Product page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/desktop_auth_products.png)
-
-**Price validation in add or edit product form**
-
-## ![Price validation in add or edit product form](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/update_product_invalid_price.png)
-
-</details>
-
-**User stories covered:**
-
-36. As a site owner, I can add, edit or remove any product on the site
-
-37. As a site owner, I can add, edit or remove any brand on the site
-
-38. As a site owner, I can remove any products review on the site
-
-### Feature 14: The Django Admin
-
-The Django framework provides an excellent admin interface which this site has taken full advantage of. The admin panel of this site contains all instances of all database models, and the ability to edit, remove or add instances.
-
----
-
-**The Django Admin Panel**
-
-## ![The Django Admin Panel](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_home.png)
-
-**User stories covered:**
-
-35. As a site owner, I can view an admin page, where I can perform batch editing of model instances on the site including products, categories, orders and brands
 
 ## Features Yet to Implement
 
-User story 30, adding products to the cart, is a could have user story, and for this implementation I decided not to include in production. This due to the need for quantity and size input from user, and there was no space on the My StepUp page in the current design for this.
+While Little Explorers already offers a robust and user-friendly shopping experience, several features are planned for future development to enhance usability and functionality I have a lot of ideas in mind, but here are some of them:
 
-Also, the ability for site owners to keep track of stock numbers is an important future update.
+ 1.Sorting enhancements: Sorting by most viewed, best-selling, and customer reviews.
 
-Having several images for the products is intended, but, as this is a fictional site and the images are royalty free, I had to make do with the single image for each one. In a real world scenario, the site owner would provide me with all content for the site, erasing this issue.
+ 2.Product Recommendations,like "Recommended for You" section based on user behavior and "Customers Also Bought" feature on the product detail page.
+
+ 3.Live Chat for Customer Support to assist customers in real-time.
+
+
+ 4.Order Tracking System allowing users to monitor their shipment status.
+
+ 5.Exploring the possibility of a dedicated iOS and Android app.
+
 
 ## Technologies Used
 
 ### Languages
+The following programming languages were used in the development of the project 'Little Explorers':
 
-- [Python 3.8](https://www.python.org/) was used for backend programming
+- **[Python 3.10.3](https://www.python.org/)** – Used as the core backend language, handling server-side logic, database interactions, and business processes.  
+- **[HTML5](https://en.wikipedia.org/wiki/HTML5)** – The foundation of all web pages, structuring the content and layout of the site.  
+- **[CSS3](https://en.wikipedia.org/wiki/CSS)** – Applied for styling, responsiveness, and enhancing the visual appeal of the site.  
+- **[JavaScript](https://en.wikipedia.org/wiki/JavaScript)** – Enables interactive features, improves user experience, and enhances frontend functionality.  
 
-- [HTML5](https://en.wikipedia.org/wiki/HTML5) was used for building all web pages
-
-- [CSS3](https://en.wikipedia.org/wiki/CSS) was utilized for styling the website
-
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for frontend programming
 
 ### Frameworks, Libraries and Other Resources
 
-This project is built solely through the framework [Django](https://www.djangoproject.com/), and I have tried to make use of its many powerful features.
+The **Little Explorers** project was developed using a combination of powerful frameworks, libraries, and tools to ensure efficiency and responsiveness.
 
-- I have used [Bootstrap 4](https://getbootstrap.com/) as a framework for styling for efficiency purposes.
+ **Backend Framework**
+- **[Django version 5.1.2](https://www.djangoproject.com/)** – The core framework used for backend development, enabling a structured, secure, and scalable web application.
 
-- The JavaScript framework [JQuery](https://jquery.com/) was used to minimize written code.
+ **Frontend Technologies**
+- **[Bootstrap 5.0.2](https://getbootstrap.com/)** – Utilized as the primary CSS framework to enhance styling consistency and mobile responsiveness.
+- **[JQuery](https://jquery.com/)** – A JavaScript library used to simplify DOM manipulation and reduce code complexity.
+- **[Font Awesome](https://fontawesome.com/)** – Provides all icons used throughout the site for a modern and clean UI.
+- **[Google Fonts](https://fonts.google.com/)** – Used for typography to enhance readability and branding consistency.
 
-- [Font Awesome](https://fontawesome.com/) fonts were used for all icons in this project.
+ **External Services & Integrations**
+- **[Facebook Pages](https://www.facebook.com/pages/create/?ref_type=site_footer)** – Used to create the business page that is linked on the site.wich external sources and integration i have been used for email
+- **[Email & Subscription System,Django Allauth](https://django-allauth.readthedocs.io/)** – Handles user authentication, email verification, and password reset functionalities.  
+- **[Stripe](https://stripe.com/)** – Securely processes payments and handles webhook responses for transactions.
 
-- [Google Fonts](https://fonts.google.com/) - Were used for all fonts in this project.
+ **Version Control & Development**
+- **[Git](https://git-scm.com/)** – Used for version control, ensuring efficient project tracking and collaboration.
+- **[GitHub](https://github.com/)** – Serves as the remote repository, where all code and branches are committed and stored.
+- **[Gitpod](https://gitpod.io/)** – The cloud-based IDE used for coding, testing, and debugging the application.
 
-- [Facebook Pages](https://www.facebook.com/pages/create/?ref_type=site_footer) was used to create the Facebook Business Page that is linked on the site.
+ **Deployment & Hosting**
+- **[Heroku](https://www.heroku.com/)** – The application is deployed on Heroku, ensuring accessibility and uptime.
+- **[AWS S3 Bucket](https://aws.amazon.com/s3/)** – Used to store and serve static files (CSS, JavaScript) and media content (product images, user uploads).
 
-- [Mailchimp](https://mailchimp.com/) was used to create the newsletter signup form.
-
-- [Git](https://git-scm.com/) - Version control system used to commit and push to Github via Gitpod.
-
-- [Github](https://github.com/) - The projects repository and all its branches were commited,
-  and pushed to Github.
-
-- [Heroku](https://www.heroku.com) - Used to deploy the application.
-
-- [AWS S3 Bucket](https://aws.amazon.com/s3/) - Used to host media (images) and static(CSS and JavaScript) files for the site.
-
-- [Stripe](https://stripe.com/) - Used to process the users payments and handle webhooks.
-
-- [Gitpod](https://gitpod.com/) - All code was written and tested with the Gitpod web-based IDE.
-
-- [Balsamiq Wireframes](https://balsamiq.com/wireframes/) was used to create wireframe images of the website which you can view [here](#).
-
-- [Lucidchart](https://lucid.co/product/lucidchart) was used to create the visual [model schema](#schema-of-models) of the project.
+ **Design & Documentation**
+- **[Balsamiq Wireframes](https://balsamiq.com/wireframes/)** – Utilized to design wireframe mockups of the site layout. You can view them [here](#).
+- **[Lucidchart](https://lucid.co/product/lucidchart)** – Used to create a **visual schema of the project's data models**, which you can view [here](#schema-of-models).
 
 ## Testing
 
@@ -1291,66 +1111,96 @@ Thorough testing of the StepUp site was performed and can be viewed [here](https
 
 ### Stripe
 
-Stripe was used as a payment service, allowing users to pay for products. The process:
+Stripe was used as the payment gateway for processing transactions securely.
 
-1. Create an account at https://stripe.com/
-2. Go to the developers pane and navigate to API keys
-3. Copy the publishable and secret keys and put them in your config vars in your development envirenment (and in Heroku config vars in production)
+ **Setup Process**
+1. Create an account at **[Stripe](https://stripe.com/)**.
+2. Go to the **Developers** section and find your **API keys**.
+3. Add the **publishable** and **secret keys** to your environment variables (both: in your development environment  and in Heroku for production).
 
-Webhooks were created too to make sure payments did not fail due to web errors. This can be done by doing the following:
+ **Webhooks Integration**
+To ensure payments are processed correctly and to make sure payments did not fail due to web errors, **webhooks** were set up:
+1. Go to **Webhooks** in the Stripe dashboard.
+2. Create an **endpoint** with the URL you send your webhooks to, 
+in this case, the url is https://[https://little-explorers-journey-34e4e4481594.herokuapp.com/] 
+3. Add webhook events like:
+   - `payment_intent.succeeded` (successful payment)
+   - `payment_intent.payment_failed` (failed payment)
+4. Stripe will automatically send payment updates to the backend.
 
-1. Navigate to Webhooks on the page, and create an endpoint with the url you send your webhooks to, in this case, the url is https://stepup-shoes.herokuapp.com/checkout/wh/
-2. Add events to listen for, for example payment_intent_succeeded and payment_intent.payment_failed as in this case
-3. The webhooks should be sent when processing orders in all cases
 
 ## Deployment
 
-### Forking the GitHub Repository
+### **Forking the GitHub Repository**
+To 'fork' or create a copy of this repository in your **own GitHub account**, follow these steps:
 
-To make a clone, or 'Fork' this repository, follow the steps below.
+1. Log in to your **GitHub account** and find the relevant repository.
+2. Click the **"Fork"** button in the top right corner.
+3. You now have a **forked copy** in your GitHub account.
 
-1. Access your GitHub account and find the relevant repository.
-2. Click on 'Fork' on the top right of the page.
-3. You will find a copy of the repository in your own Github account.
+### **Making a Local Clone**
 
-### Making a Local Clone
+To clone this repository to your local machine:
 
-1. Access your GitHub account and find the relevant repository.
-2. Click the 'Code' button next to 'Add file'.
-3. To clone the repository using HTTPS, under clone with HTTPS, copy the link.
-4. Open Git Bash.
-5. Access the directory you want the clone to be have.
-6. In your IDE's terminal type 'git clone' and the paste the URL you copied.
-7. Press Enter.
-8. You now have a local clone.
+1. Log in to your GitHub account and navigate to therelevant repository.
+2. Click the "Code" button next to "Add file".
+3. Copy the HTTPS clone URL.
+4. Open Git Bash or your terminal.
+5. Navigate to the directory where you want to store the project.
+6. In your IDE's terminal run the following command:
+   ```sh
+   git clone <paste_copied_URL_here>
+7. Press Enter, and the repository will be cloned locally.
 
 ### Heroku
+This application is **deployed using Heroku**. Follow these steps:
 
-This application has been deployed from Github using Heroku. Here's how:
+**1. Create a Heroku Account & App**
+1. Sign up or log in at **[Heroku](https://www.heroku.com/)**.
+2. Click **"Create New App"**.
+3. Choose a **unique app name** and select your **region**.
+4. Click **"Create app"**.
 
-1. Create an account at [heroku.com](https://www.heroku.com/)
-2. Create a new app, add app name and your region
-3. Click on create app
-4. Go to "Settings"
-5. Under Config Vars, add your sensitive data (creds.json for example)
-6. For this project, I set buildpacks to <Python> and <NodeJS> in that order.
-7. Go to "Deploy" and at "Deployment method", click on "Connect to Github"
-8. Enter your repository name and click on it when it shows below
-9. Choose the branch you want to buid your app from
-10. If desired, click on "Enable Automatic Deploys", which keeps the app up to date with your Github repository
-11. All done!
+**2. Configure Settings**
+1. Navigate to the **"Settings"** tab.
+2. Under **Config Vars**, add your **environment variables** (e.g., API keys, database credentials, etc.).
+3. Scroll down to **Buildpacks**, and add:
+   - **Python**
+   - **Node.js** (if needed for static files).
+
+**3. Connect to GitHub & Deploy**
+1. Go to the **"Deploy"** tab.
+2. Under **Deployment method**, choose **GitHub**.
+3. Connect to your GitHub repository by **searching for the repository name** and selecting it. Enter your repository name and click on it when it shows below
+4. Choose the **branch** you want to deploy (e.g., `main` or `master`).
+5. Click **"Deploy Branch"** to manually deploy, or enable **Automatic Deploys** to keep the app updated.
+6. Wait for the deployment process to complete. Your app is now **live on Heroku**!
+
 
 ### AWS S3
-
-The deployed version of this website has static(CSS and JavaScript) and media files hosted to it via a web based service called Amazon Web Services S3 Bucket.
-
+To host **static (CSS & JavaScript) and media files**, AWS S3 was used.
 The steps to take are:
 
-1. Create an account at aws.amazon.com
-2. Navigate to the IAM application and create a user and group
-3. Set the AmazonS3FullAccess for the user and copy the AWS ACCESS and SECRET keys as config vars to your workspace and deployment environment
-4. Create a new Bucket within the S3 application with an appropriate name.
-5. Enable public access for your bucket so users can access and use the services on your website (upload, view, download, etc). More info can be read in the official documentation: https://aws.amazon.com/s3/
+**1. Create an AWS Account & IAM User**
+1. Go to **[AWS](https://aws.amazon.com/)** and sign up or log in.
+2. Navigate to **IAM (Identity & Access Management)**.
+3. Create a **new user** and assign the **AmazonS3FullAccess** policy.
+4. Copy and store the **AWS Access Key ID** and **Secret Access Key**  as config vars to your workspace and deployment environment
+
+**2. Create an S3 Bucket**
+1. Open the **AWS S3** service.
+2. Click **"Create Bucket"** and enter a **unique bucket name**.
+3. Choose a **region** that matches your Heroku app.
+4. Enable **public access** so users can access static and media files.
+5. Click **"Create Bucket"**.
+
+**3. Configure Django to Use AWS S3**
+1. Add the **AWS credentials** to your environment variables:
+   ```sh
+   AWS_ACCESS_KEY_ID=<your_access_key>
+   AWS_SECRET_ACCESS_KEY=<your_secret_key>
+   AWS_STORAGE_BUCKET_NAME=<your_bucket_name>
+
 
 ## Performance
 
