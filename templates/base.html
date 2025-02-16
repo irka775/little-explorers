@@ -1,10 +1,10 @@
 <!-- This file is the mail HTML-file, in which all files have their base.
     Base structure is inspired by the Code Institute Boutique Ado project, but customized -->
-{% load static %}
-
-<!doctype html>
-<html lang="en">
-
+    <!DOCTYPE html>
+    <html lang="en">
+    {% load static %}
+    
+    
 <head>
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -53,7 +53,9 @@
 
     {% endblock %}
 
-    <title>{{ store_settings.store_name }} - Premium Kids Clothing {% block extra_title %}{% endblock %}</title>
+    <title>{{ store_settings.store_name }} - Premium Kids Clothing 
+        {% block extra_title %} | Quality Apparel for Kids{% endblock %}</title>
+    
 </head>
 
 <body style="background: url('{{ store_settings.main_page_image.url }}') no-repeat center center fixed; background-size: cover;">
@@ -240,11 +242,13 @@
         {% block postloadjs %}
 
         <script>
+            /* jshint esversion: 6 */
+            /* global bootstrap */
             document.addEventListener("DOMContentLoaded", function () {
                 let toastElList = [].slice.call(document.querySelectorAll('.toast'));
 
-                let toastList = toastElList.map(function (toastEl) {
-                    return new bootstrap.Toast(toastEl).show();
+                toastElList.forEach(function (toastEl) {
+                      new bootstrap.Toast(toastEl).show();
                 });
             });
 
@@ -284,7 +288,7 @@
                         },
                         body: `email=${encodeURIComponent(email)}`
                     })
-                        .then(response => response.json())  // Verifică dacă JSON-ul e valid
+                        .then(response => response.json())  
                         .then(data => {
                             if (data.status === "subscribed") {
                                 button.textContent = "Unsubscribe";

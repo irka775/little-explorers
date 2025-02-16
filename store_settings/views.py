@@ -47,8 +47,9 @@ def subscribe(request):
     """
     Handles user email subscription.
 
-    This function allows users to subscribe to a newsletter or email notifications.
-    If the email is valid and not already subscribed, it is saved in the database.
+    This function allows users to subscribe to a newsletter or email
+    notifications.If the email is valid and not already subscribed,
+    it is saved in the database.
 
     Args:
         request (HttpRequest): The request object containing POST data.
@@ -96,7 +97,8 @@ def unsubscribe(request):
     """
     Handles user email unsubscription.
 
-    This function allows users to unsubscribe from a newsletter or email notifications.
+    This function allows users to unsubscribe from a newsletter or
+    email notifications.
     If the email exists in the database, it updates the subscription status.
 
     Args:
@@ -154,7 +156,8 @@ def store_settings_view(request):
     - Shipping settings
     - User profile settings
 
-    Forms are validated before saving, and success messages are displayed if updates are made.
+    Forms are validated before saving, and success messages are displayed if
+    updates are made.
 
     Args:
         request (HttpRequest): The request object containing user data.
@@ -200,7 +203,8 @@ def store_settings_view(request):
         if updated_fields:
             messages.success(
                 request,
-                f"✅ The following settings were updated: {', '.join(updated_fields)}",
+                f" The following settings were updated:"
+                f"{', '.join(updated_fields)}",
             )
         else:
             messages.info(request, "ℹ️ No changes were detected.")

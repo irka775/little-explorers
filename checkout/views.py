@@ -1,8 +1,9 @@
 """
 Views for the checkout process.
 
-This module contains views for handling the checkout process, 
-including order creation, payment processing, and successful order confirmation.
+This module contains views for handling the checkout process,
+including order creation, payment processing, and successful
+order confirmation.
 """
 
 from django.shortcuts import (
@@ -33,8 +34,9 @@ def cache_checkout_data(request):
     """
     Cache checkout data in the Stripe payment intent metadata.
 
-    This function modifies the Stripe PaymentIntent to store additional metadata
-    such as the shopping bag contents, whether to save user info, and the username.
+    This function modifies the Stripe PaymentIntent to store additional
+    metadata such as the shopping bag contents, whether to save user
+    info, and the username.
 
     Args:
         request (HttpRequest): The incoming request.
@@ -57,7 +59,8 @@ def cache_checkout_data(request):
     except Exception:
         messages.error(
             request,
-            "Sorry, your payment cannot be processed right now. Please try again later.",
+            "Sorry, your payment cannot be processed right now."
+            "Please try again later.",
         )
         return HttpResponse(
             content="Sorry, your payment cannot be processed right now",
@@ -78,7 +81,8 @@ def checkout(request):
         request (HttpRequest): The incoming request.
 
     Returns:
-        HttpResponse: The checkout page with order details or redirects if errors occur.
+        HttpResponse: The checkout page with order details
+          or redirects if errors occur.
     """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -131,7 +135,9 @@ def checkout(request):
                 except Product.DoesNotExist:
                     messages.error(
                         request,
-                        "One of the products in your bag wasn't found in our database. Please call us for assistance!",
+                        "One of the products in your bag wasn't found in"
+                        "our database."
+                        "Please call us for assistance!",
                     )
                     order.delete()
                     return redirect(reverse("view_bag"))
@@ -143,7 +149,8 @@ def checkout(request):
         else:
             messages.error(
                 request,
-                "There was an error with your form. Please double-check your information.",
+                "There was an error with your form."
+                "Please double-check your information.",
             )
 
     else:
@@ -187,7 +194,8 @@ def checkout(request):
     if not stripe_public_key:
         messages.warning(
             request,
-            "Stripe public key is missing. Did you forget to set it in your environment?",
+            "Stripe public key is missing."
+            "Did you forget to set it in your environment?",
         )
 
     template = "checkout/checkout.html"

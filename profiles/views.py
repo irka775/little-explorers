@@ -5,7 +5,8 @@ This module includes:
 - `profile`: Allows users to view and update their profile.
 - `order_history`: Displays past orders for authenticated users.
 
-Both views require authentication (`@login_required`) and provide user feedback via Django messages.
+Both views require authentication (`@login_required`) and provide
+ user feedback via Django messages.
 """
 
 from django.shortcuts import render, get_object_or_404
@@ -59,14 +60,16 @@ def order_history(request, order_number):
     Displays a past order confirmation for the user.
 
     - Retrieves the order by its order number.
-    - Displays a message informing the user that this is a past order confirmation.
+    - Displays a message informing the user that this is
+      a past order confirmation.
 
     Args:
         request (HttpRequest): The request object.
         order_number (str): The order number.
 
     Returns:
-        HttpResponse: Renders the `checkout_success.html` template with order details.
+        HttpResponse: Renders the `checkout_success.html`
+          template with order details.
     """
     order = get_object_or_404(Order, order_number=order_number)
 

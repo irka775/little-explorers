@@ -83,7 +83,6 @@ You can view the deployed site [here](https://little-explorers-journey-34e4e4481
     - [AWS S3](#aws-s3)
   - [Performance](#performance)
   - [Validation](#validation)
-  - [Accessibility](#accessibility)
   - [Bugs](#bugs)
   - [Credits](#credits)
     - [Copyrights](#copyrights)
@@ -1204,15 +1203,11 @@ The steps to take are:
 
 ## Performance
 
-Performance was tested using Google Chrome's Lighthouse tool in DevTools built into the browser. The performance tests can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/performance/PERFORMANCE.md).
+Performance was tested using Google Chrome's Lighthouse tool in DevTools built into the browser. The performance tests can be viewed [here](PERFORMANCE.md).
 
 ## Validation
 
-Thourough validation of all code was made without errors. The results can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/VALIDATION.md).
-
-## Accessibility
-
-Accessibility tests were also performed with the [WAVE](https://wave.webaim.org/) Web Accessibility Evaluation Tool and passed all tests. They can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/accessibility/ACCESSIBILITY.md).
+Thourough validation of all code was made without errors. The results can be viewed [here](VALIDATION.md).
 
 ## Bugs
 
@@ -1248,68 +1243,28 @@ _Fix_ - Fix try and except in code that removes users wishlist items that are pu
 
 #### Media
 
-Images of the products and the site background are all from [Unsplash](https://unsplash.com/).
+Images of the products and the site background are all from [Pixabay](https://pixabay.com//).
 
-Images of logos are from [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page) and from the brands website, with consent.
-
-The shoe icon in the pages favicon comes from here: https://en.m.wikipedia.org/wiki/File:Running_shoe_icon.png
+Images for favicons are from [Favicons](https://icons8.com/icons/set/favicon)
 
 #### Content
 
-As I have no data on the images of model or other information, I have taken product information from similar products for the ones on this site.
+ Since I do not have original product data, I was influenced by several key sources:  
 
-The sites I have taken product information from are here:
+ **Boutique Ado by Code Institute** – This project served as a foundational guide, helping me understand the structure and functionality of a Django-based eCommerce platform. It provided valuable insights into best practices for building an online store.  
 
-https://www.cucufashion.co.uk/hexya-orange-sock-sneakers/
+ **Existing Kids' Clothing eShops** – I have referenced product details, descriptions, and inspiration from well-known kids' clothing retailers.
+ The following sources were referenced for product descriptions, pricing models, and fashion trends:  
+- **[Next Ireland - Kids](https://www.next.ie/en/shop/gender-babyboys-gender-babygirls-gender-boys-gender-girls)** – A popular choice for stylish and comfortable kids' wear.  
+- **[Mothercare Ireland](https://www.mothercare.ie/)** – Well-known for baby & children's clothing, accessories, and essentials.  
+- **[Dunnes Stores - Kids](https://www.dunnesstores.com/c/kids)** – A go-to Irish retailer for affordable and high-quality kids' fashion.  
 
-https://www.amazon.com/ElegantPark-Womens-Buckles-Evening-Sandals/dp/B01GR2ZJGY?th=1
-
-https://www.endclothing.com/gb/comme-des-garcons-play-x-converse-chuck-taylor-1970s-hi-p1-k112-1.html
-
-https://www.farfetch.com
-
-https://www.vallgatan12.se/
-
-https://erwans.com/
-
-https://www.google.com/shopping
-
-https://theluxurycloset.com/women/chanel-creamblack-leather-cap-toe-bow-mary-jane-block-heel-pumps-size-38-p499197?cur=GBP
-
-https://www.redbubble.com/i/socks/i-love-Mouths-pattern-by-virilamissa/62023266.9HZ1B
-
-clarks.co.uk
-
-https://www.sweatshop.com/Running-Shoes/Nike/Free-Run-5.0-Ladies-Running-Shoes-Black-or-White/255056
-
-https://danishendurance.com/products/low-cut-running-socks?variant=33432525307963
-
-https://axelarigato.com/
-
-https://www.gearcor.com/t53009/Timberland-Pro-Endurance-PR-Wedge-6inch-Soft-Toe.htm
-
-https://www.johnstonsofelgin.com/
-
-https://www.nike.com
-
-https://www.timberland.se
-
-https://www.asics.com
-
-https://www.bellabelleshoes.com
-
-https://www.minfot.se
-
-https://www.gucci.com
-
+ **ChatGPT for Product Ideas** – To generate product listings and descriptions, I sought assistance from ChatGPT, which provided creative ideas and suggestions for structuring product information effectively.  
+ 
 ### Coding Tips and Tricks
-
-These are tips that have helped me along the way for this project:
+Throughout the development of Little Explorers, I encountered various coding challenges and found useful resources that helped me build and improve the project. These are tips that have helped me along the way for this project:
 
 **Code Institute Boutique Ado project**
-
-**Hiding header on scroll down:**
-https://medium.com/@mariusc23/hide-header-on-scroll-**down-show-on-scroll-up-67bbaae9a78c
 
 **Distribute navbar items evenly:**
 https://stackoverflow.com/questions/32140607/horizontal-list-that-evenly-divides-remaining-space-via-css/32140682
@@ -1317,14 +1272,10 @@ https://stackoverflow.com/questions/32140607/horizontal-list-that-evenly-divides
 **Split list into li items from model:**
 https://stackoverflow.com/questions/8317537/django-templates-split-string-to-array
 
-**Proper way to handle two forms**
-https://stackoverflow.com/questions/1395807/proper-way-to-handle-multiple-forms-on-one-page-in-django
 
 **Title in Django template**
 https://stackoverflow.com/questions/14268342/make-the-first-letter-uppercase-inside-a-django-template
 
-**Adapted Mailchimp form**
-https://bootstrapious.com/p/mailchimp-signup-form -->
 
 **Raise error in model form method**
 https://docs.djangoproject.com/en/4.0/ref/forms/validation/
@@ -1332,8 +1283,6 @@ https://docs.djangoproject.com/en/4.0/ref/forms/validation/
 **Parseint JQuery:**
 https://stackoverflow.com/questions/16269385/jquery-adding-2-numbers-from-input-fields
 
-**Smooth Scrolling:**
-https://css-tricks.com/snippets/jquery/smooth-scrolling/
 
 **Scroll incl for window width**
 https://stackoverflow.com/questions/7715124/do-something-if-screen-width-is-less-than-960-px
@@ -1344,9 +1293,6 @@ https://stackoverflow.com/questions/12684128/looping-through-two-objects-in-a-dj
 **Item at certain position in object from template:**
 https://stackoverflow.com/questions/4286461/django-templates-first-element-of-a-list
 
-**Back button:**
-https://stackoverflow.com/questions/27325505/django-getting-previous-url
-
 **Footer:**
 https://radu.link/make-footer-stay-bottom-page-bootstrap/
 
@@ -1355,6 +1301,6 @@ https://stackoverflow.com/questions/13119912/disable-bootstraps-collapse-open-cl
 
 ### Acknowledgments
 
-I want to thank my mentor Mo Shami positive vibes throughout the course, and pointing me in the right directions. Also pmeenys project [Love Rugby](https://github.com/pmeeny/CI-MS4-LoveRugby) has given me tips on some of the elements on this site, including the review model and automated testing.
+Throughout the development of Little Explorers, I received incredible support, guidance, and inspiration from various people. I would like to take a moment to express my gratitude to first : to my husband,for his unwavering support and encouragement throughout this journey. His motivation and belief in me kept me going even during the toughest moments. Secondly to Laura_ci(cohort facilitator) for inspiring me and providing valuable guidance on how to structure a clear and professional README documentation. Her advice has been instrumental in helping me create a well-organized and informative project. I would also like to extend my gratitude to all the Tutors at Code Institute for their patience and support. Thank you for your guidance, patience, and invaluable support throughout this journey. The development of Little Explorers has been a challenging yet rewarding experience. The support, guidance, and resources mentioned above played a crucial role in making this project successful.    
 
-Lastly, I want to thank all Tutors at Code Institute for their patience; Jo, Sheryl, John, Sean, Igor, Alan, Rebecca, James, and all the rest that have had to put up with me!
+

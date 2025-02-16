@@ -1,8 +1,9 @@
 """
 Views for the products application.
 
-This module defines views for displaying, adding, editing, deleting, 
-and managing products, including wishlist functionality and custom error pages.
+This module defines views for displaying, adding, editing, deleting,
+and managing products, including wishlist functionality and
+ custom error pages.
 """
 
 from django.shortcuts import render, redirect, reverse, get_object_or_404
