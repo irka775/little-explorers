@@ -27,8 +27,8 @@ Below is a **breakdown of performance testing** based on **Kanban Board user sto
 - Navbar script blocking rendering
 
  **Test Results:**
-- **View Home Page Test - Desktop**  ![View Home Page Test - Desktop](media\screenshots\lighthouse\home_desctop.PNG)
-- **View Home Page Test - Mobile**  ![View Home Page Test - Mobile](media\screenshots\lighthouse\home_mobile.PNG)
+- **View Home Page Test - Desktop**  ![View Home Page Test - Desktop](media/screenshots/lighthouse/home_desctop.PNG)
+- **View Home Page Test - Mobile**  ![View Home Page Test - Mobile](media/screenshots/lighthouse/home_mobile.PNG)
 
 ---
 
@@ -38,10 +38,10 @@ Below is a **breakdown of performance testing** based on **Kanban Board user sto
 - Lazy loading required for product images
 
  **Test Results:**
-- **View Product Catalog Test desktop** ![View Product Catalog Test - Desktop](media\screenshots\lighthouse\catalog_desktop.PNG)
-- **View Product Catalog Test mobile** ![View Product Catalog Test - Mobile](media\screenshots\lighthouse\catalog_mobile.PNG)
-- **View Product Search Test desktop** ![View Product Search Test - Desktop](media\screenshots\lighthouse\search_desctop.PNG)
-- **View Product Search Test mobile** ![View Product Search Test - Mobile](media\screenshots\lighthouse\search_mobile.PNG)
+- **View Product Catalog Test desktop** ![View Product Catalog Test - Desktop](media/screenshots/lighthouse/catalog_desktop.PNG)
+- **View Product Catalog Test mobile** ![View Product Catalog Test - Mobile](media/screenshots/lighthouse/catalog_mobile.PNG)
+- **View Product Search Test desktop** ![View Product Search Test - Desktop](media/screenshots/lighthouse/search_desctop.PNG)
+- **View Product Search Test mobile** ![View Product Search Test - Mobile](media/screenshots/lighthouse/search_mobile.PNG)
 
 ---
 
@@ -52,10 +52,10 @@ Below is a **breakdown of performance testing** based on **Kanban Board user sto
 - Multiple JavaScript calls increase blocking time
 
  **Test Results:**
-- **View Shopping Cart Test - Desktop** ![View Shopping Cart Test - Desktop](media\screenshots\lighthouse\shopBag_desctop.PNG)
-- **View Shopping Cart Test - Mobile** ![View Shopping Cart Test - Mobile](media\screenshots\lighthouse\shopBag_mobile.PNG)
-- **View Checkout Test - Desktop** ![View Checkout Test - Desktop](media\screenshots\lighthouse\checkout_desctop.PNG)
-- **View Checkout Test - Mobile** ![View Checkout Test - Mobile](media\screenshots\lighthouse\checkout_mobile.PNG)
+- **View Shopping Cart Test - Desktop** ![View Shopping Cart Test - Desktop](media/screenshots/lighthouse/shopBag_desctop.PNG)
+- **View Shopping Cart Test - Mobile** ![View Shopping Cart Test - Mobile](media/screenshots/lighthouse/shopBag_mobile.PNG)
+- **View Checkout Test - Desktop** ![View Checkout Test - Desktop](media/screenshots/lighthouse/checkout_desctop.PNG)
+- **View Checkout Test - Mobile** ![View Checkout Test - Mobile](media/screenshots/lighthouse/checkout_mobile.PNG)
 
 ---
 
@@ -66,12 +66,12 @@ Below is a **breakdown of performance testing** based on **Kanban Board user sto
 - Password reset page performance could be improved
 
  **Test Results:**
-- **View Sign-Up Test - Desktop** ![View register Test - Desktop](media\screenshots\lighthouse\register_desctop.PNG)
-- **View Sign-Up Test - Mobile** ![View register Test - Mobile](media\screenshots\lighthouse\register_mobile.PNG)
-- **View Login Test - Desktop** ![View Login Test - Desktop](media\screenshots\lighthouse\signIn_desctop.PNG)
-- **View Login Test - Mobile** ![View Login Test - Mobile](media\screenshots\lighthouse\signin_mobile.PNG)
-- **View Profile Page Test - Desktop** ![View Profile Page Test - Desktop](media\screenshots\lighthouse\profile_desctop.PNG)
-- **View Profile Page Test - Mobile** ![View Profile Page Test - Mobile](media\screenshots\lighthouse\profile_mobile.PNG)
+- **View Sign-Up Test - Desktop** ![View register Test - Desktop](media/screenshots/lighthouse/register_desctop.PNG)
+- **View Sign-Up Test - Mobile** ![View register Test - Mobile](media/screenshots/lighthouse/register_mobile.PNG)
+- **View Login Test - Desktop** ![View Login Test - Desktop](media/screenshots/lighthouse/signIn_desctop.PNG)
+- **View Login Test - Mobile** ![View Login Test - Mobile](media/screenshots/lighthouse/signin_mobile.PNG)
+- **View Profile Page Test - Desktop** ![View Profile Page Test - Desktop](media/screenshots/lighthouse/profile_desctop.PNG)
+- **View Profile Page Test - Mobile** ![View Profile Page Test - Mobile](media/screenshots/lighthouse/profile_mobile.PNG)
 
 ---
 
@@ -81,8 +81,8 @@ Below is a **breakdown of performance testing** based on **Kanban Board user sto
 - Order history table takes longer to render on large datasets
 
  **Test Results:**
-- **View Order History Test - Desktop** ![View Order History Test - Desktop](media\screenshots\lighthouse\orderHistory_desctop.PNG)
-- **View Order History Test - Mobile** ![View Order History Test - Mobile](media\screenshots\lighthouse\orderHistory_mobile.PNG)
+- **View Order History Test - Desktop** ![View Order History Test - Desktop](media/screenshots/lighthouse/orderHistory_desctop.PNG)
+- **View Order History Test - Mobile** ![View Order History Test - Mobile](media/screenshots/lighthouse/orderHistory_mobile.PNG)
 
 
 ---
@@ -94,10 +94,10 @@ Below is a **breakdown of performance testing** based on **Kanban Board user sto
 - Admin panel loads extra scripts that slow page performance
 
  **Test Results:**
-- **View Login Test - desktop** ![View Admin Panel Test - Desktop](media\screenshots\lighthouse\admin_desctop.PNG)
-- **View Login Test - Mobile** ![View Admin Panel Test - Mobile](media\screenshots\lighthouse\admin_mobile.PNG)
-- **View Store settings Test - Desktop** ![View Store settings Test - Desktop](media\screenshots\lighthouse\storeSet_desctopp.PNG)
-- **View Store settings  Test - Mobile** ![View Store settings  Test - Mobile](media\screenshots\lighthouse\storeSet_mobile.PNG)
+- **View Login Test - desktop** ![View Admin Panel Test - Desktop](media/screenshots/lighthouse/admin_desctop.PNG)
+- **View Login Test - Mobile** ![View Admin Panel Test - Mobile](media/screenshots/lighthouse/admin_mobile.PNG)
+- **View Store settings Test - Desktop** ![View Store settings Test - Desktop](media/screenshots/lighthouse/storeSet_desctopp.PNG)
+- **View Store settings  Test - Mobile** ![View Store settings  Test - Mobile](media/screenshots/lighthouse/storeSet_mobile.PNG)
 
 
 

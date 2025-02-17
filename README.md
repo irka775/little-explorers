@@ -1,7 +1,7 @@
 # Little Explorers
 
 Little Explorers is an e-commerce web application designed for customers looking to purchase high-quality children's clothing online.
-🚨 **Disclaimer:** This is not a real store. The site is created for **learning purposes only** as part of a portfolio project.
+**Disclaimer:** This is not a real store. The site is created for **learning purposes only** as part of a portfolio project.
 
 This project is part of my portfolio, showcasing a full-featured online store with user authentication, product management, and secure payment integration.
 
@@ -39,7 +39,7 @@ You can view the deployed site [here](https://little-explorers-journey-34e4e4481
         - [Schema of models](#schema-of-models)
     - [Scope - Epics and User Stories](#scope-epics-and-user-stories)
       - [Epic 1: Base functionality and ease of use](#epic-1-base-functionality-and-ease-of-use)
-      - [Epic 2: Products](#epic-2-products)hj
+      - [Epic 2: Products](#epic-2-products)
       - [Epic 3: The Cart](#epic-3-the-cart)
       - [Epic 4: Checkout](#epic-4-checkout)
       - [Epic 5: User registration and account](#epic-5--user-registration-and-account)
@@ -90,8 +90,6 @@ You can view the deployed site [here](https://little-explorers-journey-34e4e4481
       - [Content](#content)
     - [Coding Tips and Tricks](#coding-tips-and-tricks)
     - [Acknowledgments](#acknowledgments)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Project Overview
 
@@ -184,7 +182,6 @@ Unlike marketplaces that host multiple sellers, **Little Explorers** operates as
 
 #### **Revenue Model**
 - Direct Sales: Customers purchase clothing directly from the store.
-- Promotional Offers & Discounts: Special promotions encourage repeat purchases.
 - Newsletter Marketing: Registered users can **subscribe to receive promotional emails**, ensuring they stay updated on new collections and deals.
 #### **User Experience Focus**
 The website is designed to be:
@@ -212,10 +209,9 @@ While this page is only a placeholder for learning purposes, in the future, a fu
 
 
 ##### **Newsletter Subscription (Email Marketing)**
-**Little Explorers** integrates **Mailchimp** to allow users to subscribe to newsletters during registration. This simulates how an online store can engage with customers through **exclusive offers, product updates, and seasonal promotions**.
+**Little Explorers**  allow users to subscribe to newsletters during registration. This simulates how an online store can engage with customers through **exclusive offers, product updates, and seasonal promotions**.
 
-- Upon subscribing, users are get a confirmation message.  
-- The site owner can track subscribers in the **Mailchimp Audience Dashboard**.  
+- Upon subscribing, users are get a confirmation message.   
 - Subscribers receive promotional emails when new collections, discounts, or special events are launched.
 
 
@@ -228,7 +224,7 @@ While this page is only a placeholder for learning purposes, in the future, a fu
 #### **Subscription Success Message**
 ![Subscription Success Message](media/screenshots/unsubscribe.PNG)
 
-### **Future Marketing Plans (If the Project Expands)**
+#### **Future Marketing Plans (If the Project Expands)**
 If **Little Explorers** grows into a real business, the marketing strategy could include:
 - **A fully developed and active Facebook page** with real promotions.  
 - **Expansion to Instagram & Pinterest** for better product showcasing.  
@@ -427,7 +423,7 @@ I used in **Little Explorers** e-commerce platform a **relational database struc
 
  **3. Reviews**
 - Users can leave product reviews or site feedback.
-- Reviews include a **rating, comment, and creation date.
+- Reviews include a rating, comment, and creation date.
 - **Relationship:** 
   - A Review is linked to both a User and a Product (if applicable).
 
@@ -464,7 +460,7 @@ This schema ensures that Little Explorers remains scalable, secure, and optimize
 The **Little Explorers** e-commerce platform is designed with a **user-centric approach**, ensuring an intuitive shopping experience. Below is a key **epics and user stories**, defining the functionality required for different types of users (customers, admins, and visitors).
 Each epic represents a broad feature set, broken down into smaller, actionable user stories.
 
-#### Epic 1: Project Setup & Configuration*
+#### Epic 1: Project Setup & Configuration
  *As a developer, I want a well-configured development environment so that the project runs smoothly and is easy to maintain.*
 
 ####  **User Stories**
@@ -586,7 +582,7 @@ Each epic represents a broad feature set, broken down into smaller, actionable u
 - UI elements resize dynamically.
 
 
-#### Epic 9: Social & Email Integrations**
+#### Epic 9: Social & Email Integrations
  *As a user, I want to receive notifications and share products on social media.*
 
 ####  **User Stories**
@@ -631,11 +627,12 @@ Each epic represents a broad feature set, broken down into smaller, actionable u
 
 #### Wireframes
 
-![Wireframe of Product Detail on Desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/wireframes/images/product_detail_desktop.png)
+I created wireframes for the home page for both desktop and mobile versions to plan the layout and structure of the site effectively.
 
-Wireframe images were made for all pages except for the ones rarely used by the site, for example password change and email confirmation.
+![Wireframe of Home Page on Desktop](media\screenshots\wireframes\home_desktop.PNG)
+![Wireframe of Home Page on Mobile](media\screenshots\wireframes\home_mobile.PNG)
 
-All wireframes can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/wireframes/WIREFRAMES.md)
+All wireframes can be viewed [here]()
 
 ### Surface
 
@@ -692,7 +689,7 @@ Buttons across the site are designed to be eye-catching and functional, enhancin
 - The "Discover More" button on the homepage stands out with a bold black background for contrast.
 - Admin-related buttons (e.g., for managing products) are styled differently to clearly distinguish them from user-facing elements.
 - The Unsubscribe button is colored red, indicating a critical action.
-- The Subscribe" button is styled in a green color, representing a positive action for users who want to stay updated.
+- The Subscribe button is styled in a green color, representing a positive action for users who want to stay updated.
   Below are some screenshots showcasing the design choices implemented throughout the website:
  ![Button Elements](media/screenshots/button1.PNG)
  ![Button Elements](media/screenshots/button2.PNG)
@@ -734,17 +731,17 @@ The navigation bar provides quick access to all essential sections of the websit
  **Implemented Features**
 - Brand Logo & Name: Displays "Little Explorers", enhancing brand identity.
 - User Account Dropdown:
-  - Allows users to log in, register, or access their profile. *(#1)*
-  - Shows the current logged-in user’s name. *(#1)*
+  - Allows users to log in, register, or access their profile. 
+  - Shows the current logged-in user’s name. 
 - Shopping Cart Icon:
-  - Displays the cart total for easy tracking. *(#4)*
-  - Redirects users to the shopping cart page. *(#4)*
+  - Displays the cart total for easy tracking. 
+  - Redirects users to the shopping cart page. 
 - Dropdown Menus:
-  - All Clothes – Lists all clothing categories. *(#2)*
-  - Categories – Organizes products by category. *(#2)*
-  - Wishlist Access: A quick link to the wishlist page for easy access to saved products. *(#23)*
-- Search Bar: Users can search for products by name or description. *(#3)*
-- Announcement Banner: Displays "FREE Delivery on orders over 51.00 EUR!" with an eye-catching green highlight. *(#14)*
+  - All Clothes – Lists all clothing categories. 
+  - Categories – Organizes products by category. 
+  - Wishlist Access: A quick link to the wishlist page for easy access to saved products. 
+- Search Bar: Users can search for products by name or description. 
+- Announcement Banner: Displays "FREE Delivery on orders over 51.00 EUR!" with an eye-catching green highlight. 
 
  **User Stories Covered**
   - **#1**:As a user, I want to be able to register and log into my account so that I can manage my personal details, view my orders, and save my preferences.
@@ -765,10 +762,10 @@ The main body presents featured products, promotions, and call-to-action element
  **Implemented Features**
 - Hero Section:
   - A large welcome banner with the text: "Welcome to our store"
-  - Call-to-action button: "Discover More", redirecting users to explore the store. *(#2)*
+  - Call-to-action button: "Discover More", redirecting users to explore the store. 
 - Dynamic Product Display:
   - Featured products and categories update dynamically.
-  - Large, high-quality images showcasing children’s clothing. *(#2)*
+  - Large, high-quality images showcasing children’s clothing. 
 - User-Friendly Interface:
   - Minimalist design focusing on clarity and ease of use.
   - High contrast text for readability.
@@ -786,13 +783,13 @@ The footer provides quick links, social media access, and customer support conta
 
  **Implemented Features**
 - Subscription Section:
-  - A  "Unsubscribe/Subscribe" button allowing users to manage their newsletter preferences. *(#8)*
+  - A  "Unsubscribe/Subscribe" button allowing users to manage their newsletter preferences. 
 - Social Media Integration:
-  - A "Follow us on Facebook" link (displays a screenshot instead of a direct link). *(#14)*
+  - A "Follow us on Facebook" link (displays a screenshot instead of a direct link). 
 - Customer Support Information:
-  - Displays contact email: *IrishRoyals@example.com*. *(#8)*
+  - Displays contact email: IrishRoyals@example.com (fixional one).
   - Shows customer service phone number: *+353000000000*.
-  - N.B. It is just example for contacr email and customer phone number.
+  - N.B. It is just example for contact email and customer phone number.
 - Consistent Design:
   - The footer maintains a green and blue gradient to align with the site's overall theme.
   - Ensures a clear, readable font for user convenience.
@@ -937,7 +934,7 @@ Users can share feedback and rate products.
 The website is fully responsive, ensuring a smooth browsing experience across all devices.
 
 **Implemented Features**
-- Optimized layout for mobile, tablet, and desktop. *(#9)*
+- Optimized layout for mobile, tablet, and desktop. 
 - Buttons and navigation adjust dynamically for touch-friendly interactions.
 
 **User Stories Covered**
@@ -958,7 +955,7 @@ The website is fully responsive, ensuring a smooth browsing experience across al
 Users receive email updates regarding account activity and orders.
 
  **Implemented Features**
-- Order confirmation emails *(#8)*
+- Order confirmation emails 
 - Subscription confirmation for newsletters.
 - Admin notifications for new orders.
 
@@ -974,7 +971,7 @@ Users receive email updates regarding account activity and orders.
 Admins can manage product listings and inventory from the admin panel.
 Press PrtScn (Print Screen) 
  **Implemented Features**
-- Add, edit, or remove products from the store. *(#6)*
+- Add, edit, or remove products from the store. 
 - Stock management with real-time inventory updates.
 
 **User Stories Covered**
@@ -989,7 +986,7 @@ Press PrtScn (Print Screen)
 Admins can track and manage orders efficiently.
 
  **Implemented Features**
-- View, process, and update orders. *(#7)*
+- View, process, and update orders. 
 - Customers receive email updates on order status.
 
 **User Stories Covered**
@@ -1115,7 +1112,24 @@ The **Little Explorers** project was developed using a combination of powerful f
 
 ## Testing
 
-Thorough testing of the StepUp site was performed and can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/TESTING.md).
+I have reviewed my project thoroughly and decided to evaluate it using both manual testing and automated testing to ensure all functionalities work as expected.
+
+### Manual Testing
+Manual testing was performed to verify that the core features align with the user stories and function as intended and can be viewed [here](MANUAL_TESTING.md).
+
+### Automated Testing
+I conducted automated tests for my application as part of the project to ensure functionality, performance, and security. The automated testing phase of the Little Explorers project was successfully conducted using pytest, covering various functional aspects of the application.The tests are listed below:
+- **Bag Tests: 6 tests passed** – Verified the functionality of adding, removing, and adjusting products in the shopping bag.![Bag test pass](media/screenshots/unitest/bag_tests_pass.PNG)
+- **Checkout Tests: 7 tests passed** – Ensured the checkout process works correctly with authenticated and unauthenticated users.![checkout test pass](media/screenshots/unitest/checkout_tests_pass.PNG)
+- **Home Tests: 1 test passed** – Confirmed that the homepage loads properly and critical components function as expected.![home  test pass](media/screenshots/unitest/home_tests_pass.PNG)
+- **Profiles Tests: 5 tests passed** – Checked profile authentication, order history accessibility, and profile updates.![profiles  test pass](media/screenshots/unitest/profiles_tests_pass.PNG)
+- **Reviews Tests: 7 tests passed** – Validated review creation, editing, and listing functionalities.![review  test pass](media/screenshots/unitest/reviews_tests_pass.PNG)
+- **Store Settings Tests: 16 tests passed** – Ensured correct behavior in subscription, password change, and store settings features.![store settings app test pass](media/screenshots/unitest/store_settings_tests_pass.PNG)
+- **Overall Total: 42 tests passed successfully**![all tests pass](media/screenshots/unitest/all_tests_passed.PNG)
+
+- All 42 automated tests passed successfully, demonstrating the robustness of the implemented functionalities.
+- A few warnings were noted, mainly due to Django version updates (e.g., changes in URLField scheme from HTTP to HTTPS). These do not affect the core functionalities but will need to be addressed in future updates.
+- Performance optimizations, such as lazy loading for images and checkout speed improvements, were implemented to enhance user experience.
 
 ## Other Services
 
@@ -1222,18 +1236,20 @@ Thourough validation of all code was made without errors. The results can be vie
 
 ## Bugs
 
-Here are a few of the bugs found during the testing phase.
+Here are a few of the bugs found during the testing phase:
 
-**Bug** While working on performance optimization for my project, I discovered several issues, including large images slowing mobile load times, JavaScript delays affecting rendering, and checkout & authentication scripts causing lags. Additionally, search, order history, and the admin panel were resource-heavy, impacting efficiency.
+- **Bug** While working on performance optimization for my project, I discovered several issues, including large images slowing mobile load times, JavaScript delays affecting rendering, and checkout & authentication scripts causing lags. Additionally, search, order history, and the admin panel were resource-heavy, impacting efficiency.
 
 To address these, I will implement image optimization (WebP & lazy loading), JavaScript deferment, script optimizations for checkout & login, search pagination, and remove unnecessary admin panel scripts to enhance overall performance.
 _Fix_ - No fix as of now
 
-**Bug**  When sent a password through the Django Allauth service, the link sent is http and not https. A warning by stripe in the terminal that payments for production only works with https is issued. This doesn't affect this site as the payments are for testing purposes, but needs to be investigated further in the future
+- **Bug**  When sent a password through the Django Allauth service, the link sent is http and not https. A warning by stripe in the terminal that payments for production only works with https is issued. This doesn't affect this site as the payments are for testing purposes, but needs to be investigated further in the future
 _Fix_ - No fix as of now
 
-**Bug** The  product images were not displaying because the necessary AWS S3 storage settings were missing.
+- **Bug** The  product images were not displaying because the necessary AWS S3 storage settings were missing.
 _Fix_ - adding the correct STORAGES configuration in Django settings, ensuring that uploaded media files were properly stored and served from Amazon S3
+
+There may still be some undiscovered bugs in the project, as no software is entirely bug-free. However, based on my work and testing, the project currently functions well.
 
 ## Credits
 
@@ -1299,6 +1315,6 @@ https://stackoverflow.com/questions/13119912/disable-bootstraps-collapse-open-cl
 
 ### Acknowledgments
 
-Throughout the development of Little Explorers, I received incredible support, guidance, and inspiration from various people. I would like to take a moment to express my gratitude to first : to my husband,for his unwavering support and encouragement throughout this journey. His motivation and belief in me kept me going even during the toughest moments. Secondly to Laura_ci(cohort facilitator) for inspiring me and providing valuable guidance on how to structure a clear and professional README documentation. Her advice has been instrumental in helping me create a well-organized and informative project. Also project **[StepUp](https://github.com/johnvenkiah/CI_PP5_John_Venkiah)**served as a template for structuring my README documentation, providing valuable insights into organizing information clearly and effectively.  I would also like to extend my gratitude to all the Tutors at Code Institute for their patience and support. Thank you for your guidance, patience, and invaluable support throughout this journey. The development of Little Explorers has been a challenging yet rewarding experience. The support, guidance, and resources mentioned above played a crucial role in making this project successful.    
+Throughout the development of Little Explorers, I received incredible support, guidance, and inspiration from various people. I would like to take a moment to express my gratitude 1. **to my husband**,for his unwavering support and encouragement throughout this journey. His motivation and belief in me kept me going even during the toughest moments. 2. **to Laura_ci(cohort facilitator)** for inspiring me and providing valuable guidance on how to structure a clear and professional README documentation. Her advice has been instrumental in helping me create a well-organized and informative project. Also project **[StepUp](https://github.com/johnvenkiah/CI_PP5_John_Venkiah)**served as a template for structuring my README documentation, providing valuable insights into organizing information clearly and effectively.  I would also like to extend my gratitude to **all the Tutors at Code Institute** for their patience and support. Thank you for your guidance, patience, and invaluable support throughout this journey. The development of Little Explorers has been a challenging yet rewarding experience. The support, guidance, and resources mentioned above played a crucial role in making this project.    
 
 
