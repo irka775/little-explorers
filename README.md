@@ -16,7 +16,7 @@ You can also test the card payment functionality without making a real purchase.
 
 You can view the deployed site [here](https://little-explorers-journey-34e4e4481594.herokuapp.com/).
 
-![Mockup of live site on different devices](media\screenshots\main_page.PNG)
+![Mockup of live site on different devices](media/screenshots/main_page.PNG)
 
 ## Table of Contents
 
@@ -102,7 +102,7 @@ This project focuses on **e-commerce development** using the **Django framework*
 
 ### Agile Workflow
 
-![Kanban Board](media\screenshots\canban_board.PNG)
+![Kanban Board](media/screenshots/canban_board.PNG)
 
 For the development of **Little Explorers**, I have followed an **Agile approach**, breaking down the project into smaller, manageable tasks using **user stories**, a **Kanban board**, and **Labels** to track progress.
 
@@ -203,7 +203,7 @@ For the **Little Explorers** e-commerce project, I have developed a **basic Face
  
 This site has a Facebook Business page with a link on the page footer. **Screenshot of the Fictional Facebook Page:**
 
- ![Facebook Page Screenshot](media\facebook_bussines_page.PNG) 
+ ![Facebook Page Screenshot](media/facebook_bussines_page.PNG) 
 
 While this page is only a placeholder for learning purposes, in the future, a fully functional Facebook page could be implemented with more advanced social media marketing strategies like:
 - Regular product updates and promotions to engage potential customers.  
@@ -220,13 +220,13 @@ While this page is only a placeholder for learning purposes, in the future, a fu
 
 
 #### **Subscription Form**
-![Subscription Form](media\screenshots\subscribe_email.PNG)
+![Subscription Form](media/screenshots/subscribe_email.PNG)
 
 #### **Subscription Confirmation Page**
-![Subscription Confirmation Page](media\screenshots\subscribe.PNG)
+![Subscription Confirmation Page](media/screenshots/subscribe.PNG)
 
 #### **Subscription Success Message**
-![Subscription Success Message](media\screenshots\unsubscribe.PNG)
+![Subscription Success Message](media/screenshots/unsubscribe.PNG)
 
 ### **Future Marketing Plans (If the Project Expands)**
 If **Little Explorers** grows into a real business, the marketing strategy could include:
@@ -245,7 +245,7 @@ I have generated a sitemap.xml and robots.txt file which helps Google map the pa
 I have also done some research on highest searched words in kids clothing retailing, and came up with this title and description:
 
 #### **Meta-tags seo**
-![Meta-tags seo](media\screenshots\meta_tags.PNG)
+![Meta-tags seo](media/screenshots/meta_tags.PNG)
 
 ---
 
@@ -643,7 +643,7 @@ All wireframes can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_V
 
 The **Little Explorers** website uses a vibrant and playful color palette to reflect the joy and creativity of children's fashion. The combination of green, blue, black, and white provides a fresh, clean, and inviting design.
 
-![Colors](media\screenshots\colors.PNG)  
+![Colors](media/screenshots/colors.PNG)  
 (*Color palette generated at [imagecolorpicker.com](https://imagecolorpicker.com)*)
 
 ##### **Primary Colors**
@@ -682,7 +682,7 @@ The navbar is designed to be highly functional and visually appealing, maintaini
 - A search bar allows users to find products efficiently.
 - The header features a full-screen hero image with an inviting message and a call-to-action button for exploring products.
 
-![Navbar](media\screenshots\navbar.PNG)
+![Navbar](media/screenshots/navbar.PNG)
 
 
  **Buttons & UI Elements**
@@ -694,8 +694,8 @@ Buttons across the site are designed to be eye-catching and functional, enhancin
 - The Unsubscribe button is colored red, indicating a critical action.
 - The Subscribe" button is styled in a green color, representing a positive action for users who want to stay updated.
   Below are some screenshots showcasing the design choices implemented throughout the website:
- ![Button Elements](media\screenshots\button1.PNG)
- ![Button Elements](media\screenshots\button2.PNG)
+ ![Button Elements](media/screenshots/button1.PNG)
+ ![Button Elements](media/screenshots/button2.PNG)
 
  **Typography & Readability**
 - The site primarily uses black text  for readability.
@@ -718,9 +718,9 @@ The typography on Little Explorers I was carefully chosen to ensure clarity, rea
 
 To better visualize the typography choices, see the screenshot of the homepage:
 
-- ![Typography in Action1](media\screenshots\baner.PNG)
-- ![Typography in Action2](media\screenshots\typography1.PNG)
-- ![Typography in Action3](media\screenshots\typography2.PNG)
+- ![Typography in Action1](media/screenshots/baner.PNG)
+- ![Typography in Action2](media/screenshots/typography1.PNG)
+- ![Typography in Action3](media/screenshots/typography2.PNG)
 
 ---
 
@@ -755,8 +755,8 @@ The navigation bar provides quick access to all essential sections of the websit
 
 
 #### **Screenshots**
-**Navigation Bar Desktop**![Navigation Bar Desktop](media\existing_features\navbar_desctop.PNG)
-**Navigation Bar Mobile**![Navigation Bar Mobile](media\existing_features\navbar_mobile.PNG)
+**Navigation Bar Desktop**![Navigation Bar Desktop](media/existing_features/navbar_desctop.PNG)
+**Navigation Bar Mobile**![Navigation Bar Mobile](media/existing_features/navbar_mobile.PNG)
 
 
 ### **Feature 2: Body (Homepage & Content Sections)**
@@ -777,8 +777,8 @@ The main body presents featured products, promotions, and call-to-action element
  - **#2**: As a user, I want to be able to browse a catalog of products so that I can explore different clothing options for my children.
 
 #### **Screenshots**
-**Homepage Body desktop**![Homepage Body desktop](media\existing_features\homepage_desktop.PNG)
-**Homepage Body Mobile**![Homepage Body Mobile](media\existing_features\homepage_mobile.PNG)
+**Homepage Body desktop**![Homepage Body desktop](media/existing_features/homepage_desktop.PNG)
+**Homepage Body Mobile**![Homepage Body Mobile](media/existing_features/homepage_mobile.PNG)
 
 
 ### **Feature 3: Footer**
@@ -802,8 +802,8 @@ The footer provides quick links, social media access, and customer support conta
 - **#14**: As a user, I want to share products on social media so that I can recommend them to friends and family.
 
 #### **Screenshots**
-**Footer desktop**![Footer desktop](media\existing_features\footer_desctop.PNG)
-**Footer Mobile**![Footer Mobile](media\existing_features\footer_mobile.PNG)
+**Footer desktop**![Footer desktop](media/existing_features/footer_desctop.PNG)
+**Footer Mobile**![Footer Mobile](media/existing_features/footer_mobile.PNG)
 
 
 ### **Feature 4: User Registration and Authentication**
@@ -821,8 +821,8 @@ The site allows users to create an account, log in, and manage their profiles.
 - **#15** - As a shoper or site user I want to buy children's clothing from "Little Explorers,so that I can shop for kids in a convenient way.  
 
 #### **Screenshots**
-**User Authentication desktop**![User Authentication desktop](media\existing_features\registration_desktop.PNG)
-**User Authentication Mobile**![User Authentication Mobile](media\existing_features\registration_mobile.PNG)
+**User Authentication desktop**![User Authentication desktop](media/existing_features/registration_desktop.PNG)
+**User Authentication Mobile**![User Authentication Mobile](media/existing_features/registration_mobile.PNG)
 
 
 
@@ -843,8 +843,8 @@ Users can explore a well-structured list of children’s clothing items categori
 
 
 ### **Screenshots**
-**Product List desktop**![Product List desktop](media\existing_features\productlist_desktop.PNG)
-**Product List Mobile**![Product List Mobile](media\existing_features\productlist_mobile.PNG)
+**Product List desktop**![Product List desktop](media/existing_features/productlist_desktop.PNG)
+**Product List Mobile**![Product List Mobile](media/existing_features/productlist_mobile.PNG)
 
 
 ### **Feature 6: Product Search and Filtering**
@@ -860,8 +860,8 @@ Users can quickly find the products they need through search and filtering optio
 
   
 #### **Screenshots**
-**Search Products desktop**![Search Products desktop](media\existing_features\search_desktop.PNG)
-**Search Products Mobile**![Search Products Mobile](media\existing_features\search_mobile.PNG)
+**Search Products desktop**![Search Products desktop](media/existing_features/search_desktop.PNG)
+**Search Products Mobile**![Search Products Mobile](media/existing_features/search_mobile.PNG)
 
 ### **Feature 7: Wishlist**
 Users can *save products* they are interested in purchasing later.
@@ -876,9 +876,9 @@ Users can *save products* they are interested in purchasing later.
 
 
 #### **Screenshots**
-**Wishlist desktop**![Wishlist desktop](media\existing_features\wishlist_desktop.PNG)
-**Wishlist Mobile**![Wishlist Mobile](media\existing_features\wishlist_mobile.PNG)
-**Wishlist notification**![Wishlist notification](media\existing_features\wishlist_notification.PNG)
+**Wishlist desktop**![Wishlist desktop](media/existing_features/wishlist_desktop.PNG)
+**Wishlist Mobile**![Wishlist Mobile](media/existing_features/wishlist_mobile.PNG)
+**Wishlist notification**![Wishlist notification](media/existing_features/wishlist_notification.PNG)
 
 
 ###  **Feature 7: Shopping Cart**
@@ -894,9 +894,9 @@ The shopping cart allows users to manage their selected items before checkout.
   **#4** - As a user, I want to add items to my shopping cart so that I can prepare my purchase.
 
 #### **Screenshots**
-**Shopping Cart Desktop**![Shopping Cart desktop](media\existing_features\shopingbag_desktop.PNG)
-**Shopping Cart Mobile**![Shopping Cart Mobile](media\existing_features\shopingbag_mobile.PNG)
-**Shopping Cart Notification**![Shopping Cart  Notification](media\existing_features\shopingbag_notification.PNG)
+**Shopping Cart Desktop**![Shopping Cart desktop](media/existing_features/shopingbag_desktop.PNG)
+**Shopping Cart Mobile**![Shopping Cart Mobile](media/existing_features/shopingbag_mobile.PNG)
+**Shopping Cart Notification**![Shopping Cart  Notification](media/existing_features/shopingbag_notification.PNG)
 
 
 ### **Feature 8: Secure Checkout and Payment**
@@ -912,10 +912,10 @@ A seamless and secure checkout process ensures safe transactions.
  **#5** - As a user, I want to securely checkout and make payments so that I can complete my purchase with ease and confidence. 
 
 #### **Screenshots**
-**Checkout Process Desktop**![Checkout Process desktop](media\existing_features\checkoutprocess_desctop.PNG)
-**Checkout Process Mobile**![Checkout Process Mobile](media\existing_features\checkoutprocess_mobile.PNG)
-**Checkout confirmation Desktop**![Checkout confirmation desktop](media\existing_features\checkout_desktop.PNG)
-**Checkout confirmation Mobile**![Checkout confirmation Mobile](media\existing_features\checkout_mobile.PNG)
+**Checkout Process Desktop**![Checkout Process desktop](media/existing_features/checkoutprocess_desctop.PNG)
+**Checkout Process Mobile**![Checkout Process Mobile](media/existing_features/checkoutprocess_mobile.PNG)
+**Checkout confirmation Desktop**![Checkout confirmation desktop](media/existing_features/checkout_desktop.PNG)
+**Checkout confirmation Mobile**![Checkout confirmation Mobile](media/existing_features/checkout_mobile.PNG)
 
 
 ## **Feature 8: Product Reviews and Ratings**
@@ -930,8 +930,8 @@ Users can share feedback and rate products.
  **#11** -As a user, I want to leave reviews for products I have purchased so that I can share my feedback with other customers.  
 
 #### **Screenshots**
-**Product Reviews Desktop**![Product Reviews desktop](media\existing_features\review_desktop.PNG)
-**Product Reviews Mobile**![Product Reviews Mobile](media\existing_features\review_mobile.PNG)
+**Product Reviews Desktop**![Product Reviews desktop](media/existing_features/review_desktop.PNG)
+**Product Reviews Mobile**![Product Reviews Mobile](media/existing_features/review_mobile.PNG)
 
 ### **Feature 9: Responsive Design for Mobile Devices**
 The website is fully responsive, ensuring a smooth browsing experience across all devices.
@@ -945,11 +945,11 @@ The website is fully responsive, ensuring a smooth browsing experience across al
 
 
 #### **Screenshots**
-**Mobile view**![Mobile view](media\existing_features\responsive_mobile.PNG)
+**Mobile view**![Mobile view](media/existing_features/responsive_mobile.PNG)
 
-**Tablet view**![Tablet view](media\existing_features\responsive_ipad.PNG) 
+**Tablet view**![Tablet view](media/existing_features/responsive_ipad.PNG) 
 
-**Desktop view**![Desktop view](media\existing_features\responsive_desktop.PNG)
+**Desktop view**![Desktop view](media/existing_features/responsive_desktop.PNG)
 
 
 
@@ -966,7 +966,7 @@ Users receive email updates regarding account activity and orders.
  **#8** -As a user, I want to receive order confirmation and shipping notifications via email so that I am informed about the status of my purchase.
 
  #### **Screenshot**
- **Email Notifications**![Email Notifications ](media\existing_features\review_desktop.PNG)
+ **Email Notifications**![Email Notifications ](media/existing_features/review_desktop.PNG)
 
 
 
@@ -981,8 +981,8 @@ Press PrtScn (Print Screen)
  **#6** -As an admin, I want to manage products, categories so that I can keep the product listings up-to-date.
 
 #### **Screenshots**
- **Admin Product Management desktop**![Admin Product Management desktop](media\existing_features\management_desktop.PNG)
- **Admin Product Management mobile**![Admin Product Management mobile](media\existing_features\management_mobile.PNG)
+ **Admin Product Management desktop**![Admin Product Management desktop](media/existing_features/management_desktop.PNG)
+ **Admin Product Management mobile**![Admin Product Management mobile](media/existing_features/management_mobile.PNG)
 
 
 ### **Feature 12: Order Management**
@@ -997,7 +997,7 @@ Admins can track and manage orders efficiently.
 
 
 #### **Screenshots**
- **Admin Order Management**![Admin Order Management](media\existing_features\order_management.PNG)
+ **Admin Order Management**![Admin Order Management](media/existing_features/order_management.PNG)
 
 
 
@@ -1021,8 +1021,8 @@ Changes made in the settings should be saved and immediately reflected on the si
 A success message should be displayed after saving the settings.
 
 #### **Screenshots**
- **Admin Settings Panel for Customization desktop**![Admin Settings Panel for Customization desktop](media\existing_features\settingspannel_desktop.PNG)
- **Admin Settings Panel for Customization mobile**![Admin Settings Panel for Customization mobile](media\existing_features\settingspanel_mobile.PNG)
+ **Admin Settings Panel for Customization desktop**![Admin Settings Panel for Customization desktop](media/existing_features/settingspannel_desktop.PNG)
+ **Admin Settings Panel for Customization mobile**![Admin Settings Panel for Customization mobile](media/existing_features/settingspanel_mobile.PNG)
 
 
 
@@ -1038,8 +1038,8 @@ Users can connect with Little Explorers on social media platforms.
  **#14** -As a user, I want to share products on social media so that I can recommend them to friends and family.
 
 #### **Screenshots**
- **Social Media Integration**![Social Media Integration](media\existing_features\socialmedia.PNG)
- **Social Media Facebook page**![Social Media Facebook page](media\facebook_bussines_page.PNG)
+ **Social Media Integration**![Social Media Integration](media/existing_features/socialmedia.PNG)
+ **Social Media Facebook page**![Social Media Facebook page](media/facebook_bussines_page.PNG)
 
 
 
