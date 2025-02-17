@@ -411,7 +411,7 @@ Admin users manage store configurations, shipping options, and payment settings.
 I used in **Little Explorers** e-commerce platform a **relational database structure** and below is a schema diagram representing the relationships between models.
 
  **Schema Diagram**
-![Schema of models](--------)
+![Schema of models](erd_diagram.png)
 
  **Key Relationships & Explanation**
 
@@ -755,7 +755,8 @@ The navigation bar provides quick access to all essential sections of the websit
 
 
 #### **Screenshots**
-![Navigation Bar](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/navigation_bar.png)
+**Navigation Bar Desktop**![Navigation Bar Desktop](media\existing_features\navbar_desctop.PNG)
+**Navigation Bar Mobile**![Navigation Bar Mobile](media\existing_features\navbar_mobile.PNG)
 
 
 ### **Feature 2: Body (Homepage & Content Sections)**
@@ -776,8 +777,8 @@ The main body presents featured products, promotions, and call-to-action element
  - **#2**: As a user, I want to be able to browse a catalog of products so that I can explore different clothing options for my children.
 
 #### **Screenshots**
-![Homepage Body](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/homepage_body.png)
-
+**Homepage Body desktop**![Homepage Body desktop](media\existing_features\homepage_desktop.PNG)
+**Homepage Body Mobile**![Homepage Body Mobile](media\existing_features\homepage_mobile.PNG)
 
 
 ### **Feature 3: Footer**
@@ -801,8 +802,8 @@ The footer provides quick links, social media access, and customer support conta
 - **#14**: As a user, I want to share products on social media so that I can recommend them to friends and family.
 
 #### **Screenshots**
-![Footer](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/footer.png)
-
+**Footer desktop**![Footer desktop](media\existing_features\footer_desctop.PNG)
+**Footer Mobile**![Footer Mobile](media\existing_features\footer_mobile.PNG)
 
 
 ### **Feature 4: User Registration and Authentication**
@@ -820,7 +821,8 @@ The site allows users to create an account, log in, and manage their profiles.
 - **#15** - As a shoper or site user I want to buy children's clothing from "Little Explorers,so that I can shop for kids in a convenient way.  
 
 #### **Screenshots**
-![User Authentication](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/user_auth.png)
+**User Authentication desktop**![User Authentication desktop](media\existing_features\registration_desktop.PNG)
+**User Authentication Mobile**![User Authentication Mobile](media\existing_features\registration_mobile.PNG)
 
 
 
@@ -841,8 +843,8 @@ Users can explore a well-structured list of children’s clothing items categori
 
 
 ### **Screenshots**
-![Product List](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/product_list.png)
-
+**Product List desktop**![Product List desktop](media\existing_features\productlist_desktop.PNG)
+**Product List Mobile**![Product List Mobile](media\existing_features\productlist_mobile.PNG)
 
 
 ### **Feature 6: Product Search and Filtering**
@@ -858,8 +860,8 @@ Users can quickly find the products they need through search and filtering optio
 
   
 #### **Screenshots**
-![Search Products](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/search_products.png)
-
+**Search Products desktop**![Search Products desktop](media\existing_features\search_desktop.PNG)
+**Search Products Mobile**![Search Products Mobile](media\existing_features\search_mobile.PNG)
 
 ### **Feature 7: Wishlist**
 Users can *save products* they are interested in purchasing later.
@@ -874,8 +876,9 @@ Users can *save products* they are interested in purchasing later.
 
 
 #### **Screenshots**
-![Wishlist](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/wishlist.png)
-
+**Wishlist desktop**![Wishlist desktop](media\existing_features\wishlist_desktop.PNG)
+**Wishlist Mobile**![Wishlist Mobile](media\existing_features\wishlist_mobile.PNG)
+**Wishlist notification**![Wishlist notification](media\existing_features\wishlist_notification.PNG)
 
 
 ###  **Feature 7: Shopping Cart**
@@ -891,8 +894,9 @@ The shopping cart allows users to manage their selected items before checkout.
   **#4** - As a user, I want to add items to my shopping cart so that I can prepare my purchase.
 
 #### **Screenshots**
-![Shopping Cart](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/shopping_cart.png)
-
+**Shopping Cart Desktop**![Shopping Cart desktop](media\existing_features\shopingbag_desktop.PNG)
+**Shopping Cart Mobile**![Shopping Cart Mobile](media\existing_features\shopingbag_mobile.PNG)
+**Shopping Cart Notification**![Shopping Cart  Notification](media\existing_features\shopingbag_notification.PNG)
 
 
 ### **Feature 8: Secure Checkout and Payment**
@@ -908,8 +912,10 @@ A seamless and secure checkout process ensures safe transactions.
  **#5** - As a user, I want to securely checkout and make payments so that I can complete my purchase with ease and confidence. 
 
 #### **Screenshots**
-![Checkout Process](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/checkout.png)
-
+**Checkout Process Desktop**![Checkout Process desktop](media\existing_features\checkoutprocess_desctop.PNG)
+**Checkout Process Mobile**![Checkout Process Mobile](media\existing_features\checkoutprocess_mobile.PNG)
+**Checkout confirmation Desktop**![Checkout confirmation desktop](media\existing_features\checkout_desktop.PNG)
+**Checkout confirmation Mobile**![Checkout confirmation Mobile](media\existing_features\checkout_mobile.PNG)
 
 
 ## **Feature 8: Product Reviews and Ratings**
@@ -924,9 +930,8 @@ Users can share feedback and rate products.
  **#11** -As a user, I want to leave reviews for products I have purchased so that I can share my feedback with other customers.  
 
 #### **Screenshots**
-![Product Reviews](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/reviews.png)
-
-
+**Product Reviews Desktop**![Product Reviews desktop](media\existing_features\review_desktop.PNG)
+**Product Reviews Mobile**![Product Reviews Mobile](media\existing_features\review_mobile.PNG)
 
 ### **Feature 9: Responsive Design for Mobile Devices**
 The website is fully responsive, ensuring a smooth browsing experience across all devices.
@@ -940,7 +945,12 @@ The website is fully responsive, ensuring a smooth browsing experience across al
 
 
 #### **Screenshots**
-![Mobile View](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/mobile_view.png)
+**Mobile view**![Mobile view](media\existing_features\responsive_mobile.PNG)
+
+**Tablet view**![Tablet view](media\existing_features\responsive_ipad.PNG) 
+
+**Desktop view**![Desktop view](media\existing_features\responsive_desktop.PNG)
+
 
 
 
@@ -955,13 +965,14 @@ Users receive email updates regarding account activity and orders.
 **User Stories Covered**
  **#8** -As a user, I want to receive order confirmation and shipping notifications via email so that I am informed about the status of my purchase.
 
- #### **Screenshots**
-![Email Notifications](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/mobile_view.png)
+ #### **Screenshot**
+ **Email Notifications**![Email Notifications ](media\existing_features\review_desktop.PNG)
+
 
 
 ### **Feature 11: Product and Inventory Management**
 Admins can manage product listings and inventory from the admin panel.
-
+Press PrtScn (Print Screen) 
  **Implemented Features**
 - Add, edit, or remove products from the store. *(#6)*
 - Stock management with real-time inventory updates.
@@ -970,8 +981,8 @@ Admins can manage product listings and inventory from the admin panel.
  **#6** -As an admin, I want to manage products, categories so that I can keep the product listings up-to-date.
 
 #### **Screenshots**
-![Admin Product Management](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/admin_products.png)
-
+ **Admin Product Management desktop**![Admin Product Management desktop](media\existing_features\management_desktop.PNG)
+ **Admin Product Management mobile**![Admin Product Management mobile](media\existing_features\management_mobile.PNG)
 
 
 ### **Feature 12: Order Management**
@@ -986,7 +997,7 @@ Admins can track and manage orders efficiently.
 
 
 #### **Screenshots**
-![Admin Order Management](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/admin_orders.png)
+ **Admin Order Management**![Admin Order Management](media\existing_features\order_management.PNG)
 
 
 
@@ -1010,7 +1021,9 @@ Changes made in the settings should be saved and immediately reflected on the si
 A success message should be displayed after saving the settings.
 
 #### **Screenshots**
-![Admin Settings Panel for Customization](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/admin_orders.png)
+ **Admin Settings Panel for Customization desktop**![Admin Settings Panel for Customization desktop](media\existing_features\settingspannel_desktop.PNG)
+ **Admin Settings Panel for Customization mobile**![Admin Settings Panel for Customization mobile](media\existing_features\settingspanel_mobile.PNG)
+
 
 
 
@@ -1025,7 +1038,8 @@ Users can connect with Little Explorers on social media platforms.
  **#14** -As a user, I want to share products on social media so that I can recommend them to friends and family.
 
 #### **Screenshots**
-![Social Media Integration](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/social_media.png)
+ **Social Media Integration**![Social Media Integration](media\existing_features\socialmedia.PNG)
+ **Social Media Facebook page**![Social Media Facebook page](media\facebook_bussines_page.PNG)
 
 
 
@@ -1039,9 +1053,6 @@ The website has unit tests to ensure reliability and is fully deployed.
 **User Stories Covered**
  **#10** -As a developer, I want to deploy the application to a live server so that users can access and use the platform publicly.
  **#22** -Add comprehensive unit tests to validate the functionality of the product-related views in the Django application. These tests aim to ensure that all key features, such as displaying products, filtering, sorting, and CRUD operations, work as expected. Testing also includes verifying permissions for superusers and preventing unauthorized actions.
-
- #### **Screenshots**
-![Unit Tests & Project Deployment](https://github.com/yourusername/little-explorers/blob/main/docs/screenshots/social_media.png)
 
 
 ## Features Yet to Implement
@@ -1099,8 +1110,8 @@ The **Little Explorers** project was developed using a combination of powerful f
 - **[AWS S3 Bucket](https://aws.amazon.com/s3/)** – Used to store and serve static files (CSS, JavaScript) and media content (product images, user uploads).
 
  **Design & Documentation**
-- **[Balsamiq Wireframes](https://balsamiq.com/wireframes/)** – Utilized to design wireframe mockups of the site layout. You can view them [here](#).
-- **[Lucidchart](https://lucid.co/product/lucidchart)** – Used to create a **visual schema of the project's data models**, which you can view [here](#schema-of-models).
+- **[Balsamiq Wireframes](https://balsamiq.com/wireframes/)** – Utilized to design wireframe mockups of the site layout. 
+- **[Lucidchart](https://lucid.co/product/lucidchart)** – Used to create a visual schema of the project's data models.
 
 ## Testing
 
@@ -1213,29 +1224,16 @@ Thourough validation of all code was made without errors. The results can be vie
 
 Here are a few of the bugs found during the testing phase.
 
-**Bug** - The forms in the Manage Brands page were displaying information for the wrong brand instances
-_Fix_ - Remove the sorting functionality in the pages Django view which sorted the instances of brands but not the forms
+**Bug** While working on performance optimization for my project, I discovered several issues, including large images slowing mobile load times, JavaScript delays affecting rendering, and checkout & authentication scripts causing lags. Additionally, search, order history, and the admin panel were resource-heavy, impacting efficiency.
 
-**Bug** - Duplicate ID's in HTML elements due to Django creating the same form over again in Manage Brands
-_Fix_ - Give a prefix of the brands ID to the form, ensuring each one is unique
-
-**Bug** - Sizes displaying as 'N/A' even though product has size on Order Confirmation page
-_Fix_ - Logic in order confirmation had false values, updated and works
-
-**Bug** - When sent a password through the Django Allauth service, the link sent is http and not https. A warning by stripe in the terminal that payments for production only works with https is issued. This doesn't affect this site as the payments are for testing purposes, but needs to be investigated further in the future
+To address these, I will implement image optimization (WebP & lazy loading), JavaScript deferment, script optimizations for checkout & login, search pagination, and remove unnecessary admin panel scripts to enhance overall performance.
 _Fix_ - No fix as of now
 
-**Bug** - Price validation in product form failing
-_Fix_ - Creating variables in the JavaScript file that controls this, as the id's for the form are different on the edit and add pages where the form is present
+**Bug**  When sent a password through the Django Allauth service, the link sent is http and not https. A warning by stripe in the terminal that payments for production only works with https is issued. This doesn't affect this site as the payments are for testing purposes, but needs to be investigated further in the future
+_Fix_ - No fix as of now
 
-**Bug** - Navbar animation jumpy and not displaying menus correctly at all times
-_Fix_ - Refine JavaScript to add and remove classes to show and hide all elements of the nav upon clicking and accessing other menus, remove animations
-
-**Bug** - Modal not displaying for remove review, only overlay
-_Fix_ - Remove css attribute backdrop filter for modal causing issues
-
-**Bug** - 404 error at checkout when processing payment
-_Fix_ - Fix try and except in code that removes users wishlist items that are purchased
+**Bug** The  product images were not displaying because the necessary AWS S3 storage settings were missing.
+_Fix_ - adding the correct STORAGES configuration in Django settings, ensuring that uploaded media files were properly stored and served from Amazon S3
 
 ## Credits
 
@@ -1243,7 +1241,7 @@ _Fix_ - Fix try and except in code that removes users wishlist items that are pu
 
 #### Media
 
-Images of the products and the site background are all from [Pixabay](https://pixabay.com//).
+Images of the products and the site background are all from [Pixabay](https://pixabay.com//) and [Google images](https://www.google.com//)
 
 Images for favicons are from [Favicons](https://icons8.com/icons/set/favicon)
 
@@ -1301,6 +1299,6 @@ https://stackoverflow.com/questions/13119912/disable-bootstraps-collapse-open-cl
 
 ### Acknowledgments
 
-Throughout the development of Little Explorers, I received incredible support, guidance, and inspiration from various people. I would like to take a moment to express my gratitude to first : to my husband,for his unwavering support and encouragement throughout this journey. His motivation and belief in me kept me going even during the toughest moments. Secondly to Laura_ci(cohort facilitator) for inspiring me and providing valuable guidance on how to structure a clear and professional README documentation. Her advice has been instrumental in helping me create a well-organized and informative project. I would also like to extend my gratitude to all the Tutors at Code Institute for their patience and support. Thank you for your guidance, patience, and invaluable support throughout this journey. The development of Little Explorers has been a challenging yet rewarding experience. The support, guidance, and resources mentioned above played a crucial role in making this project successful.    
+Throughout the development of Little Explorers, I received incredible support, guidance, and inspiration from various people. I would like to take a moment to express my gratitude to first : to my husband,for his unwavering support and encouragement throughout this journey. His motivation and belief in me kept me going even during the toughest moments. Secondly to Laura_ci(cohort facilitator) for inspiring me and providing valuable guidance on how to structure a clear and professional README documentation. Her advice has been instrumental in helping me create a well-organized and informative project. Also project **[StepUp](https://github.com/johnvenkiah/CI_PP5_John_Venkiah)**served as a template for structuring my README documentation, providing valuable insights into organizing information clearly and effectively.  I would also like to extend my gratitude to all the Tutors at Code Institute for their patience and support. Thank you for your guidance, patience, and invaluable support throughout this journey. The development of Little Explorers has been a challenging yet rewarding experience. The support, guidance, and resources mentioned above played a crucial role in making this project successful.    
 
 

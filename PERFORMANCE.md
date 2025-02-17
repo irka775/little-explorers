@@ -38,10 +38,10 @@ Below is a **breakdown of performance testing** based on **Kanban Board user sto
 - Lazy loading required for product images
 
  **Test Results:**
-- **View Product Catalog Test** ![View Product Catalog Test - Desktop](#)
-- **View Product Catalog Test** ![View Product Catalog Test - Mobile](#)
-- **View Product Search Test** ![View Product Search Test - Desktop](media\screenshots\lighthouse\search_desctop.PNG)
-- **View Product Search Test** ![View Product Search Test - Mobile](media\screenshots\lighthouse\search_mobile.PNG)
+- **View Product Catalog Test desktop** ![View Product Catalog Test - Desktop](media\screenshots\lighthouse\catalog_desktop.PNG)
+- **View Product Catalog Test mobile** ![View Product Catalog Test - Mobile](media\screenshots\lighthouse\catalog_mobile.PNG)
+- **View Product Search Test desktop** ![View Product Search Test - Desktop](media\screenshots\lighthouse\search_desctop.PNG)
+- **View Product Search Test mobile** ![View Product Search Test - Mobile](media\screenshots\lighthouse\search_mobile.PNG)
 
 ---
 
@@ -55,7 +55,7 @@ Below is a **breakdown of performance testing** based on **Kanban Board user sto
 - **View Shopping Cart Test - Desktop** ![View Shopping Cart Test - Desktop](media\screenshots\lighthouse\shopBag_desctop.PNG)
 - **View Shopping Cart Test - Mobile** ![View Shopping Cart Test - Mobile](media\screenshots\lighthouse\shopBag_mobile.PNG)
 - **View Checkout Test - Desktop** ![View Checkout Test - Desktop](media\screenshots\lighthouse\checkout_desctop.PNG)
-- **View Checkout Test - Mobile** ![View Checkout Test - Mobile](#)
+- **View Checkout Test - Mobile** ![View Checkout Test - Mobile](media\screenshots\lighthouse\checkout_mobile.PNG)
 
 ---
 
@@ -94,7 +94,7 @@ Below is a **breakdown of performance testing** based on **Kanban Board user sto
 - Admin panel loads extra scripts that slow page performance
 
  **Test Results:**
-- **View Login Test - Mobile** ![View Admin Panel Test - Desktop](media\screenshots\lighthouse\admin_desctop.PNG)
+- **View Login Test - desktop** ![View Admin Panel Test - Desktop](media\screenshots\lighthouse\admin_desctop.PNG)
 - **View Login Test - Mobile** ![View Admin Panel Test - Mobile](media\screenshots\lighthouse\admin_mobile.PNG)
 - **View Store settings Test - Desktop** ![View Store settings Test - Desktop](media\screenshots\lighthouse\storeSet_desctopp.PNG)
 - **View Store settings  Test - Mobile** ![View Store settings  Test - Mobile](media\screenshots\lighthouse\storeSet_mobile.PNG)

@@ -16,7 +16,8 @@
                     <a href="{{ product.image.url }}" target="_blank">
                         <img class="image-container-modal image-container" id="image" src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy"  width="200" height="200">
                     </a>
-                {% elif product.image_url %}
+                    
+                    {% elif product.image_url %}
 
                         {% if  image_exists %}
 
@@ -30,11 +31,11 @@
 
 
 
-                {% else %}
-                    <a href="">
-                        <img class="image-container-modal image-container" id="image" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}" loading="lazy"  width="200" height="200">
-                    </a>
-                {% endif %}
+                    {% else %}
+                        <a href="">
+                            <img class="image-container-modal image-container" id="image" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}" loading="lazy"  width="200" height="200">
+                        </a>
+                    {% endif %}
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">

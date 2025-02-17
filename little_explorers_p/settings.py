@@ -62,7 +62,6 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",  # Bootstrap 5 Support
     "corsheaders",
     "widget_tweaks",
-    "django_extensions",
     "django_otp.plugins.otp_totp",
     "rest_framework",
     "rest_framework.authtoken",
@@ -77,6 +76,8 @@ INSTALLED_APPS = [
     "profiles",
     "reviews",
     "store_settings",
+    "django_extensions",
+
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -247,6 +248,23 @@ else:
 
     MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/media/"
     DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+    STORAGES = {
+        "default": {
+            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+            "OPTIONS": {
+                "bucket_name": "organic-food-bucket",
+                "custom_domain": "organic-food-bucket.s3.amazonaws.com",
+                "querystring_auth": False,
+            },
+        },
+        "staticfiles": {
+            "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+            "OPTIONS": {
+                "bucket_name": "organic-food-bucket",
+                "location": "static",
+            },
+        },
+    }
 
 # =============================================================================
 
