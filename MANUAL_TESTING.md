@@ -38,7 +38,7 @@ During the development of the **Little Explorers** eCommerce store, I conducted 
 I have tested the functionality according to the user stories that cover it. I am not including images in this section because most of them have already been added to the README documentation in various sections, such as the "Existing Features" section (which contains images) and the "Performance" section. Therefore, I find it unnecessary to repeat them.
 Below, I have demonstrated the tasks, the results obtained from the tests, and the issues that were resolved.
 
-### ** Key Areas Tested:**
+### **Key Areas Tested:**
 -  Home Page Functionality
 -  Product Catalog & Search
 -  Shopping Cart & Checkout
@@ -63,7 +63,7 @@ Below, I have demonstrated the tasks, the results obtained from the tests, and t
  Check if the search bar and category filters work properly.  
  Ensure the home page loads within an acceptable time.  
 
-### ** Result:**  
+### **Result:**  
  Some test cases were verified, and the homepage functionality appears to be working correctly. However, not all test cases were checked in detail.
  Navigation and featured products display correctly.
  Performance issue: Image loading performance needs improvement.Image loading was identified as an area for optimization.(more details I left in section PERFORMANCE of Readme documentation) Further analysis is needed to determine its impact.
@@ -85,7 +85,7 @@ Below, I have demonstrated the tasks, the results obtained from the tests, and t
  Ensure pagination works for large product listings.  
  Test responsiveness on different screen sizes.  
 
-### ** Result:**  
+### **Result:**  
 Some test cases were verified, but a full review is still pending.
  Lazy loading was implemented for product images to enhance performance.
  Basic functionality appears to be working, but further validation is needed for pagination.
@@ -108,7 +108,7 @@ Some test cases were verified, but a full review is still pending.
  Ensure Stripe payment integration is functioning.  
  Check that order confirmation emails are sent correctly.  
 
-### ** Result:**  
+### **Result:**  
  All tests passed and JavaScript optimizations were made to improve checkout speed.
 
 ---
@@ -127,7 +127,7 @@ Some test cases were verified, but a full review is still pending.
  Ensure profile updates (e.g., address changes) are saved.  
  Confirm security measures (password hashing, CSRF protection).  
 
-### ** Result:**  
+### **Result:**  
  All tests passed and password reset page was slightly optimized for mobile display.
 
 ---
@@ -145,7 +145,7 @@ Some test cases were verified, but a full review is still pending.
  Test email notifications for order confirmation and status updates.  
  Check if unauthorized users are restricted from viewing orders.  
 
-### ** Result:**  
+### **Result:**  
  All tests passed.
 
 ---
@@ -166,21 +166,21 @@ Some test cases were verified, but a full review is still pending.
  Test order status updates and refunds.  
  Validate restricted access to admin-only features.  
 
-### ** Result:**  
+### **Result:**  
  All tests passed and missing AWS S3 settings were added to resolve image upload issues.(More details is insection BUGS of Readme documentation).
 
 ---
 
 ##  Final Thoughts & Improvements
 
-### ** Issues Found:**
+### **Issues Found:**
 - **Some pages had large image files** causing slow loading.
 - **JavaScript files blocked rendering** in some sections.
 - **Checkout & login scripts needed optimization** for mobile devices.
 - **Order history pages slowed down** when displaying large datasets.
 - **Admin panel loaded unnecessary scripts**, impacting performance.
 
-### ** Optimizations Applied:**
+### **Optimizations Applied:**
 - Implemented lazy loading.
 - **Deferred JavaScript execution** to improve page speed.
 - **Optimized checkout & authentication scripts** for faster response.

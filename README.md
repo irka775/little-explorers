@@ -627,12 +627,15 @@ Each epic represents a broad feature set, broken down into smaller, actionable u
 
 #### Wireframes
 
-I created wireframes for the home page for both desktop and mobile versions to plan the layout and structure of the site effectively.
+I created wireframes for some of the pages for both desktop and mobile versions to plan the layout and structure of the site effectively.
 
-![Wireframe of Home Page on Desktop](media\screenshots\wireframes\home_desktop.PNG)
-![Wireframe of Home Page on Mobile](media\screenshots\wireframes\home_mobile.PNG)
+ **Wireframe of Home Page on Desktop**![Wireframe of Home Page on Desktop](media/screenshots/wireframes/home_desktop.PNG)
+ **Wireframe of Home Page on Mobile**![Wireframe of Home Page on Mobile](media/screenshots/wireframes/home_mobile.PNG)
+ **Wireframe of Products on Desktop**![Wireframe of Products on Desktop](media/screenshots/wireframes/Products_desktop.PNG)
+ **Wireframe of Products  on Mobile**![Wireframe of Products on Mobile](media/screenshots/wireframes/products_mobile.PNG)
+ **Wireframe of Sign in on Desktop**![Wireframe of Sign in on Desktop](media/screenshots/wireframes/SignIn_Desktop.PNG)
+ **Wireframe of Sign in on Mobile**![Wireframe of Sign in on Mobile](media/screenshots/wireframes/signin_mobile.PNG)
 
-All wireframes can be viewed [here]()
 
 ### Surface
 
@@ -787,7 +790,7 @@ The footer provides quick links, social media access, and customer support conta
 - Social Media Integration:
   - A "Follow us on Facebook" link (displays a screenshot instead of a direct link). 
 - Customer Support Information:
-  - Displays contact email: IrishRoyals@example.com (fixional one).
+  - Displays contact email: IrishRoyals@example.com (fake email).
   - Shows customer service phone number: *+353000000000*.
   - N.B. It is just example for contact email and customer phone number.
 - Consistent Design:
