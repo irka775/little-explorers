@@ -7,13 +7,6 @@ This project is part of my portfolio, showcasing a full-featured online store wi
 
 Users can create accounts to manage their orders, while administrators have full write and delete access to all products and customer data.
 
-You can also test the card payment functionality without making a real purchase. Use the following test card details:
-
-**Card Number:** 4242 4242 4242 4242  
-**Expiration Date:** Any future date  
-**CVC:** Any 3-digit number  
-**Postal Code:** Any 5-digit number  
-
 You can view the deployed site [here](https://little-explorers-journey-34e4e4481594.herokuapp.com/).
 
 ![Mockup of live site on different devices](media/responsive.PNG)
