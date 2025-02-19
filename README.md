@@ -16,7 +16,7 @@ You can also test the card payment functionality without making a real purchase.
 
 You can view the deployed site [here](https://little-explorers-journey-34e4e4481594.herokuapp.com/).
 
-![Mockup of live site on different devices](media\responsive.PNG)
+![Mockup of live site on different devices](media/responsive.PNG)
 
 ## Table of Contents
 
