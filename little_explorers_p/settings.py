@@ -105,9 +105,9 @@ MIDDLEWARE = [
 ROOT_URLCONF = "little_explorers_p.urls"
 
 CORS_ORIGIN_ALLOW_ALL = True
-SESSION_COOKIE_SECURE = True  
-SESSION_COOKIE_HTTPONLY = True 
-SESSION_COOKIE_SAMESITE = 'Lax' 
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SAMESITE = 'Lax'
 
 # =============================================================================
 
@@ -145,7 +145,7 @@ CSP_SCRIPT_SRC = ("'self'", "https://cdnjs.cloudflare.com", "https://ajax.google
 CSP_STYLE_SRC = ("'self'", "https://fonts.googleapis.com", "'unsafe-inline'")
 CSP_IMG_SRC = ("'self'", "data:", "https://img.icons8.com")
 CSP_FONT_SRC = ("'self'", "https://fonts.gstatic.com")
-CSP_SCRIPT_SRC = ("'self'", "https://js.stripe.com")  
+CSP_SCRIPT_SRC = ("'self'", "https://js.stripe.com")
 
 
 # =============================================================================
