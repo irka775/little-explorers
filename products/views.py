@@ -6,12 +6,13 @@ and managing products, including wishlist functionality and
  custom error pages.
 """
 
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.http import Http404
+from django.urls import reverse
 
 from .models import Product, Category, Wishlist
 from .forms import ProductForm

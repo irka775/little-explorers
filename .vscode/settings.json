@@ -6,7 +6,7 @@
        "**/.gitp*": true,
        "**/.hg": true,
        "**/.svn": true,
-       "**/.vscode": true,
+       "**/.vscode": false,
        "**/core.Microsoft*": true,
        "**/core.mongo*": true,
        "**/core.python*": true,
@@ -15,4 +15,15 @@
     "files.autoSave": "afterDelay",
     "workbench.colorTheme": "Default Dark Modern",
     "terminal.integrated.gpuAcceleration": "canvas",
- }
+ 
+    
+   "python.linting.enabled": true,
+   "python.linting.pylintEnabled": true,
+   "python.linting.flake8Enabled": true,
+   "python.linting.mypyEnabled": true,
+   "python.linting.lintOnSave": true,
+   "errorLens.enabled": true
+  
+  
+   }
+ 

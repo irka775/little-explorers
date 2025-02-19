@@ -8,10 +8,11 @@ products from the shopping bag.
 from django.shortcuts import (
     render,
     redirect,
-    reverse,
-    HttpResponse,
     get_object_or_404,
 )
+from django.http import HttpResponse
+from django.urls import reverse
+
 from django.contrib import messages
 
 from products.models import Product

@@ -14,7 +14,8 @@ For more details:
 
 import os
 import dj_database_url
-from pathlib import Path
+from typing import Tuple
+from typing import Dict, Any, cast
 
 # Enable colored output in Django management commands
 os.environ["DJANGO_COLORS"] = "green"
@@ -38,7 +39,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "")
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 print("Debug mode is " + str(DEBUG))
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS: Tuple[str, ...] = tuple(os.environ.get("ALLOWED_HOSTS", "").split(","))
 CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
 
 # =============================================================================
@@ -180,9 +181,14 @@ WSGI_APPLICATION = "little_explorers_p.wsgi.application"
 # =============================================================================
 
 # Database configuration
-if "DATABASE_URL" in os.environ and not DEBUG:
-    DATABASES = {
-        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+if not DEBUG:
+    db_config = dj_database_url.config(
+        default=os.environ.get("DATABASE_URL", ""),
+        conn_max_age=600,
+        ssl_require=True
+    )
+    DATABASES: Dict[str, Dict[str, Any]] = {
+        "default": cast(Dict[str, Any], db_config)
     }
 elif DEBUG:
     DATABASES = {
@@ -248,24 +254,32 @@ else:
 
     MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/media/"
     DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-    STORAGES = {
-        "default": {
-            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
-            "OPTIONS": {
-                "bucket_name": "organic-food-bucket",
-                "custom_domain": "organic-food-bucket.s3.amazonaws.com",
-                "querystring_auth": False,
-            },
-        },
-        "staticfiles": {
-            "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
-            "OPTIONS": {
-                "bucket_name": "organic-food-bucket",
-                "location": "static",
-            },
-        },
-    }
 
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+        "OPTIONS": {
+            "bucket_name": "organic-food-bucket",
+            "custom_domain": "organic-food-bucket.s3.amazonaws.com",
+            "querystring_auth": False,
+        },
+    },
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+        "OPTIONS": {
+            "bucket_name": "organic-food-bucket",
+            "location": "static",
+        },
+    },
+    "mediafiles": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+        "OPTIONS": {
+            "bucket_name": os.environ.get("AWS_STORAGE_BUCKET_NAME", "organic-food-bucket"),
+            "location": "media",
+        },
+    },
+}
 # =============================================================================
 
 # Stripe payment settings
