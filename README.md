@@ -1309,8 +1309,31 @@ https://radu.link/make-footer-stay-bottom-page-bootstrap/
 **Removing navbar transitions:**
 https://stackoverflow.com/questions/13119912/disable-bootstraps-collapse-open-close-animation
 
-### Acknowledgments
 
-Throughout the development of Little Explorers, I received incredible support, guidance, and inspiration from various people. I would like to take a moment to express my gratitude 1. **to my husband**,for his unwavering support and encouragement throughout this journey. His motivation and belief in me kept me going even during the toughest moments. 2. **to Laura_ci(cohort facilitator)** for inspiring me and providing valuable guidance on how to structure a clear and professional README documentation. Her advice has been instrumental in helping me create a well-organized and informative project. Also project **[StepUp](https://github.com/johnvenkiah/CI_PP5_John_Venkiah)**served as a template for structuring my README documentation, providing valuable insights into organizing information clearly and effectively.  I would also like to extend my gratitude to **all the Tutors at Code Institute** for their patience and support. Thank you for your guidance, patience, and invaluable support throughout this journey. The development of Little Explorers has been a challenging yet rewarding experience. The support, guidance, and resources mentioned above played a crucial role in making this project.    
 
+## **Acknowledgments**
+
+The development of *Little Explorers* has been an incredible journey, filled with challenges, learning, and growth. I am deeply grateful to everyone who supported, guided, and inspired me throughout this project. I would like to extend my heartfelt thanks to the following:
+
+1. **My Husband**  
+   Your unwavering support, encouragement, and belief in my abilities kept me motivated even during the most challenging moments. Thank you for standing by me and cheering me on every step of the way.
+
+2. **Laura_ci (Cohort Facilitator)**  
+   Thank you for your invaluable guidance on structuring clear and professional README documentation. Your advice helped me create a well-organized and informative project presentation, ensuring that every detail was communicated effectively.
+
+3. **The Code Institute Tutors**  
+   I am truly grateful to all the tutors at Code Institute for their patience, dedication, and willingness to assist whenever I encountered difficulties. Your insights and support made a significant difference in overcoming obstacles and improving my project.
+
+4. **Fellow Students at Code Institute**  
+   A special thank you to my peers for their continuous encouragement, collaboration, and exchange of ideas. Your feedback and shared experiences made this journey even more enriching.
+
+5. **Project Inspiration – [StepUp](https://github.com/johnvenkiah/CI_PP5_John_Venkiah)**  
+   The *StepUp* project served as a valuable template for structuring my README documentation, providing clear and effective insights into organizing content logically and professionally. Thank you, John Venkiah, for sharing your work and inspiring others.
+
+6. **The Entire Code Institute Community**  
+   From the course content to the community discussions, the support provided by the Code Institute team has been truly exceptional. Thank you for creating an environment that fosters growth, creativity, and success.
+
+---
+
+The journey of building *Little Explorers* has been both challenging and rewarding, and it would not have been possible without the incredible people mentioned above. Thank you all for your guidance, support, and inspiration!
 
