@@ -13,7 +13,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.http import Http404
 from django.urls import reverse
-
+from django.core.paginator import Paginator
 from .models import Product, Category, Wishlist
 from .forms import ProductForm
 
@@ -26,6 +26,12 @@ def all_products(request):
     products by name or description, and sort them based on selected criteria.
     """
     products = Product.objects.all()
+
+    paginator = Paginator(products, 6)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+    is_paginated = paginator.num_pages > 1
+
     query = None
     categories = None
     sort = None
@@ -71,6 +77,10 @@ def all_products(request):
         "search_term": query,
         "current_categories": categories,
         "current_sorting": current_sorting,
+        "paginator": paginator,
+        "page_number": page_number,
+        "page_obj": page_obj,
+        "is_paginated": is_paginated,
     }
     return render(request, "products/products.html", context)
 
