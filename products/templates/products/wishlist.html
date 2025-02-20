@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="wishlist-container col-10 offset-1">
+            {% if wishlist_items %}
+                <div class="row">
+                    {% for product in wishlist_items %}
+                        <div class="mt-5 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <a href="{% url 'product_detail' product.id %}">
+                                    {% if product.image %}
+                                        <img class="image-container" src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy"  width="200" height="200">
+                                    {% else %}
+                                        <img class="image-container" src="{% static 'images/noimage.webp' %}" alt="No Image" loading="lazy"  width="200" height="200">
+                                    {% endif %}
+                                </a>
+                                <div class="card-body pb-0">
+                                    <h5 class="card-title">{{ product.name }}</h5>
+                                    <p class="card-text">
+                                        <strong>Price:</strong> ${{ product.price }} <br>
+                                        <strong>Category:</strong> {{ product.category.friendly_name }}
+                                    </p>
+                                    <a href="{% url 'product_detail' product.id %}" class="btn btn-sm btn-primary">View Details</a>
+                                    <a href="{% url 'remove_from_wishlist' product.id %}" class="btn btn-sm btn-danger">Remove</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="mt-5 alert alert-info text-center" role="alert">
+                    Your wishlist is empty! Start adding your favorite <a href="{% url 'products' %}"><b><i><u> products.</u></i></b></a> 
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="btt-button shadow-sm rounded-0 border border-black">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    </a>	
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    // Scroll to top functionality
+    $('.btt-link').click(function() {
+        window.scrollTo(0, 0);
+    });
+</script>
+{% endblock %}

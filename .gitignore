@@ -1,0 +1,16 @@
+core.Microsoft*
+core.mongo*
+core.python*
+env.py
+__pycache__/
+*.py[cod]
+node_modules/
+.github/
+cloudinary_python.txt
+*.sqlite3
+*__pycache__
+*.pyc
+venv/
+venv
+format_code.py
+to_heroku_witout_commit.txt

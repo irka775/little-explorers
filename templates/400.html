@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <h1 class="display-4">400 - Bad Request</h1>
+        <p>The request could not be understood by the server. Please check the URL and try again.</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Go to Home</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,281 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+
+
+
+{% block content %}
+{% if user.is_superuser %}
+<!-- Admin Exclusive Content -->
+<div class="alert alert-primary text-center mt-5 p-5 rounded-3 shadow-sm" role="alert"
+    style="font-family: 'Arial', sans-serif; font-size: 1.1rem; line-height: 1.5">
+    <!-- Store Logo -->
+    {% if store_settings and store_settings.store_logo %}
+        <img src="{{ store_settings.store_logo.url }}" alt="Logo" width="200" height="200" loading="lazy">
+    {% else %}
+        <p>No store logo available.</p>
+    {% endif %}
+
+
+    <!-- Welcome Heading -->
+    <h4 class="alert-heading">
+        Welcome, Administrator of <strong>{{ store_settings.store_name }}</strong>!
+    </h4>
+
+    <!-- Admin Message -->
+    <p>
+        You have exclusive access to the management panel, designed to help you oversee and optimize
+        the operations of <strong>{{ store_settings.store_name }}</strong>. From here, you can manage products,
+        configure store settings, and ensure a seamless shopping experience for customers.
+    </p>
+
+    <hr>
+
+    <!-- Important Note -->
+    <p class="mb-0">
+        Please use this dashboard responsibly, as any changes made here directly affect the store’s
+        functionality, user experience, and overall performance.
+    </p>
+</div>
+
+{% endif %}
+
+
+<div class="container mt-4 pt-3">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-12 col-sm-12">
+            <div class="card bg-light shadow-lg">
+                <div class="card-body">
+                    <h2 class="mt-4 text-center">Store Settings</h2>
+
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% if user.is_superuser %}
+
+                        <!-- Store Settings -->
+                        <!-- Store Name -->
+                        <div class="row mb-3">
+                            <label class="col-lg-4 col-md-4 col-sm-4 col-4 col-form-label">Store Name</label>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-8 text-end">
+                                {{ store_sett_form.store_name }}
+                            </div>
+                        </div>
+
+                        <!-- Store Logo -->
+                        <div class="row mb-3">
+                            <label class="col-lg-4 col-md-4 col-sm-4 col-4 col-form-label">Store Logo</label>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-8 text-end">
+                                {{ store_sett_form.store_logo }}
+                            </div>
+                        </div>          
+                        
+                        
+                        
+                        <!-- Store Logo -->
+                        <div class="row mb-3">
+                            <label class="col-lg-4 col-md-4 col-sm-4 col-4 col-form-label">Welcome Message</label>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-8 text-end">
+                                {{ store_sett_form.welcome_msg }}
+                            </div>
+                        </div>                                  <!-- Button Logo -->
+                        <div class="row mb-3">
+                            <label class="col-lg-4 col-md-4 col-sm-4 col-4 col-form-label">Main Page Button</label>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-8 text-end">
+                                {{ store_sett_form.home_page_button }}
+                            </div>
+                        </div>          
+
+
+
+
+
+                        <!-- Store main page Image -->
+                        <div class="row mb-3">
+                            <label class="col-lg-4 col-md-4 col-sm-4 col-4 col-form-label">Main Page Image</label>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-8 text-end">
+                                {{ store_sett_form.main_page_image }}
+                            </div>
+                        </div>
+
+                        <!-- Contact Email -->
+                        <div class="row mb-3">
+                            <label class="col-lg-4 col-md-4 col-sm-4 col-4 col-form-label">Contact Email</label>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-8 text-end">
+                                {{ store_sett_form.contact_email }}
+                            </div>
+                        </div>
+
+                        <!-- Contact Phone -->
+                        <div class="row mb-3">
+                            <label class="col-lg-4 col-md-4 col-sm-4 col-4 col-form-label">Contact Phone</label>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-8 text-end">
+                                {{ store_sett_form.contact_phone }}
+                            </div>
+                        </div>
+
+                        <!-- Currency -->
+                        <div class="row mb-3">
+                            <label class="col-lg-4 col-md-4 col-sm-4 col-4 col-form-label">Currency</label>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-8 text-end">
+                                {{ store_sett_form.currency }}
+                            </div>
+                        </div>
+                        <hr class="mt-5">
+
+                        <!-- Shipping Settings -->
+
+                        {{ shipping_sett_form|crispy }}
+
+                        <hr class="m-5">
+
+
+                        <!-- Enable PayPal -->
+                        <div class="row mb-3">
+                            <label class="col-lg-6 col-md-6 col-sm-6 col-9 col-form-label">Enable PayPal</label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3 text-end">
+                                <label class="switch">
+                                    {{ store_sett_form.enable_paypal }}
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- Switch for Boolean Fields -->
+                        <div class="row mb-3">
+                            <label class="col-lg-6 col-md-6 col-sm-6 col-9 col-form-label">Enable Reviews</label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3 text-end">
+                                <label class="switch">
+                                    {{ store_sett_form.enable_reviews }}
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-lg-6 col-md-6 col-sm-6 col-9 col-form-label">Enable Maintenance Mode</label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3 text-end">
+                                <label class="switch">
+                                    {{ store_sett_form.enable_maintenance_mode }}
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-lg-6 col-md-6 col-sm-6 col-9 col-form-label">Enable Stripe</label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3 text-end">
+                                <label class="switch">
+                                    {{ store_sett_form.enable_stripe }}
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-lg-6 col-md-6 col-sm-6 col-9 col-form-label">Enable Cash On Delivery</label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3 text-end">
+                                <label class="switch">
+                                    {{ store_sett_form.enable_cash_on_delivery }}
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        {% endif %}
+
+                        <!-- Additional Security Options (Switches) -->
+                        <h4 class="mb-3">🔧 Security & Privacy Settings</h4>
+
+                        <div class="row mb-3">
+                            <label class="col-lg-6 col-md-6 col-sm-6 col-9 col-form-label">Enable 2FE</label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3 text-end">
+                                <label class="switch">
+                                    {{ user_profile_form.enable_2fa }}
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-lg-6 col-md-6 col-sm-6 col-9 col-form-label">Log out from other devices</label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3 text-end">
+                                <label class="switch">
+                                    {{ user_profile_form.logout_other_sessions }}
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-lg-6 col-md-6 col-sm-6 col-9 col-form-label">Send confirmation email</label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3 text-end">
+                                <label class="switch">
+                                    {{ user_profile_form.notify_change }}
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-lg-6 col-md-6 col-sm-6 col-9 col-form-label">Enable dark mode</label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3 text-end">
+                                <label class="switch">
+                                    {{ user_profile_form.enable_dark_mode }}
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-lg-6 col-md-6 col-sm-6 col-9 col-form-label">Enable notifications</label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3 text-end">
+                                <label class="switch">
+                                    {{ user_profile_form.enable_notifications }}
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-lg-6 col-md-6 col-sm-6 col-9 col-form-label">Allow password autofill</label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3 text-end">
+                                <label class="switch">
+                                    {{ user_profile_form.password_autofill }}
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+
+
+                     
+
+                        <hr>
+
+
+                        <div class="form-group row mb-3">
+                            <div class="col-sm-12 offset-sm-4">
+                                <a href="{% url 'change_password' %}" class="btn btn-warning mb-3">Change Password</a>
+                            </div>
+                        </div>
+
+                        <hr>
+
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-warning btn-lg">💾 Save Settings</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /user_account/
+Disallow: /bag/
+Disallow: /store_settings/
+Disallow: /checkout/order_confirmation/
+Disallow: /media/
+Disallow: /products/add/
+Disallow: /products/
+Disallow: /private/ 
+Sitemap: https://arduino-lab-project-ab20ce1e1a15.herokuapp.com/sitemap.xml
