@@ -1337,3 +1337,6 @@ The development of *Little Explorers* has been an incredible journey, filled wit
 
 The journey of building *Little Explorers* has been both challenging and rewarding, and it would not have been possible without the incredible people mentioned above. Thank you all for your guidance, support, and inspiration!
 
+
+---
+Educational project — see [FAMILY_USE.md](FAMILY_USE.md).
